@@ -1,0 +1,362 @@
+@import 'tailwindcss';
+
+/*
+ * dot air — brand fonts.
+ * The Alibaba family (alibaba.ir) covers both Latin and Persian. Drop the woff2 files into
+ * /public/fonts/alibaba/ (see the README there). Until then the fallback stack renders Persian
+ * acceptably. font-display: swap avoids invisible text while the font loads.
+ */
+@font-face {
+  font-family: 'Alibaba';
+  src: url('/fonts/alibaba/Alibaba-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Alibaba';
+  src: url('/fonts/alibaba/Alibaba-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Alibaba';
+  src: url('/fonts/alibaba/Alibaba-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*
+ * Graphik Web — primary Latin typeface (non-Persian locales). Licensed font: drop the woff2
+ * files into /public/fonts/graphik/ (see the README there). Until then Latin falls back to
+ * Alibaba, and Persian/Arabic always use Alibaba (Graphik has no Arabic glyphs).
+ */
+@font-face {
+  font-family: 'Graphik';
+  src: url('/fonts/graphik/Graphik-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Graphik';
+  src: url('/fonts/graphik/Graphik-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Graphik';
+  src: url('/fonts/graphik/Graphik-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Graphik';
+  src: url('/fonts/graphik/Graphik-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*
+ * dot air — design tokens.
+ * Brand: Yellow #FDB814, Orange #F7941D, Black #000000.
+ */
+@theme {
+  --font-sans: 'Graphik', 'Alibaba', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --color-brand-50: #fff8e7;
+  --color-brand-100: #feefc2;
+  --color-brand-200: #fde08a;
+  --color-brand-300: #fdcb4d;
+  --color-brand-400: #fdb814;
+  --color-brand-500: #eaa200;
+  --color-brand-600: #c98708;
+  --color-brand-700: #9a6700;
+  --color-brand-800: #7a5200;
+  --color-brand-900: #5c3e00;
+
+  --color-accent-300: #fbb35a;
+  --color-accent-400: #f7941d;
+  --color-accent-500: #e07e0c;
+  --color-accent-600: #bd6a08;
+  --color-accent-700: #985400;
+
+  --color-ink: #000000;
+
+  /* Warm page surface (very light brand-tinted off-white). */
+  --color-surface: #fbfbf8;
+
+  --radius-card: 1.25rem;
+  --radius-control: 0.75rem;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+}
+
+/* Persian & Arabic always render in Alibaba (Graphik is Latin-only). */
+:where(html[lang^='fa'], html[lang^='ar']) body {
+  font-family: 'Alibaba', 'Vazirmatn', 'Tahoma', system-ui, sans-serif;
+}
+
+/* Alibaba's glyphs read larger than the Latin stack at the same size, so scale the
+ * root down for RTL locales — every rem-based size follows proportionally. */
+:where(html[lang^='fa'], html[lang^='ar']) {
+  font-size: 92%;
+}
+
+/* Consistent, visible keyboard focus for accessibility (WCAG 2.2 AA). */
+@layer base {
+  :focus-visible {
+    outline: 2px solid var(--color-brand-700);
+    outline-offset: 2px;
+  }
+
+  /* Tailwind v4 no longer sets cursor:pointer on buttons — restore it for interactive elements. */
+  button:not(:disabled),
+  [role='button']:not([aria-disabled='true']),
+  input[type='button']:not(:disabled),
+  input[type='submit']:not(:disabled),
+  input[type='reset']:not(:disabled),
+  input[type='checkbox']:not(:disabled),
+  input[type='radio']:not(:disabled),
+  select:not(:disabled),
+  label[for],
+  summary {
+    cursor: pointer;
+  }
+}
+
+/* --- Text & glow effects (dragonfly-inspired), brand-tinted --- */
+@keyframes shimmer {
+  to {
+    background-position: 200% center;
+  }
+}
+@keyframes glow-pulse {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
+/* Animated gradient text — reads best on dark surfaces (warm gold/orange). */
+.text-shimmer {
+  background-image: linear-gradient(
+    100deg,
+    var(--color-brand-500) 15%,
+    var(--color-accent-400) 40%,
+    var(--color-brand-300) 60%,
+    var(--color-brand-500) 90%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  /* Give tall Persian/Arabic glyphs room so background-clip:text covers the whole letter
+     (the gradient only paints inside the box). Negative margin keeps layout unchanged. */
+  padding-block: 0.22em;
+  margin-block: -0.22em;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .text-shimmer {
+    animation: shimmer 5s linear infinite;
+  }
+  .animate-glow {
+    animation: glow-pulse 7s ease-in-out infinite;
+  }
+}
+
+/* Staggered word-by-word title reveal (rise + blur-in). Delay is set per word inline. */
+@keyframes word-rise {
+  from {
+    opacity: 0;
+    transform: translateY(0.5em);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: blur(0);
+  }
+}
+/* Visible by default; only hidden *during* its own animation (backwards fill), so a title is
+   never blank even if animations are disabled. */
+.word-rise {
+  display: inline-block;
+}
+@media (prefers-reduced-motion: no-preference) {
+  /* Above the fold (not inside a scroll-reveal): animate on page load. */
+  .word-rise {
+    animation: word-rise 0.5s cubic-bezier(0.2, 0.65, 0.3, 1) backwards;
+  }
+  /* Inside a scroll-reveal: hold hidden until the block enters view, then stagger the words. */
+  .reveal .word-rise {
+    opacity: 0;
+    animation: none;
+  }
+  .reveal.is-visible .word-rise {
+    animation: word-rise 0.5s cubic-bezier(0.2, 0.65, 0.3, 1) both;
+  }
+}
+
+/* --- Light motion: respects prefers-reduced-motion --- */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 1;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes popover-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes ken-burns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.12);
+  }
+}
+
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes drawer-in-ltr {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes drawer-in-rtl {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes loading-progress {
+  0% {
+    width: 4%;
+    transform: translateX(-100%);
+  }
+  55% {
+    width: 62%;
+  }
+  100% {
+    width: 100%;
+    transform: translateX(0);
+  }
+}
+
+/* Scroll-reveal: animated when JavaScript is available; content remains usable without it. */
+.reveal {
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  animation: reveal-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .animate-fade-up {
+    animation: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .animate-fade-in {
+    animation: fade-in 1s ease both;
+  }
+  .animate-ken-burns {
+    animation: ken-burns 20s ease-in-out infinite alternate;
+  }
+  .animate-float {
+    animation: float-y 6s ease-in-out infinite;
+  }
+  .animate-popover {
+    animation: popover-in 180ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  html[dir='ltr'] .animate-drawer-in {
+    animation: drawer-in-ltr 240ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  html[dir='rtl'] .animate-drawer-in {
+    animation: drawer-in-rtl 240ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .animate-loading-progress {
+    animation: loading-progress 1.8s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  }
+}
+
+/* Reduced motion: show everything immediately, no movement. */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+  }
+  .reveal.is-visible {
+    animation: none;
+  }
+}

@@ -1,0 +1,6 @@
+apiVersion: v2
+name: aerotech-web
+description: Helm chart for the AeroTech airline B2C web app (Next.js)
+type: application
+version: 0.1.0
+appVersion: "0.0.0"

@@ -1,0 +1,88 @@
+# GitLab CI for the AeroTech web monorepo.
+# Pipeline scope: install -> verify (lint/typecheck/test/build) -> package (build & push image).
+# Deployment is intentionally NOT automated here (handled manually via Helm or via Rancher Fleet/GitOps).
+
+stages:
+  - verify
+  - package
+
+variables:
+  NODE_IMAGE: node:22-alpine
+  PNPM_STORE_DIR: "$CI_PROJECT_DIR/.pnpm-store"
+  NEXT_TELEMETRY_DISABLED: "1"
+  # Image coordinates in the GitLab Container Registry.
+  IMAGE: "$CI_REGISTRY_IMAGE/web"
+
+# Reusable setup for Node jobs: enable pnpm (pinned by packageManager) and install deps.
+.node:
+  image: $NODE_IMAGE
+  before_script:
+    - corepack enable
+    - pnpm config set store-dir "$PNPM_STORE_DIR"
+    - pnpm install --frozen-lockfile
+  cache:
+    key:
+      files:
+        - pnpm-lock.yaml
+    paths:
+      - .pnpm-store
+  rules:
+    - if: '$CI_COMMIT_BRANCH'
+    - if: '$CI_COMMIT_TAG'
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+
+lint:
+  extends: .node
+  stage: verify
+  script:
+    - pnpm -r run lint
+
+typecheck:
+  extends: .node
+  stage: verify
+  script:
+    - pnpm -r run typecheck
+
+test:
+  extends: .node
+  stage: verify
+  script:
+    - pnpm -r run test
+  artifacts:
+    when: always
+    reports:
+      junit: packages/**/junit.xml
+    expire_in: 1 week
+
+build:
+  extends: .node
+  stage: verify
+  script:
+    - pnpm --filter @aerotech/web build
+
+# Build the production image and push to the GitLab Container Registry (Kaniko, no Docker daemon).
+build_image:
+  stage: package
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  needs:
+    - lint
+    - typecheck
+    - test
+    - build
+  before_script:
+    - mkdir -p /kaniko/.docker
+    - |
+      echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" \
+        > /kaniko/.docker/config.json
+  script:
+    - >-
+      /kaniko/executor
+      --context "$CI_PROJECT_DIR"
+      --dockerfile "$CI_PROJECT_DIR/Dockerfile"
+      --destination "$IMAGE:$CI_COMMIT_SHORT_SHA"
+      --destination "$IMAGE:$CI_COMMIT_REF_SLUG"
+  rules:
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+    - if: '$CI_COMMIT_TAG'

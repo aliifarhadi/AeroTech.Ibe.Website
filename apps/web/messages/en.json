@@ -1,0 +1,635 @@
+{
+  "Brand": {
+    "name": "dotair"
+  },
+  "Common": {
+    "skipToContent": "Skip to content",
+    "comingSoon": "This page is part of the design preview. Full content arrives in a later phase."
+  },
+  "Nav": {
+    "book": "Book",
+    "manage": "Manage",
+    "checkIn": "Check-in",
+    "flightStatus": "Flight status",
+    "destinations": "Destinations",
+    "offers": "Offers",
+    "help": "Help",
+    "loyalty": "Loyalty",
+    "login": "Log in",
+    "signup": "Sign up",
+    "about": "About",
+    "menu": "Menu",
+    "search": "Search",
+    "explore": "Explore",
+    "experience": "Experience",
+    "club": "DotAir Club"
+  },
+  "Home": {
+    "heroBadge": "Direct from the airline",
+    "title": "Discover <hl>great fares</hl> worldwide",
+    "heroCta": "Save up to 15%",
+    "subtitle": "Search flights, manage your booking, and check in — in your language and reading direction."
+  },
+  "LocaleSwitcher": {
+    "label": "Language and market"
+  },
+  "Widget": {
+    "ariaTabs": "Booking options",
+    "tabs": {
+      "book": "Book a flight",
+      "stopover": "Stopover / Packages",
+      "manage": "Manage / Check in",
+      "flightStatus": "Flight status"
+    },
+    "tripType": {
+      "legend": "Trip type",
+      "roundTrip": "Return",
+      "oneWay": "One way",
+      "multiCity": "Multi-city"
+    },
+    "from": "From",
+    "to": "To",
+    "fromPlaceholder": "From",
+    "toPlaceholder": "To",
+    "swap": "Swap origin and destination",
+    "depart": "Departure",
+    "return": "Return",
+    "passengers": "Passengers",
+    "passengersCount": "{count, plural, one {# passenger} other {# passengers}}",
+    "paxClassLabel": "Passengers / Class",
+    "paxClass": "{count, plural, one {# Passenger} other {# Passengers}}, {cabin}",
+    "passengerPicker": {
+      "title": "Passengers and cabin",
+      "adults": "Adults",
+      "children": "Children",
+      "infants": "Infants",
+      "cabin": "Cabin",
+      "done": "Done",
+      "increase": "Increase {label}",
+      "decrease": "Decrease {label}"
+    },
+    "selectDate": "Select date",
+    "previousMonth": "Previous month",
+    "nextMonth": "Next month",
+    "today": "Today",
+    "noAirportsFound": "No airports found",
+    "dateRange": {
+      "flexibleDates": "My dates are flexible",
+      "clearAll": "Clear all",
+      "continue": "Continue"
+    },
+    "useMiles": "Book using miles",
+    "cabin": "Cabin",
+    "cabins": {
+      "economy": "Economy",
+      "premiumEconomy": "Premium economy",
+      "business": "Business",
+      "first": "First"
+    },
+    "promo": "Promo code",
+    "promoPlaceholder": "Enter code",
+    "addPromo": "Add promo code",
+    "search": "Search flights",
+    "manage": {
+      "reference": "Booking reference",
+      "surname": "Surname",
+      "cta": "Find booking"
+    },
+    "checkIn": {
+      "reference": "Booking reference or ticket",
+      "surname": "Surname",
+      "cta": "Check in"
+    },
+    "status": {
+      "flightNumber": "Flight number",
+      "date": "Date",
+      "cta": "Check status"
+    },
+    "errors": {
+      "from": "Select a departure city",
+      "to": "Select a destination city",
+      "sameAirport": "Origin and destination must differ",
+      "depart": "Choose a departure date",
+      "returnDate": "Choose a return date"
+    },
+    "bookCash": "Book",
+    "bookMiles": "Book with miles",
+    "flexibleDates": "Flexible dates"
+  },
+  "Trust": {
+    "items": {
+      "a": {
+        "title": "Best fare promise",
+        "desc": "Transparent pricing with no hidden fees."
+      },
+      "b": {
+        "title": "Secure payments",
+        "desc": "Protected checkout with trusted providers."
+      },
+      "c": {
+        "title": "24/7 support",
+        "desc": "Real help whenever you travel."
+      },
+      "d": {
+        "title": "Flexible changes",
+        "desc": "Manage or change your trip with ease."
+      }
+    }
+  },
+  "Destinations": {
+    "eyebrow": "Explore",
+    "title": "Popular destinations",
+    "subtitle": "Inspiration for your next trip.",
+    "from": "from",
+    "cta": "View all destinations",
+    "cities": {
+      "DXB": "Dubai",
+      "IST": "Istanbul",
+      "LHR": "London",
+      "BER": "Berlin"
+    }
+  },
+  "Offers": {
+    "eyebrow": "Deals",
+    "title": "Current offers",
+    "subtitle": "Deals to help you travel for less.",
+    "cta": "See details",
+    "cards": {
+      "a": {
+        "badge": "Limited time",
+        "title": "Companion fares",
+        "desc": "Bring a travel companion for less on selected routes."
+      },
+      "b": {
+        "badge": "Members",
+        "title": "Member-only prices",
+        "desc": "Log in to unlock fares reserved for loyalty members."
+      },
+      "c": {
+        "badge": "Seasonal",
+        "title": "Last-minute escapes",
+        "desc": "Spontaneous getaways at reduced fares this season."
+      }
+    }
+  },
+  "Loyalty": {
+    "eyebrow": "Rewards",
+    "title": "Earn miles on every trip",
+    "body": "Join the loyalty program to earn and redeem miles, unlock member fares, and travel your way.",
+    "join": "Join now",
+    "login": "Log in"
+  },
+  "AppPromo": {
+    "title": "Take your trip with you",
+    "body": "Install the app for boarding passes, flight updates, and faster check-in.",
+    "cta": "Get the app"
+  },
+  "About": {
+    "eyebrow": "About DotAir",
+    "title": "Flying you <hl>closer</hl> to what matters",
+    "subtitle": "We're a modern airline built around one idea: travel should feel effortless, transparent, and human — in every language you speak.",
+    "stats": {
+      "destinations": {
+        "value": "120+",
+        "label": "Destinations"
+      },
+      "onTime": {
+        "value": "92%",
+        "label": "On-time performance"
+      },
+      "guests": {
+        "value": "18M",
+        "label": "Guests a year"
+      },
+      "fleet": {
+        "value": "60",
+        "label": "Modern aircraft"
+      }
+    },
+    "storyEyebrow": "Our story",
+    "storyTitle": "Built around the people who fly",
+    "storyP1": "DotAir began with a simple belief — that booking and managing a trip should be as pleasant as the journey itself. No hidden fees, no dead ends, no jargon.",
+    "storyP2": "Today we connect cities across the world with a young, efficient fleet and a direct channel designed to put you in control, from search to check-in.",
+    "valuesEyebrow": "What we stand for",
+    "valuesTitle": "Our values",
+    "values": {
+      "safety": {
+        "title": "Safety first",
+        "desc": "Every decision starts with the safety of our guests and crew — no compromises, ever."
+      },
+      "guests": {
+        "title": "Guest-obsessed",
+        "desc": "We design around real travellers, with clear pricing and help whenever you need it."
+      },
+      "planet": {
+        "title": "Lighter on the planet",
+        "desc": "A fuel-efficient fleet and smarter operations to shrink our footprint each year."
+      }
+    },
+    "ctaTitle": "Ready to fly with us?",
+    "ctaBody": "Find fares to over 120 destinations worldwide.",
+    "ctaButton": "Book a flight"
+  },
+  "Contact": {
+    "eyebrow": "Contact us",
+    "title": "We're here to help",
+    "subtitle": "Reach the DotAir team any time — by phone, email, or live chat, in your language.",
+    "methods": {
+      "phone": {
+        "title": "Call us",
+        "detail": "+49 30 1234 5678",
+        "note": "24/7, every day"
+      },
+      "email": {
+        "title": "Email",
+        "detail": "help@dotair.example",
+        "note": "We reply within 24 hours"
+      },
+      "chat": {
+        "title": "Live chat",
+        "detail": "Chat in the app",
+        "note": "Fastest for booking help"
+      },
+      "offices": {
+        "title": "Offices",
+        "detail": "Find a DotAir office",
+        "note": "In 40+ countries"
+      }
+    },
+    "hoursTitle": "Support hours",
+    "hours": "Phone and chat support are available 24/7, in multiple languages.",
+    "formTitle": "Send us a message",
+    "form": {
+      "name": "Full name",
+      "email": "Email address",
+      "subject": "Subject",
+      "subjects": {
+        "booking": "Booking help",
+        "baggage": "Baggage",
+        "refund": "Refunds & changes",
+        "other": "Something else"
+      },
+      "message": "Message",
+      "send": "Send message"
+    },
+    "successTitle": "Thanks — your message is on its way.",
+    "successBody": "Our team will get back to you within 24 hours."
+  },
+  "Footer": {
+    "rights": "All rights reserved.",
+    "stayInTouch": "Stay in touch",
+    "columns": {
+      "bookManage": "Book & Manage",
+      "explore": "Explore",
+      "help": "Help",
+      "about": "About DotAir",
+      "business": "Business"
+    },
+    "links": {
+      "bookFlight": "Book a flight",
+      "manage": "Manage booking",
+      "checkIn": "Check-in",
+      "flightStatus": "Flight status",
+      "destinations": "Destinations",
+      "offers": "Offers",
+      "experience": "Experience",
+      "club": "DotAir Club",
+      "contact": "Contact us",
+      "faqs": "FAQs",
+      "baggage": "Baggage",
+      "assistance": "Special assistance",
+      "aboutUs": "About us",
+      "careers": "Careers",
+      "newsroom": "Newsroom",
+      "sustainability": "Sustainability",
+      "corporate": "Corporate travel",
+      "agents": "Travel agents",
+      "partners": "Partners"
+    },
+    "legal": {
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "cookies": "Cookies"
+    },
+    "getApp": "Get the app"
+  },
+  "Passengers": {
+    "back": "Back",
+    "progress": "Booking progress",
+    "stepFlights": "Flights",
+    "stepPassengers": "Passengers",
+    "stepSeats": "Seats",
+    "stepPayment": "Payment",
+    "eyebrow": "Passenger information",
+    "title": "Who is travelling?",
+    "subtitle": "Enter passenger and contact details exactly as they appear on the travel document.",
+    "documentNotice": "Passenger names must exactly match the passport or travel document used for this journey.",
+    "adultOne": "Adult 1",
+    "requiredFields": "All required fields must be completed.",
+    "titleLabel": "Title",
+    "select": "Select",
+    "mr": "Mr",
+    "ms": "Ms",
+    "mrs": "Mrs",
+    "givenName": "Given name",
+    "familyName": "Family name",
+    "dateOfBirth": "Date of birth",
+    "dateHint": "Use YYYY-MM-DD format.",
+    "gender": "Gender (optional)",
+    "preferNot": "Prefer not to say",
+    "female": "Female",
+    "male": "Male",
+    "loyalty": "Add loyalty membership",
+    "loyaltyProgram": "Loyalty programme",
+    "loyaltyNumber": "Membership number",
+    "contactTitle": "Contact details",
+    "contactHint": "We’ll use these details for booking updates and disruption notifications.",
+    "email": "Email address",
+    "countryCode": "Code",
+    "phone": "Phone number",
+    "tripSummary": "Your trip",
+    "passengers": "Passengers",
+    "oneAdult": "1 adult",
+    "fare": "Fare",
+    "total": "Total",
+    "continue": "Continue to seats",
+    "secure": "Your details are protected and are not stored in this browser."
+  },
+  "SearchResults": {
+    "title": "Select your departure flight",
+    "editSearch": "Edit search",
+    "resultsFound": "flights found",
+    "sortBy": "Sort by",
+    "recommended": "Recommended",
+    "lowestPrice": "Lowest price",
+    "shortest": "Shortest",
+    "filters": "Filter results",
+    "stops": "Stops",
+    "anyStops": "Any stops",
+    "nonstop": "Nonstop",
+    "oneStop": "1 stop",
+    "departureTime": "Departure time",
+    "morning": "Morning",
+    "afternoon": "Afternoon",
+    "evening": "Evening",
+    "flexible": "Any time",
+    "select": "Select",
+    "selected": "Selected",
+    "from": "From",
+    "total": "Total",
+    "duration": "Duration",
+    "direct": "Direct",
+    "stop": "stop",
+    "economy": "Economy",
+    "cabinBaggage": "Cabin bag",
+    "checkedBaggage": "Checked bag",
+    "changes": "Changes allowed",
+    "refundable": "Refundable",
+    "perPassenger": "per passenger",
+    "details": "Flight details",
+    "bestValue": "Best value",
+    "noResults": "No flights match these filters.",
+    "fareFamily": "Continue selecting your flight and fare",
+    "lite": "Economy Lite",
+    "classic": "Economy Classic",
+    "convenience": "Economy Convenience",
+    "comfort": "Economy Comfort",
+    "continueBooking": "Continue booking",
+    "business": "Business",
+    "first": "First",
+    "selectFlights": "Select flights",
+    "passengerServices": "Passenger and services",
+    "paymentDetails": "Payment details",
+    "tripSummary": "Trip summary",
+    "flightSelected": "Flight selected",
+    "back": "Back",
+    "login": "Log in",
+    "travelRequirements": "Travel requirements",
+    "seeMoreDates": "See more dates",
+    "changeCurrency": "Change currency",
+    "advisory": "Review relevant travel advisories before booking.",
+    "standardSeat": "Standard seat selection",
+    "preferredSeat": "Preferred seat selection",
+    "routeChanges": "Flight/route changes",
+    "carryOn": "Carry-on baggage",
+    "upgradeAvios": "Upgrade with Avios",
+    "noFees": "No fees",
+    "forFee": "For a fee",
+    "oneChange": "1 change",
+    "unlimited": "Unlimited",
+    "available": "Available",
+    "selectFare": "Select fare",
+    "seeFares": "See fares",
+    "totalAllPassengers": "Total for all passengers",
+    "earnAvios": "Earn Avios",
+    "businessClass": "Business Class",
+    "departureSelected": "Departure selected",
+    "confirm": "Confirm",
+    "operatedBy": "Operated by DotAir",
+    "close": "Close",
+    "loadingWelcome": "Welcome on board",
+    "loadingTitle": "It’s the details that make a journey perfect",
+    "loadingResults": "Loading results…",
+    "loadingAward": "Airline award",
+    "earliest": "Earliest departure",
+    "maxPrice": "Max price",
+    "resetFilters": "Reset",
+    "showResults": "{count, plural, one {Show # flight} other {Show # flights}}",
+    "noResultsHint": "Try adjusting your filters or dates.",
+    "roundTrip": "Round trip",
+    "oneWay": "One way",
+    "hoursShort": "h",
+    "minutesShort": "m",
+    "nextDay": "+1",
+    "seatsLeft": "{count, plural, one {# seat left} other {# seats left}}",
+    "compareFares": "Compare fares and what is included",
+    "view": "View",
+    "fareFamilies": {
+      "light": "Light",
+      "classic": "Classic",
+      "plus": "Plus",
+      "flex": "Flex"
+    },
+    "fareRows": {
+      "rebooking": "Rebooking",
+      "refund": "Refund",
+      "cabinBag": "Cabin baggage",
+      "checkedBag": "Checked baggage",
+      "seat": "Seat selection",
+      "catering": "Onboard meal",
+      "miles": "Miles earned"
+    },
+    "fareValues": {
+      "included": "Included",
+      "forFee": "For a fee",
+      "notAllowed": "Not available",
+      "atCheckIn": "At check-in"
+    },
+    "businessPerks": {
+      "perkSeat": "More spacious seat",
+      "perkBoarding": "Priority boarding",
+      "perkLounge": "Lounge access",
+      "perkMeal": "Premium dining"
+    }
+  },
+  "Baggage": {
+    "eyebrow": "Baggage",
+    "title": "Everything about your baggage",
+    "subtitle": "Cabin and checked allowances, extra bags, special items and what to do if something goes wrong.",
+    "nav": {
+      "cabin": "Cabin baggage",
+      "checked": "Checked baggage",
+      "extra": "Extra baggage",
+      "special": "Special items",
+      "restricted": "Restricted items",
+      "help": "Delayed or damaged"
+    },
+    "cabin": {
+      "title": "Cabin baggage",
+      "intro": "Every traveller may bring one personal item plus a carry-on bag, within the limits for their cabin.",
+      "personalItem": "Personal item",
+      "personalItemNote": "Fits under the seat in front — 40 × 30 × 15 cm.",
+      "carryOn": "Carry-on bag",
+      "colWeight": "Max weight",
+      "colDimensions": "Dimensions",
+      "rows": {
+        "economy": {
+          "weight": "1 × 8 kg",
+          "dimensions": "55 × 40 × 23 cm"
+        },
+        "premiumEconomy": {
+          "weight": "1 × 10 kg",
+          "dimensions": "55 × 40 × 23 cm"
+        },
+        "business": {
+          "weight": "2 × 10 kg",
+          "dimensions": "55 × 40 × 23 cm"
+        },
+        "first": {
+          "weight": "2 × 12 kg",
+          "dimensions": "55 × 40 × 23 cm"
+        }
+      }
+    },
+    "checked": {
+      "title": "Checked baggage",
+      "intro": "Your free checked allowance depends on your cabin and fare. Weight limits are per piece.",
+      "colCabin": "Cabin",
+      "colAllowance": "Free allowance",
+      "colPiece": "Max per piece",
+      "rows": {
+        "economy": {
+          "allowance": "1 bag",
+          "piece": "23 kg"
+        },
+        "premiumEconomy": {
+          "allowance": "2 bags",
+          "piece": "23 kg"
+        },
+        "business": {
+          "allowance": "2 bags",
+          "piece": "32 kg"
+        },
+        "first": {
+          "allowance": "3 bags",
+          "piece": "32 kg"
+        }
+      },
+      "note": "Light fares may not include checked baggage — add it during booking or in Manage."
+    },
+    "extra": {
+      "title": "Extra & excess baggage",
+      "body": "Need more space? Add extra bags in advance to save versus airport rates.",
+      "items": {
+        "a": {
+          "title": "Add before you fly",
+          "desc": "Prepay extra bags in Manage booking up to 6 hours before departure."
+        },
+        "b": {
+          "title": "Overweight & oversized",
+          "desc": "Bags above your weight limit are carried for an additional fee where space allows."
+        }
+      }
+    },
+    "special": {
+      "title": "Special baggage",
+      "body": "Travelling with something out of the ordinary? Let us know in advance so we can prepare.",
+      "items": {
+        "sports": {
+          "title": "Sports equipment",
+          "desc": "Skis, golf clubs and bikes travel as checked baggage in a suitable case."
+        },
+        "music": {
+          "title": "Musical instruments",
+          "desc": "Small instruments fit in the cabin; larger ones can use an extra seat."
+        },
+        "medical": {
+          "title": "Medical & mobility",
+          "desc": "Wheelchairs and essential medical devices are carried free of charge."
+        },
+        "infant": {
+          "title": "Strollers & car seats",
+          "desc": "One stroller and one car seat per child, carried free of charge."
+        }
+      }
+    },
+    "restricted": {
+      "title": "Restricted & prohibited items",
+      "body": "For everyone’s safety, some items are limited or not allowed on board.",
+      "cabinOnly": "Carry in cabin only",
+      "cabinOnlyItems": "Power banks, spare lithium batteries, e-cigarettes.",
+      "checkedOnly": "Pack in checked baggage",
+      "checkedOnlyItems": "Sharp objects, tools and sporting bats.",
+      "prohibited": "Never allowed",
+      "prohibitedItems": "Explosives, flammable liquids and gases, and other dangerous goods.",
+      "note": "If in doubt, check with our team before you travel."
+    },
+    "help": {
+      "title": "Delayed or damaged baggage",
+      "body": "If your bag does not arrive with you or is damaged, report it at the airport baggage desk before you leave, then track its status online.",
+      "cta": "Report a baggage issue",
+      "track": "Track my baggage"
+    },
+    "ctaTitle": "Add baggage to your trip",
+    "ctaBody": "Manage your booking to add bags and choose extras.",
+    "ctaButton": "Manage booking"
+  },
+  "HomeV2": {
+    "heroTitle": "Where would you like to go?",
+    "heroSubtitle": "Fly smart",
+    "bannerText": "DotAir’s new and improved online services, at a glance.",
+    "bannerCta": "Learn more",
+    "promos": {
+      "app": {
+        "title": "Meet the new DotAir app",
+        "desc": "Book, check in and carry your boarding pass — all in one place."
+      },
+      "assistant": {
+        "title": "Say hello to our travel assistant",
+        "desc": "Get instant answers and manage your trip through in-app chat."
+      },
+      "guide": {
+        "title": "A guide to planning your trip",
+        "desc": "From baggage to seats — everything you need before you fly."
+      }
+    },
+    "noticesTitle": "Notices",
+    "noticesViewAll": "View all",
+    "notices": {
+      "a": "Schedule update on the Doha–London route",
+      "b": "Updated partner benefits for DotAir Club members",
+      "c": "New premium lounge now open in Istanbul",
+      "d": "Improved in-flight Wi-Fi across the fleet"
+    },
+    "appTitle": "DotAir App",
+    "appDesc": "Your travel manager, in the palm of your hand.",
+    "appCta": "Get the app",
+    "travelTitle": "Complete your travel",
+    "travel": {
+      "gift": "Gift cards",
+      "hotels": "Hotels",
+      "cars": "Car rental",
+      "dutyFree": "Duty free"
+    }
+  }
+}

@@ -1,0 +1,107 @@
+replicaCount: 2
+
+image:
+  # Override with your GitLab Container Registry path, e.g.
+  # registry.gitlab.com/<group>/<project>/web
+  repository: registry.example.com/aerotech/web
+  tag: "" # defaults to .Chart.AppVersion when empty; set to the CI image tag (commit SHA)
+  pullPolicy: IfNotPresent
+
+imagePullSecrets: []
+  # - name: gitlab-registry
+
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  create: true
+  name: ""
+
+podAnnotations: {}
+
+podSecurityContext:
+  runAsNonRoot: true
+  runAsUser: 1001
+  runAsGroup: 1001
+  fsGroup: 1001
+  seccompProfile:
+    type: RuntimeDefault
+
+securityContext:
+  allowPrivilegeEscalation: false
+  readOnlyRootFilesystem: true
+  capabilities:
+    drop:
+      - ALL
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 3000
+
+containerPort: 3000
+
+ingress:
+  enabled: true
+  className: nginx
+  annotations: {}
+  hosts:
+    - host: www.example.com
+      paths:
+        - path: /
+          pathType: Prefix
+  tls: []
+  #  - secretName: aerotech-web-tls
+  #    hosts:
+  #      - www.example.com
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 256Mi
+  limits:
+    cpu: "1"
+    memory: 512Mi
+
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 6
+  targetCPUUtilizationPercentage: 70
+  targetMemoryUtilizationPercentage: 80
+
+livenessProbe:
+  httpGet:
+    path: /api/health
+    port: http
+  initialDelaySeconds: 15
+  periodSeconds: 20
+  timeoutSeconds: 3
+  failureThreshold: 3
+
+readinessProbe:
+  httpGet:
+    path: /api/health
+    port: http
+  initialDelaySeconds: 5
+  periodSeconds: 10
+  timeoutSeconds: 3
+  failureThreshold: 3
+
+# Non-sensitive runtime env, rendered into a ConfigMap.
+# NOTE: NEXT_PUBLIC_* values are inlined at BUILD time, not read here at runtime.
+# Server-only vars (e.g. WEB_BFF_BASE_URL) ARE read at runtime from this map.
+env:
+  NODE_ENV: production
+  WEB_BFF_BASE_URL: "http://bff.aerotech.svc.cluster.local:5000"
+
+# Sensitive env injected from an existing Secret (created out-of-band or by CI/Fleet).
+# Leave empty to disable.
+existingSecret: ""
+
+nodeSelector: {}
+tolerations: []
+affinity: {}
+
+# Spread replicas across nodes for availability.
+topologySpreadConstraints: []
