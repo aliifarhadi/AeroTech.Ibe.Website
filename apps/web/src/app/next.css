@@ -1,0 +1,9 @@
+/*
+ * Stylesheet of the redesigned routes (route group "(next)").
+ * It is loaded only by app/(next)/[locale]/layout.tsx, a separate root layout, so nothing here
+ * reaches the current site: the two never share a document.
+ */
+@import 'tailwindcss';
+@import './fonts.css';
+@import '@aerotech/ui/styles/tokens.css';
+@source '../../../../packages/ui/src';

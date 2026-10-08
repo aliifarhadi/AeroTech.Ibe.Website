@@ -1,0 +1,235 @@
+/*
+ * dot air design tokens (v6). Single source of truth for colour, type, space, radius, shadow, motion.
+ *
+ * Three tiers:
+ *   1. primitives  (:root, --p-*)    raw values. Never used in components.
+ *   2. semantic    (@theme)          what a value is FOR. Components use only these, through Tailwind utilities.
+ *   3. component   (in the component) only when a component needs a value no semantic token covers.
+ *
+ * Usage: see apps/web/src/app/next.css (the stylesheet of the redesigned routes):
+ *   @import 'tailwindcss';
+ *   @import '@aerotech/ui/styles/tokens.css';
+ *   @source '../../../../packages/ui/src';
+ *
+ * The default Tailwind palette, radii, shadows, fonts and breakpoints are switched off below, so a
+ * class such as bg-neutral-100 or rounded-xl no longer exists and fails review instead of shipping.
+ */
+
+/* ---------- 1. primitives ---------- */
+:root {
+  --p-ink-950: #0d0b0b;
+  --p-ink-900: #131112;
+  --p-ink-850: #1a1817;
+  --p-ink-800: #211e1d;
+  --p-ink-700: #2e2a28;
+  --p-ink-600: #33343a;
+
+  --p-sand-50: #ffffff;
+  --p-sand-100: #efebe4;
+  --p-sand-200: #cfcfc9;
+  --p-sand-300: #b4ada4;
+  --p-sand-400: #99928a;
+  --p-sand-500: #5a5b5f;
+
+  --p-sun-300: #ffc73a;
+  --p-sun-400: #fdb814; /* brand yellow */
+  --p-sun-500: #e3a000;
+  --p-cream-50: #fcf3e3; /* text on the hero scene */
+  --p-coral-400: #e8674a; /* scene and destination tiles only */
+  --p-orange-400: #f7941d; /* brand orange; reserved for illustrations and the logo */
+
+  --p-green-400: #35c282;
+  --p-red-300: #f0a79e;
+  --p-red-400: #ff7a6b;
+  --p-blue-400: #6fb1ff;
+
+  --p-white-a04: rgb(255 255 255 / 0.04);
+  --p-white-a07: rgb(255 255 255 / 0.07);
+  --p-white-a12: rgb(255 255 255 / 0.12);
+  --p-white-a22: rgb(255 255 255 / 0.22);
+  --p-white-a40: rgb(255 255 255 / 0.4);
+  --p-sun-a08: rgb(253 184 20 / 0.08);
+  --p-sun-a12: rgb(253 184 20 / 0.12);
+  --p-sun-a60: rgb(253 184 20 / 0.6);
+
+  color-scheme: dark;
+}
+
+/* ---------- 2. semantic tokens (generate Tailwind utilities) ---------- */
+@theme {
+  /* switch off Tailwind defaults we do not want anyone to reach for */
+  --color-*: initial;
+  --radius-*: initial;
+  --shadow-*: initial;
+  --font-*: initial;
+  --text-*: initial;
+  --breakpoint-*: initial;
+  --ease-*: initial;
+  --animate-*: initial;
+
+  /* colour: surfaces (bg-canvas, bg-surface-1 ...) */
+  --color-canvas: var(--p-ink-900);
+  --color-canvas-deep: var(--p-ink-950); /* footer */
+  --color-surface-1: var(--p-ink-850); /* alternate section, inset wells */
+  --color-surface-2: var(--p-ink-800); /* cards, popovers */
+  --color-surface-3: var(--p-ink-700); /* selected row, hovered card */
+  --color-surface-hover: var(--p-white-a07);
+  --color-scrim: rgb(0 0 0 / 0.6);
+
+  /* colour: text (text-default, text-muted ...) */
+  --color-default: var(--p-sand-100);
+  --color-strong: var(--p-sand-50);
+  --color-soft: var(--p-sand-200);
+  --color-muted: var(--p-sand-300); /* 4.5:1 or better on every surface */
+  --color-faint: var(--p-sand-400); /* canvas and surface-1 only */
+  --color-disabled: var(--p-sand-500);
+
+  /* colour: borders (border-hairline, border-strong ...) */
+  --color-hairline: var(--p-white-a12);
+  --color-strong-line: var(--p-white-a22);
+  --color-hover-line: var(--p-white-a40);
+
+  /* colour: action. Yellow marks the primary action and the selected state, nothing else. */
+  --color-action: var(--p-sun-400);
+  --color-action-hover: var(--p-sun-300);
+  --color-action-pressed: var(--p-sun-500);
+  --color-on-action: #15161a;
+  --color-action-soft: var(--p-sun-a12);
+  --color-action-softer: var(--p-sun-a08);
+  --color-action-line: var(--p-sun-a60);
+  --color-focus: var(--p-sun-400);
+
+  /* colour: status */
+  --color-success: var(--p-green-400);
+  --color-danger: var(--p-red-400);
+  --color-danger-soft: var(--p-red-300);
+  --color-info: var(--p-blue-400);
+  --color-warning: var(--p-sun-400);
+
+  /* type families. Persian and Arabic always resolve to Alibaba (see the :lang rule at the bottom). */
+  --font-sans: 'Graphik', 'Alibaba', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-fa: 'Alibaba', 'Graphik', Tahoma, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, Menlo, monospace;
+
+  /* type scale: text-caption ... text-display. Line heights suit Persian; Latin locales tighten in base. */
+  --text-caption: 0.75rem;
+  --text-caption--line-height: 1.6;
+  --text-small: 0.875rem;
+  --text-small--line-height: 1.8;
+  --text-body: 1rem;
+  --text-body--line-height: 1.8;
+  --text-field: 1.0625rem;
+  --text-field--line-height: 1.7;
+  --text-title: 1.1875rem;
+  --text-title--line-height: 1.5;
+  --text-heading: clamp(1.625rem, 3vw, 2.375rem);
+  --text-heading--line-height: 1.4;
+  --text-display: clamp(1.875rem, 4.2vw, 3.375rem);
+  --text-display--line-height: 1.35;
+  /* weights: Tailwind's own font-normal (400) and font-bold (700). Alibaba ships no 500/600. */
+
+  /* space: Tailwind's numeric scale on a 4px base (p-4 = 16px). Section rhythm has names. */
+  --spacing: 0.25rem;
+  --spacing-gutter: clamp(1rem, 4vw, 2rem);
+  --spacing-section: clamp(4rem, 8vw, 6.5rem);
+  --container-page: 77rem;
+
+  /* radius: rounded-control, rounded-card ... */
+  --radius-chip: 999px;
+  --radius-small: 0.5rem;
+  --radius-control: 0.875rem; /* buttons, inputs */
+  --radius-group: 1.125rem; /* field group, info card */
+  --radius-card: 1.5rem; /* cards, popovers, tiles */
+
+  /* elevation: shadow-raised, shadow-overlay */
+  --shadow-raised: inset 0 1px 0 rgb(255 255 255 / 0.07), 0 30px 80px rgb(0 0 0 / 0.55);
+  --shadow-overlay: 0 30px 80px rgb(0 0 0 / 0.6);
+  --shadow-action: 0 8px 28px rgb(253 184 20 / 0.35);
+
+  /* motion: ease-out-soft, ease-pop; durations as plain custom properties below */
+  --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-pop: cubic-bezier(0.3, 1.4, 0.5, 1);
+
+  /* breakpoints: named after what changes, mobile first (md: = 701px and up ...) */
+  --breakpoint-sm: 30rem;
+  --breakpoint-md: 43.8125rem; /* 701px: sheets become popovers, bottom nav goes away */
+  --breakpoint-lg: 56.3125rem; /* 901px: two-column sections */
+  --breakpoint-xl: 68.8125rem; /* 1101px: full header, one-row booking form */
+
+  /* animations used by more than one component */
+  --animate-fade-up: fade-up 0.9s var(--ease-out-soft) backwards;
+  --animate-pop-in: pop-in 0.28s var(--ease-out-soft);
+  --animate-sheet-in: sheet-in 0.35s var(--ease-out-soft);
+  --animate-spin: spin 0.7s linear infinite;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+  }
+  @keyframes pop-in {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+  }
+  @keyframes sheet-in {
+    from {
+      transform: translateY(100%);
+    }
+  }
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+/* tokens Tailwind has no namespace for */
+:root {
+  --duration-fast: 150ms; /* hover, press */
+  --duration-base: 250ms; /* state change */
+  --duration-slow: 450ms; /* enter, layout */
+  --tap-min: 2.75rem; /* 44px. Mobile floor is 38px for dense controls such as calendar days. */
+  --header-height: 4rem;
+  --z-header: 50;
+  --z-popover: 60;
+  --z-sheet: 80;
+  --z-toast: 90;
+}
+@media (max-width: 700px) {
+  :root {
+    --header-height: 3.5rem;
+  }
+}
+
+/* ---------- base ---------- */
+@layer base {
+  html {
+    background: var(--color-canvas);
+    color: var(--color-default);
+    font-family: var(--font-sans);
+    font-size: 100%;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  :where(html:lang(fa), html:lang(ar)) {
+    font-family: var(--font-fa);
+    line-height: 1.8;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
