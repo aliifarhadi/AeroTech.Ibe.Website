@@ -9,7 +9,7 @@ import { getDirection } from '@aerotech/domain';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
 import { routing } from '@/i18n/routing';
-import '../globals.css';
+import '../../globals.css';
 
 export const metadata: Metadata = {
   title: 'DotAir',
