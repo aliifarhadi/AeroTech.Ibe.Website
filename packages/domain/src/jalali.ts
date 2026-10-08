@@ -36,7 +36,7 @@ function isGregorianLeapYear(year: number): boolean {
 }
 
 export function gregorianToJalali(date: Date): JalaliDate {
-  let gy = date.getFullYear() - 1600;
+  const gy = date.getFullYear() - 1600;
   const gm = date.getMonth();
   const gd = date.getDate() - 1;
 
@@ -68,7 +68,7 @@ export function gregorianToJalali(date: Date): JalaliDate {
 
 export function jalaliToGregorian(value: JalaliDate): Date {
   const { year: inputYear, month, day } = value;
-  let jy = inputYear - 979;
+  const jy = inputYear - 979;
   const jm = month - 1;
   const jd = day - 1;
 
