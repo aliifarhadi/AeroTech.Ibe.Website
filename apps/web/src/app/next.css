@@ -6,4 +6,5 @@
 @import 'tailwindcss';
 @import './fonts.css';
 @import '@aerotech/ui/styles/tokens.css';
+@import '../features/next/home/home.css';
 @source '../../../../packages/ui/src';

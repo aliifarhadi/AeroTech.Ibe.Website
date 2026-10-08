@@ -1,7 +1,10 @@
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { FlatCompat } from '@eslint/eslintrc';
-import { designSystemRestrictions } from '@aerotech/config/eslint/design-system';
+import {
+  designSystemRestrictions,
+  illustrationRestrictions,
+} from '@aerotech/config/eslint/design-system';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -30,6 +33,11 @@ const eslintConfig = [
     // Redesigned routes and their features: design tokens only (see @aerotech/config/eslint/design-system).
     files: ['src/app/(next)/**/*.{ts,tsx}', 'src/features/next/**/*.{ts,tsx}'],
     rules: { 'no-restricted-syntax': ['error', ...designSystemRestrictions] },
+  },
+  {
+    // Illustrations (canvas scenes, generated SVG art) carry their own palettes as data.
+    files: ['src/features/next/**/*.art.{ts,tsx}'],
+    rules: { 'no-restricted-syntax': ['error', ...illustrationRestrictions] },
   },
   {
     // The current site must not import the design-system barrel: it pulls every primitive (and

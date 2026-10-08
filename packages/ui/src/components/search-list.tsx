@@ -8,7 +8,6 @@ import {
   ListBoxItem,
   SearchField,
   useFilter,
-  type Key,
 } from 'react-aria-components';
 
 export type SearchListItem = {
@@ -56,7 +55,13 @@ export function SearchList({
         items={items}
         selectionMode="single"
         selectedKeys={selectedId ? [selectedId] : []}
-        onAction={(key: Key) => onSelect(String(key))}
+        // Selection, not onAction: once something is selected React Aria turns a press into a
+        // selection change and stops firing actions. Pressing the selected row again reports it too.
+        onSelectionChange={(keys) => {
+          const [key] = keys === 'all' ? [] : [...keys];
+          const id = key ?? selectedId;
+          if (id != null) onSelect(String(id));
+        }}
         renderEmptyState={() => <p className="px-3 py-5 text-small text-muted">{emptyMessage}</p>}
         className="mt-2 flex max-h-80 flex-col overflow-auto outline-none"
       >

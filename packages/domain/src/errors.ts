@@ -31,11 +31,7 @@ export const ERROR_CODES = [
 export type ErrorCode = (typeof ERROR_CODES)[number];
 
 export type NextAction =
-  | 'retry'
-  | 'refreshSearch'
-  | 'contactSupport'
-  | 'login'
-  | 'acceptPriceChange';
+  'retry' | 'refreshSearch' | 'contactSupport' | 'login' | 'acceptPriceChange';
 
 export type ApiError = {
   code: ErrorCode | string;

@@ -53,7 +53,8 @@ export default async function NextRootLayout({
   return (
     <html lang={locale} dir={getDirection(locale)}>
       <body className="min-h-dvh overflow-x-clip bg-canvas text-default antialiased">
-        <NextIntlClientProvider messages={messages}>
+        {/* Only the redesign's own messages go to the browser. */}
+        <NextIntlClientProvider messages={{ Next: messages.Next }}>
           <UiProvider locale={locale}>{children}</UiProvider>
         </NextIntlClientProvider>
       </body>

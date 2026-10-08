@@ -5,17 +5,13 @@ import {
   useCallback,
   useContext,
   useEffect,
+  useMemo,
   useRef,
   useState,
   type ReactNode,
 } from 'react';
 import { I18nProvider } from 'react-aria-components';
-
-/** Maps an app locale (`fa-ir`) to the BCP 47 tag that formatting and calendars expect (`fa-IR`). */
-export function toBcp47(locale: string): string {
-  const [language, region] = locale.split('-');
-  return region ? `${language?.toLowerCase()}-${region.toUpperCase()}` : locale;
-}
+import { toBcp47 } from '../locale';
 
 type ToastApi = { show: (message: string, durationMs?: number) => void };
 const ToastContext = createContext<ToastApi | null>(null);
@@ -44,9 +40,11 @@ export function UiProvider({ locale, children }: { locale: string; children: Rea
     [],
   );
 
+  const api = useMemo(() => ({ show }), [show]);
+
   return (
     <I18nProvider locale={toBcp47(locale)}>
-      <ToastContext.Provider value={{ show }}>
+      <ToastContext.Provider value={api}>
         {children}
         <div
           role="status"

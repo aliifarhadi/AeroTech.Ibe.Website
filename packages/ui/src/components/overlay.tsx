@@ -125,6 +125,8 @@ export type ResponsiveOverlayProps = {
   /** Popover width class on desktop, for example `w-95`. */
   className?: string;
   placement?: AriaPopoverProps['placement'];
+  /** Set to false to keep the popover on its preferred side; it then shrinks and scrolls instead of flipping. */
+  shouldFlip?: boolean;
   triggerRef?: AriaPopoverProps['triggerRef'];
   isOpen?: boolean;
   onOpenChange?: (open: boolean) => void;

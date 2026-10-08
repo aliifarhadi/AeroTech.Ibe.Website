@@ -631,5 +631,345 @@
       "cars": "Car rental",
       "dutyFree": "Duty free"
     }
+  },
+  "Next": {
+    "brand": "dot air",
+    "skip": "Skip to content",
+    "nav": {
+      "aria": "Main",
+      "book": "Book",
+      "manage": "Manage booking",
+      "checkIn": "Check-in",
+      "status": "Flight status",
+      "destinations": "Destinations",
+      "guide": "Travel guide",
+      "club": "Club",
+      "search": "Search flights",
+      "login": "Log in",
+      "menu": "Menu",
+      "language": "Language and region"
+    },
+    "hero": {
+      "greeting": {
+        "morning": "Good morning",
+        "afternoon": "Good afternoon",
+        "evening": "Good evening",
+        "night": "Good night"
+      },
+      "greetingLine": "{greeting}. Where shall we go?",
+      "mood": {
+        "dawn": "Sunrise",
+        "day": "Daytime",
+        "dusk": "Sunset",
+        "night": "Night"
+      },
+      "tehranTime": "Tehran {time}",
+      "moodAria": "Scene mood: {mood}. Press to change.",
+      "title": "Full stop. New line",
+      "subtitle": "Fly to seven cities in Iran and to Istanbul. Booking takes seconds."
+    },
+    "booking": {
+      "tabsAria": "Services",
+      "tabs": {
+        "book": "Book a flight",
+        "manage": "Manage booking",
+        "checkIn": "Check-in",
+        "status": "Flight status"
+      },
+      "tabsShort": {
+        "book": "Book",
+        "manage": "Manage",
+        "checkIn": "Check-in",
+        "status": "Status"
+      },
+      "tripAria": "Trip type",
+      "round": "Round trip",
+      "oneWay": "One way",
+      "promo": "I have a promo code",
+      "promoLabel": "Promo code",
+      "promoApply": "Apply",
+      "promoSaved": "Code “{code}” saved. It applies when fares are shown.",
+      "promoEmpty": "Enter a promo code.",
+      "points": "Pay with points",
+      "pointsOn": "Results will be shown in Club points.",
+      "pointsOff": "Results will be shown as cash fares.",
+      "from": "From",
+      "to": "To",
+      "toPlaceholder": "Where to?",
+      "chooseOrigin": "Choose origin",
+      "chooseDestination": "Choose destination",
+      "swap": "Swap origin and destination",
+      "swapFirst": "Choose a destination first.",
+      "depart": "Depart",
+      "return": "Return",
+      "addReturn": "Add return",
+      "chooseDate": "Choose date",
+      "dates": "Travel dates",
+      "hintDepart": "Choose your departure date",
+      "hintRange": "Choose your departure date, then your return date",
+      "previousMonth": "Previous month",
+      "nextMonth": "Next month",
+      "passengersClass": "Passengers & class",
+      "passengersCount": "{count, plural, one {# passenger} other {# passengers}}",
+      "paxTitle": "Passengers and class",
+      "adults": "Adults",
+      "adultsHint": "12 years and over",
+      "children": "Children",
+      "childrenHint": "2 to 11 years",
+      "infants": "Infants",
+      "infantsHint": "Under 2 years",
+      "fewer": "Fewer: {label}",
+      "more": "More: {label}",
+      "cabin": "Cabin",
+      "economy": "Economy",
+      "business": "Business",
+      "maxPassengers": "Up to 9 passengers per booking",
+      "done": "Done",
+      "close": "Close",
+      "search": "Search flights",
+      "cityPlaceholder": "City or airport code",
+      "citySearch": "Search cities",
+      "noCity": "No city with this name in the dot air network.",
+      "assistant": "dot assistant",
+      "assistantPlaceholder": "Or type: Friday, two people, Mashhad",
+      "assistantLabel": "Describe your trip",
+      "destinationSet": "Destination set to {city}. Choose dates and search.",
+      "lookup": {
+        "reference": "Booking reference",
+        "referenceOrTicket": "Booking reference or ticket number",
+        "lastName": "Last name",
+        "flightNumber": "Flight number",
+        "route": "Route (optional)",
+        "routePlaceholder": "Tehran to Shiraz",
+        "manageSubmit": "Find booking",
+        "checkInSubmit": "Start check-in",
+        "statusSubmit": "Check status",
+        "required": "Enter: {field}.",
+        "notConnected": "This service is not connected yet in this preview build."
+      }
+    },
+    "cities": {
+      "THR": {
+        "name": "Tehran",
+        "airport": "Mehrabad · Imam Khomeini"
+      },
+      "MHD": {
+        "name": "Mashhad",
+        "airport": "Shahid Hasheminejad Airport"
+      },
+      "SYZ": {
+        "name": "Shiraz",
+        "airport": "Shahid Dastgheib Airport"
+      },
+      "IFN": {
+        "name": "Isfahan",
+        "airport": "Shahid Beheshti Airport"
+      },
+      "TBZ": {
+        "name": "Tabriz",
+        "airport": "Shahid Madani Airport"
+      },
+      "KIH": {
+        "name": "Kish",
+        "airport": "Kish International Airport"
+      },
+      "AWZ": {
+        "name": "Ahvaz",
+        "airport": "Ahvaz International Airport"
+      },
+      "BND": {
+        "name": "Bandar Abbas",
+        "airport": "Bandar Abbas International Airport"
+      },
+      "IST": {
+        "name": "Istanbul",
+        "airport": "Istanbul Airport"
+      }
+    },
+    "duration": {
+      "hm": "{hours} h {minutes} min",
+      "h": "{hours} h",
+      "m": "{minutes} min",
+      "clock": "{time} h"
+    },
+    "inspire": {
+      "title": "Where to this week?",
+      "previous": "Previous",
+      "next": "Next",
+      "aria": "Destinations",
+      "international": "International",
+      "nonstop": "Nonstop"
+    },
+    "network": {
+      "kicker": "Network",
+      "title": "From Tehran to eight destinations",
+      "lead": "Seven cities in Iran plus Istanbul, all nonstop. Pick a destination from the list or on the map.",
+      "listAria": "Destinations",
+      "mapAria": "Map of dot air routes from Tehran",
+      "nonstop": "Nonstop",
+      "international": "International",
+      "destination": "Destination",
+      "distance": "Distance",
+      "km": "km",
+      "flightTime": "Flight time",
+      "flyTo": "Fly to {city}",
+      "note": "Fares change in real time and appear after you search. Flight times are approximate."
+    },
+    "assistant": {
+      "kicker": "Smart assistant",
+      "title": "Describe your trip in one sentence",
+      "lead": "Type where and when, the way you would say it. The dot assistant finds matching flights and suggests the best one.",
+      "name": "dot assistant",
+      "sample": "Sample",
+      "liveFare": "Live fare",
+      "suggests": "dot suggests",
+      "footer": "Each option is priced live",
+      "promptsAria": "Sample requests",
+      "customAnswer": "In the real product the assistant reads this sentence. Sample answer:",
+      "scenarios": {
+        "mashhad": {
+          "q": "Friday, two people, Mashhad",
+          "a": "Three flights to Mashhad on Friday. The midday one fits your plan best.",
+          "o1": "Early morning",
+          "o2": "Midday, nonstop",
+          "o3": "Evening"
+        },
+        "kish": {
+          "q": "Tomorrow morning, one person, Kish",
+          "a": "Two flights to Kish tomorrow morning. The first one arrives earlier.",
+          "o1": "Earliest",
+          "o2": "Late morning"
+        },
+        "istanbul": {
+          "q": "Weekend in Istanbul, round trip",
+          "a": "For Thursday to Sunday, this pair has the shortest waits.",
+          "o1": "Outbound · Thursday",
+          "o2": "Return · Sunday"
+        }
+      }
+    },
+    "tools": {
+      "kicker": "Manage your trip",
+      "title": "From purchase to baggage claim, in one place",
+      "lead": "Everything you need after booking, with no calls and no queues.",
+      "cta": "Manage booking",
+      "sample": "sample",
+      "steps": {
+        "checkIn": "Check-in",
+        "checkInState": "open",
+        "gate": "Gate 7",
+        "gateState": "announced",
+        "boarding": "Boarding",
+        "boardingState": "started",
+        "enRoute": "En route",
+        "enRouteState": "arrives 15:30"
+      },
+      "statusTitle": "Live flight status",
+      "statusBody": "We tell you about check-in, gate, boarding and the baggage belt before you ask.",
+      "selectedSeat": "Selected seat",
+      "window": "Window",
+      "aisle": "Aisle",
+      "middle": "Middle",
+      "seatAria": "Seat {seat}",
+      "seatTaken": "Seat {seat}, taken",
+      "seatsAria": "Sample cabin",
+      "seatTitle": "Seat selection",
+      "seatBody": "See the real cabin map and choose your own seat.",
+      "liveUpdates": "Live updates",
+      "cheapest": "Yellow bar: cheapest day",
+      "fareTitle": "Fare calendar",
+      "fareBody": "Compare fares across the week and pick the cheapest day.",
+      "notes": {
+        "gate": "Your gate is now 7",
+        "gateSub": "DA 142 · Tehran to Shiraz",
+        "gateTime": "now",
+        "checkIn": "Online check-in is open",
+        "checkInSub": "Get your boarding pass",
+        "checkInTime": "2 min ago",
+        "bag": "Your bag is on belt 3",
+        "bagSub": "Shiraz Airport",
+        "bagTime": "5 min ago",
+        "early": "Landing 10 minutes early",
+        "earlySub": "Arrival time updated",
+        "earlyTime": "8 min ago"
+      },
+      "alertsTitle": "Timely alerts",
+      "alertsBody": "Delays, gate changes and check-in opening, by SMS and push."
+    },
+    "guide": {
+      "kicker": "Travel guide",
+      "title": "Know before you fly",
+      "baggage": "Baggage",
+      "baggageBody": "Allowance per fare and cabin-bag rules.",
+      "changes": "Changes and refunds",
+      "changesBody": "Change dates or cancel online, without a call.",
+      "checkIn": "Online check-in",
+      "checkInBody": "Get your boarding pass before you reach the airport.",
+      "special": "Special assistance",
+      "specialBody": "Wheelchairs, unaccompanied minors, special meals and pets.",
+      "documents": "Travel documents",
+      "documentsBody": "What you need for domestic flights and for Istanbul.",
+      "support": "Support",
+      "supportBody": "Live chat and phone support."
+    },
+    "club": {
+      "kicker": "Loyalty club",
+      "title": "dot air Club",
+      "lead": "Earn points on every flight and spend them on the next one. Membership is free.",
+      "member": "MEMBER",
+      "yourName": "Your name",
+      "join": "Join free",
+      "login": "I am a member",
+      "teamKicker": "The team",
+      "hiring": "Hiring",
+      "teamTitle": "We build this in Tehran",
+      "teamLead": "A young team of engineers, designers and aviation specialists. If you think flying can be better, join us.",
+      "careers": "About dot air",
+      "roles": {
+        "designer": "Product designer",
+        "frontend": "Front-end engineer",
+        "ml": "Machine-learning engineer",
+        "network": "Network analyst"
+      }
+    },
+    "footer": {
+      "tagline": "An airline built from the ground up with AI.",
+      "fly": "Fly",
+      "destinations": "Destinations",
+      "help": "Help",
+      "company": "dot air",
+      "network": "Network",
+      "baggage": "Baggage",
+      "faq": "Help centre",
+      "contact": "Contact",
+      "about": "About",
+      "loyalty": "Loyalty club",
+      "offers": "Offers",
+      "rights": "© {year} dot air",
+      "tehran": "TEHRAN",
+      "social": {
+        "instagram": "Instagram",
+        "telegram": "Telegram",
+        "x": "X",
+        "linkedin": "LinkedIn",
+        "youtube": "YouTube",
+        "aparat": "Aparat"
+      },
+      "socialAria": "dot air on social media"
+    },
+    "mobileNav": {
+      "aria": "Bottom navigation",
+      "search": "Search",
+      "trips": "Trips",
+      "checkIn": "Check-in",
+      "status": "Status",
+      "account": "Account"
+    },
+    "locales": {
+      "en-de": "Germany · English",
+      "de-de": "Deutschland · Deutsch",
+      "fa-ir": "ایران · فارسی",
+      "ar-ae": "الإمارات · العربية"
+    }
   }
 }
