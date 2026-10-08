@@ -1,5 +1,5 @@
 import type { ButtonHTMLAttributes } from 'react';
-import { cn } from '@aerotech/ui';
+import { cn } from '@aerotech/ui/cn';
 
 type Variant = 'primary' | 'secondary' | 'ghost' | 'accent';
 type Size = 'sm' | 'md' | 'lg';

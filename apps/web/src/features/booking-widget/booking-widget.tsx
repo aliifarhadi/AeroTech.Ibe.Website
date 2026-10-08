@@ -2,7 +2,7 @@
 
 import { useId, useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { cn } from '@aerotech/ui';
+import { cn } from '@aerotech/ui/cn';
 import { CalendarIcon, PinIcon, PlaneIcon, SearchIcon, SeatIcon, SwapIcon } from '@/components/icons';
 import { FieldCell, fieldInput } from '@/components/ui/field';
 import { useRouter } from '@/i18n/navigation';

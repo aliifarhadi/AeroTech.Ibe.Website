@@ -1,6 +1,6 @@
 import type { InputHTMLAttributes, ReactNode, SelectHTMLAttributes } from 'react';
 import { useId } from 'react';
-import { cn } from '@aerotech/ui';
+import { cn } from '@aerotech/ui/cn';
 
 /* --------------------------------------------------------------------------
  * Field system — single source of truth for form fields.

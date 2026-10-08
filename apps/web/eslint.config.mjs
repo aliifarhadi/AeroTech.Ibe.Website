@@ -32,6 +32,26 @@ const eslintConfig = [
     rules: { 'no-restricted-syntax': ['error', ...designSystemRestrictions] },
   },
   {
+    // The current site must not import the design-system barrel: it pulls every primitive (and
+    // React Aria) into its bundles. `cn` has its own client-free entry.
+    files: ['src/**/*.{ts,tsx}'],
+    ignores: ['src/app/(next)/**', 'src/features/next/**'],
+    rules: {
+      'no-restricted-imports': [
+        'error',
+        {
+          paths: [
+            {
+              name: '@aerotech/ui',
+              message:
+                "Import `cn` from '@aerotech/ui/cn'. The primitives are for the redesigned routes only.",
+            },
+          ],
+        },
+      ],
+    },
+  },
+  {
     ignores: [
       '.next/**',
       'node_modules/**',

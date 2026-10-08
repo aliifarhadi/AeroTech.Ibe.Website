@@ -161,6 +161,8 @@
   --animate-pop-in: pop-in 0.28s var(--ease-out-soft);
   --animate-sheet-in: sheet-in 0.35s var(--ease-out-soft);
   --animate-spin: spin 0.7s linear infinite;
+  --animate-pulse: pulse 1.6s ease-in-out infinite;
+  --animate-fade-in: fade-in 0.25s ease-out;
 
   @keyframes fade-up {
     from {
@@ -179,6 +181,16 @@
       transform: translateY(100%);
     }
   }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+  }
+  @keyframes pulse {
+    50% {
+      opacity: 0.5;
+    }
+  }
   @keyframes spin {
     to {
       transform: rotate(360deg);
@@ -192,6 +204,7 @@
   --duration-base: 250ms; /* state change */
   --duration-slow: 450ms; /* enter, layout */
   --tap-min: 2.75rem; /* 44px. Mobile floor is 38px for dense controls such as calendar days. */
+  --sheet-max: 94dvh; /* tallest a bottom sheet may grow */
   --header-height: 4rem;
   --z-header: 50;
   --z-popover: 60;
@@ -217,6 +230,10 @@
   :where(html:lang(fa), html:lang(ar)) {
     font-family: var(--font-fa);
     line-height: 1.8;
+  }
+  /* our search fields draw their own clear affordance */
+  input[type='search']::-webkit-search-cancel-button {
+    display: none;
   }
   :focus-visible {
     outline: 2px solid var(--color-focus);
