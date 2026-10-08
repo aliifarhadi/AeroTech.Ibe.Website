@@ -1,8 +1,9 @@
 import { describe, expect, it } from 'vitest';
-import { destinationsFrom, splitDuration, ticketedAirportCode } from './network';
+import { destinationsFrom, routeBetween, splitDuration, ticketedAirportCode } from './network';
 import {
   addDaysIso,
   createTripDraft,
+  draftFromQuery,
   passengerBounds,
   toSearchQuery,
   tripReducer,
@@ -15,11 +16,27 @@ const start = createTripDraft('2026-10-08');
 const run = (draft: TripDraft, ...actions: TripAction[]) => actions.reduce(tripReducer, draft);
 
 describe('network', () => {
-  it('reaches every city from Tehran and only Tehran from elsewhere', () => {
+  it('offers every other city from any origin', () => {
     expect(destinationsFrom('THR')).toContain('IST');
     expect(destinationsFrom('THR')).not.toContain('THR');
-    expect(destinationsFrom('MHD')).toEqual(['THR']);
+    expect(destinationsFrom('MHD')).toEqual(expect.arrayContaining(['THR', 'SYZ', 'KIH']));
+    expect(destinationsFrom('MHD')).not.toContain('MHD');
     expect(destinationsFrom('XXX')).toEqual([]);
+  });
+
+  it('knows distance and time for any pair', () => {
+    expect(routeBetween('THR', 'MHD')).toEqual({
+      distanceKm: 752,
+      minutes: 85,
+      international: false,
+    });
+    expect(routeBetween('MHD', 'THR')?.minutes).toBe(85);
+    const cross = routeBetween('SYZ', 'MHD');
+    expect(cross?.distanceKm).toBeGreaterThan(900);
+    expect(cross?.distanceKm).toBeLessThan(1100);
+    expect((cross?.minutes ?? 0) % 5).toBe(0);
+    expect(routeBetween('IST', 'SYZ')?.international).toBe(true);
+    expect(routeBetween('SYZ', 'SYZ')).toBeUndefined();
   });
 
   it('sells Tehran as IKA on international routes only', () => {
@@ -57,41 +74,28 @@ describe('createTripDraft', () => {
 });
 
 describe('route selection', () => {
-  it('fixes the destination to Tehran when the origin is another city', () => {
-    expect(run(start, { type: 'setOrigin', code: 'SYZ' })).toMatchObject({
-      from: 'SYZ',
+  it('keeps the destination when the origin changes', () => {
+    const draft = run(
+      start,
+      { type: 'setDestination', code: 'KIH' },
+      { type: 'setOrigin', code: 'SYZ' },
+    );
+    expect(draft).toMatchObject({ from: 'SYZ', to: 'KIH' });
+  });
+
+  it('turns the trip around when one end is set to the other', () => {
+    const chosen = run(start, { type: 'setDestination', code: 'KIH' });
+    expect(run(chosen, { type: 'setOrigin', code: 'KIH' })).toMatchObject({
+      from: 'KIH',
+      to: 'THR',
+    });
+    expect(run(chosen, { type: 'setDestination', code: 'THR' })).toMatchObject({
+      from: 'KIH',
       to: 'THR',
     });
   });
 
-  it('clears an impossible destination when the origin returns to Tehran', () => {
-    const draft = run(
-      start,
-      { type: 'setOrigin', code: 'SYZ' },
-      { type: 'setOrigin', code: 'THR' },
-    );
-    expect(draft).toMatchObject({ from: 'THR', to: null });
-  });
-
-  it('keeps a valid destination when the origin is re-selected', () => {
-    const draft = run(
-      start,
-      { type: 'setDestination', code: 'KIH' },
-      { type: 'setOrigin', code: 'THR' },
-    );
-    expect(draft.to).toBe('KIH');
-  });
-
-  it('moves the origin back to Tehran when a non-hub destination is picked', () => {
-    const draft = run(
-      start,
-      { type: 'setOrigin', code: 'SYZ' },
-      { type: 'setDestination', code: 'MHD' },
-    );
-    expect(draft).toMatchObject({ from: 'THR', to: 'MHD' });
-  });
-
-  it('ignores unknown codes and a destination equal to the origin', () => {
+  it('ignores unknown codes and an origin chosen as destination before there is one', () => {
     expect(run(start, { type: 'setOrigin', code: 'XXX' })).toBe(start);
     expect(run(start, { type: 'setDestination', code: 'THR' })).toBe(start);
     expect(run(start, { type: 'setDestination', code: 'XXX' })).toBe(start);
@@ -190,5 +194,39 @@ describe('toSearchQuery', () => {
 
   it('requires a destination', () => {
     expect(validateTrip(start)).toBe('destination');
+  });
+});
+
+describe('draftFromQuery', () => {
+  it('round-trips with toSearchQuery', () => {
+    const draft = run(
+      start,
+      { type: 'setOrigin', code: 'SYZ' },
+      { type: 'setDestination', code: 'IST' },
+      { type: 'setPassengers', kind: 'adults', count: 2 },
+      { type: 'setPassengers', kind: 'infants', count: 1 },
+    );
+    expect(draftFromQuery(new URLSearchParams(toSearchQuery(draft)))).toEqual(draft);
+    const tehran = run(
+      start,
+      { type: 'setDestination', code: 'IST' },
+      { type: 'setTrip', trip: 'one' },
+    );
+    expect(draftFromQuery(new URLSearchParams(toSearchQuery(tehran)))).toEqual({
+      ...tehran,
+      return: null,
+    });
+  });
+
+  it('rejects searches that cannot be booked', () => {
+    const bad = (query: string) => draftFromQuery(new URLSearchParams(query));
+    expect(bad('')).toBeNull();
+    expect(bad('from=THR&to=THR&depart=2026-10-15&tripType=ONE_WAY')).toBeNull();
+    expect(bad('from=THR&to=XXX&depart=2026-10-15&tripType=ONE_WAY')).toBeNull();
+    expect(bad('from=THR&to=MHD&depart=15-10-2026&tripType=ONE_WAY')).toBeNull();
+    expect(bad('from=THR&to=MHD&depart=2026-10-15&return=2026-10-10')).toBeNull();
+    expect(
+      bad('from=THR&to=MHD&depart=2026-10-15&tripType=ONE_WAY&adults=8&children=5'),
+    ).toBeNull();
   });
 });

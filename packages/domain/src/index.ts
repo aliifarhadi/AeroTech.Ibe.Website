@@ -5,3 +5,8 @@ export * from './schemas/search';
 export * from './jalali';
 export * from './network';
 export * from './trip-draft';
+export * from './identity';
+export * from './random';
+export * from './fares';
+export * from './cabin-map';
+export * from './sample-schedule';

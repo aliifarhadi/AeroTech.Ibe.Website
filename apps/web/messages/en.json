@@ -1,975 +1,635 @@
 {
-  "Brand": {
-    "name": "dotair"
-  },
-  "Common": {
-    "skipToContent": "Skip to content",
-    "comingSoon": "This page is part of the design preview. Full content arrives in a later phase."
-  },
-  "Nav": {
+  "brand": "dot air",
+  "skip": "Skip to content",
+  "nav": {
+    "aria": "Main",
     "book": "Book",
-    "manage": "Manage",
+    "manage": "Manage booking",
     "checkIn": "Check-in",
-    "flightStatus": "Flight status",
+    "status": "Flight status",
     "destinations": "Destinations",
-    "offers": "Offers",
-    "help": "Help",
-    "loyalty": "Loyalty",
+    "guide": "Travel guide",
+    "club": "Club",
+    "search": "Search flights",
     "login": "Log in",
-    "signup": "Sign up",
-    "about": "About",
     "menu": "Menu",
-    "search": "Search",
-    "explore": "Explore",
-    "experience": "Experience",
-    "club": "DotAir Club"
+    "language": "Language and region"
   },
-  "Home": {
-    "heroBadge": "Direct from the airline",
-    "title": "Discover <hl>great fares</hl> worldwide",
-    "heroCta": "Save up to 15%",
-    "subtitle": "Search flights, manage your booking, and check in — in your language and reading direction."
+  "hero": {
+    "greeting": {
+      "morning": "Good morning",
+      "afternoon": "Good afternoon",
+      "evening": "Good evening",
+      "night": "Good night"
+    },
+    "greetingLine": "{greeting}. Where shall we go?",
+    "mood": {
+      "dawn": "Sunrise",
+      "day": "Daytime",
+      "dusk": "Sunset",
+      "night": "Night"
+    },
+    "tehranTime": "Tehran {time}",
+    "moodAria": "Scene mood: {mood}. Press to change.",
+    "title": "Full stop. New line",
+    "subtitle": "Fly to seven cities in Iran and to Istanbul. Booking takes seconds.",
+    "greetingNamed": "{greeting}, {name}. Where shall we go?"
   },
-  "LocaleSwitcher": {
-    "label": "Language and market"
-  },
-  "Widget": {
-    "ariaTabs": "Booking options",
+  "booking": {
+    "tabsAria": "Services",
     "tabs": {
       "book": "Book a flight",
-      "stopover": "Stopover / Packages",
-      "manage": "Manage / Check in",
-      "flightStatus": "Flight status"
-    },
-    "tripType": {
-      "legend": "Trip type",
-      "roundTrip": "Return",
-      "oneWay": "One way",
-      "multiCity": "Multi-city"
-    },
-    "from": "From",
-    "to": "To",
-    "fromPlaceholder": "From",
-    "toPlaceholder": "To",
-    "swap": "Swap origin and destination",
-    "depart": "Departure",
-    "return": "Return",
-    "passengers": "Passengers",
-    "passengersCount": "{count, plural, one {# passenger} other {# passengers}}",
-    "paxClassLabel": "Passengers / Class",
-    "paxClass": "{count, plural, one {# Passenger} other {# Passengers}}, {cabin}",
-    "passengerPicker": {
-      "title": "Passengers and cabin",
-      "adults": "Adults",
-      "children": "Children",
-      "infants": "Infants",
-      "cabin": "Cabin",
-      "done": "Done",
-      "increase": "Increase {label}",
-      "decrease": "Decrease {label}"
-    },
-    "selectDate": "Select date",
-    "previousMonth": "Previous month",
-    "nextMonth": "Next month",
-    "today": "Today",
-    "noAirportsFound": "No airports found",
-    "dateRange": {
-      "flexibleDates": "My dates are flexible",
-      "clearAll": "Clear all",
-      "continue": "Continue"
-    },
-    "useMiles": "Book using miles",
-    "cabin": "Cabin",
-    "cabins": {
-      "economy": "Economy",
-      "premiumEconomy": "Premium economy",
-      "business": "Business",
-      "first": "First"
-    },
-    "promo": "Promo code",
-    "promoPlaceholder": "Enter code",
-    "addPromo": "Add promo code",
-    "search": "Search flights",
-    "manage": {
-      "reference": "Booking reference",
-      "surname": "Surname",
-      "cta": "Find booking"
-    },
-    "checkIn": {
-      "reference": "Booking reference or ticket",
-      "surname": "Surname",
-      "cta": "Check in"
-    },
-    "status": {
-      "flightNumber": "Flight number",
-      "date": "Date",
-      "cta": "Check status"
-    },
-    "errors": {
-      "from": "Select a departure city",
-      "to": "Select a destination city",
-      "sameAirport": "Origin and destination must differ",
-      "depart": "Choose a departure date",
-      "returnDate": "Choose a return date"
-    },
-    "bookCash": "Book",
-    "bookMiles": "Book with miles",
-    "flexibleDates": "Flexible dates"
-  },
-  "Trust": {
-    "items": {
-      "a": {
-        "title": "Best fare promise",
-        "desc": "Transparent pricing with no hidden fees."
-      },
-      "b": {
-        "title": "Secure payments",
-        "desc": "Protected checkout with trusted providers."
-      },
-      "c": {
-        "title": "24/7 support",
-        "desc": "Real help whenever you travel."
-      },
-      "d": {
-        "title": "Flexible changes",
-        "desc": "Manage or change your trip with ease."
-      }
-    }
-  },
-  "Destinations": {
-    "eyebrow": "Explore",
-    "title": "Popular destinations",
-    "subtitle": "Inspiration for your next trip.",
-    "from": "from",
-    "cta": "View all destinations",
-    "cities": {
-      "DXB": "Dubai",
-      "IST": "Istanbul",
-      "LHR": "London",
-      "BER": "Berlin"
-    }
-  },
-  "Offers": {
-    "eyebrow": "Deals",
-    "title": "Current offers",
-    "subtitle": "Deals to help you travel for less.",
-    "cta": "See details",
-    "cards": {
-      "a": {
-        "badge": "Limited time",
-        "title": "Companion fares",
-        "desc": "Bring a travel companion for less on selected routes."
-      },
-      "b": {
-        "badge": "Members",
-        "title": "Member-only prices",
-        "desc": "Log in to unlock fares reserved for loyalty members."
-      },
-      "c": {
-        "badge": "Seasonal",
-        "title": "Last-minute escapes",
-        "desc": "Spontaneous getaways at reduced fares this season."
-      }
-    }
-  },
-  "Loyalty": {
-    "eyebrow": "Rewards",
-    "title": "Earn miles on every trip",
-    "body": "Join the loyalty program to earn and redeem miles, unlock member fares, and travel your way.",
-    "join": "Join now",
-    "login": "Log in"
-  },
-  "AppPromo": {
-    "title": "Take your trip with you",
-    "body": "Install the app for boarding passes, flight updates, and faster check-in.",
-    "cta": "Get the app"
-  },
-  "About": {
-    "eyebrow": "About DotAir",
-    "title": "Flying you <hl>closer</hl> to what matters",
-    "subtitle": "We're a modern airline built around one idea: travel should feel effortless, transparent, and human — in every language you speak.",
-    "stats": {
-      "destinations": {
-        "value": "120+",
-        "label": "Destinations"
-      },
-      "onTime": {
-        "value": "92%",
-        "label": "On-time performance"
-      },
-      "guests": {
-        "value": "18M",
-        "label": "Guests a year"
-      },
-      "fleet": {
-        "value": "60",
-        "label": "Modern aircraft"
-      }
-    },
-    "storyEyebrow": "Our story",
-    "storyTitle": "Built around the people who fly",
-    "storyP1": "DotAir began with a simple belief — that booking and managing a trip should be as pleasant as the journey itself. No hidden fees, no dead ends, no jargon.",
-    "storyP2": "Today we connect cities across the world with a young, efficient fleet and a direct channel designed to put you in control, from search to check-in.",
-    "valuesEyebrow": "What we stand for",
-    "valuesTitle": "Our values",
-    "values": {
-      "safety": {
-        "title": "Safety first",
-        "desc": "Every decision starts with the safety of our guests and crew — no compromises, ever."
-      },
-      "guests": {
-        "title": "Guest-obsessed",
-        "desc": "We design around real travellers, with clear pricing and help whenever you need it."
-      },
-      "planet": {
-        "title": "Lighter on the planet",
-        "desc": "A fuel-efficient fleet and smarter operations to shrink our footprint each year."
-      }
-    },
-    "ctaTitle": "Ready to fly with us?",
-    "ctaBody": "Find fares to over 120 destinations worldwide.",
-    "ctaButton": "Book a flight"
-  },
-  "Contact": {
-    "eyebrow": "Contact us",
-    "title": "We're here to help",
-    "subtitle": "Reach the DotAir team any time — by phone, email, or live chat, in your language.",
-    "methods": {
-      "phone": {
-        "title": "Call us",
-        "detail": "+49 30 1234 5678",
-        "note": "24/7, every day"
-      },
-      "email": {
-        "title": "Email",
-        "detail": "help@dotair.example",
-        "note": "We reply within 24 hours"
-      },
-      "chat": {
-        "title": "Live chat",
-        "detail": "Chat in the app",
-        "note": "Fastest for booking help"
-      },
-      "offices": {
-        "title": "Offices",
-        "detail": "Find a DotAir office",
-        "note": "In 40+ countries"
-      }
-    },
-    "hoursTitle": "Support hours",
-    "hours": "Phone and chat support are available 24/7, in multiple languages.",
-    "formTitle": "Send us a message",
-    "form": {
-      "name": "Full name",
-      "email": "Email address",
-      "subject": "Subject",
-      "subjects": {
-        "booking": "Booking help",
-        "baggage": "Baggage",
-        "refund": "Refunds & changes",
-        "other": "Something else"
-      },
-      "message": "Message",
-      "send": "Send message"
-    },
-    "successTitle": "Thanks — your message is on its way.",
-    "successBody": "Our team will get back to you within 24 hours."
-  },
-  "Footer": {
-    "rights": "All rights reserved.",
-    "stayInTouch": "Stay in touch",
-    "columns": {
-      "bookManage": "Book & Manage",
-      "explore": "Explore",
-      "help": "Help",
-      "about": "About DotAir",
-      "business": "Business"
-    },
-    "links": {
-      "bookFlight": "Book a flight",
       "manage": "Manage booking",
       "checkIn": "Check-in",
-      "flightStatus": "Flight status",
-      "destinations": "Destinations",
-      "offers": "Offers",
-      "experience": "Experience",
-      "club": "DotAir Club",
-      "contact": "Contact us",
-      "faqs": "FAQs",
-      "baggage": "Baggage",
-      "assistance": "Special assistance",
-      "aboutUs": "About us",
-      "careers": "Careers",
-      "newsroom": "Newsroom",
-      "sustainability": "Sustainability",
-      "corporate": "Corporate travel",
-      "agents": "Travel agents",
-      "partners": "Partners"
+      "status": "Flight status"
     },
-    "legal": {
-      "privacy": "Privacy",
-      "terms": "Terms",
-      "cookies": "Cookies"
+    "tabsShort": {
+      "book": "Book",
+      "manage": "Manage",
+      "checkIn": "Check-in",
+      "status": "Status"
     },
-    "getApp": "Get the app"
+    "tripAria": "Trip type",
+    "round": "Round trip",
+    "oneWay": "One way",
+    "promo": "I have a promo code",
+    "promoLabel": "Promo code",
+    "promoApply": "Apply",
+    "promoSaved": "Code “{code}” saved. It applies when fares are shown.",
+    "promoEmpty": "Enter a promo code.",
+    "points": "Pay with points",
+    "pointsOn": "Results will be shown in Club points.",
+    "pointsOff": "Results will be shown as cash fares.",
+    "from": "From",
+    "to": "To",
+    "toPlaceholder": "Where to?",
+    "chooseOrigin": "Choose origin",
+    "chooseDestination": "Choose destination",
+    "swap": "Swap origin and destination",
+    "swapFirst": "Choose a destination first.",
+    "depart": "Depart",
+    "return": "Return",
+    "addReturn": "Add return",
+    "chooseDate": "Choose date",
+    "dates": "Travel dates",
+    "hintDepart": "Choose your departure date",
+    "hintRange": "Choose your departure date, then your return date",
+    "previousMonth": "Previous month",
+    "nextMonth": "Next month",
+    "passengersClass": "Passengers & class",
+    "passengersCount": "{count, plural, one {# passenger} other {# passengers}}",
+    "paxTitle": "Passengers and class",
+    "adults": "Adults",
+    "adultsHint": "12 years and over",
+    "children": "Children",
+    "childrenHint": "2 to 11 years",
+    "infants": "Infants",
+    "infantsHint": "Under 2 years",
+    "fewer": "Fewer: {label}",
+    "more": "More: {label}",
+    "cabin": "Cabin",
+    "economy": "Economy",
+    "business": "Business",
+    "maxPassengers": "Up to 9 passengers per booking",
+    "done": "Done",
+    "close": "Close",
+    "search": "Search flights",
+    "cityPlaceholder": "City or airport code",
+    "citySearch": "Search cities",
+    "noCity": "No city with this name in the dot air network.",
+    "assistant": "dot assistant",
+    "assistantPlaceholder": "Or type: Friday, two people, Mashhad",
+    "assistantLabel": "Describe your trip",
+    "destinationSet": "Destination set to {city}. Choose dates and search.",
+    "lookup": {
+      "reference": "Booking reference",
+      "referenceOrTicket": "Booking reference or ticket number",
+      "lastName": "Last name",
+      "flightNumber": "Flight number",
+      "route": "Route (optional)",
+      "routePlaceholder": "Tehran to Shiraz",
+      "manageSubmit": "Find booking",
+      "checkInSubmit": "Start check-in",
+      "statusSubmit": "Check status",
+      "required": "Enter: {field}.",
+      "notConnected": "This service is not connected yet in this preview build."
+    }
   },
-  "Passengers": {
-    "back": "Back",
-    "progress": "Booking progress",
-    "stepFlights": "Flights",
-    "stepPassengers": "Passengers",
-    "stepSeats": "Seats",
-    "stepPayment": "Payment",
-    "eyebrow": "Passenger information",
-    "title": "Who is travelling?",
-    "subtitle": "Enter passenger and contact details exactly as they appear on the travel document.",
-    "documentNotice": "Passenger names must exactly match the passport or travel document used for this journey.",
-    "adultOne": "Adult 1",
-    "requiredFields": "All required fields must be completed.",
-    "titleLabel": "Title",
-    "select": "Select",
-    "mr": "Mr",
-    "ms": "Ms",
-    "mrs": "Mrs",
-    "givenName": "Given name",
-    "familyName": "Family name",
-    "dateOfBirth": "Date of birth",
-    "dateHint": "Use YYYY-MM-DD format.",
-    "gender": "Gender (optional)",
-    "preferNot": "Prefer not to say",
-    "female": "Female",
-    "male": "Male",
-    "loyalty": "Add loyalty membership",
-    "loyaltyProgram": "Loyalty programme",
-    "loyaltyNumber": "Membership number",
-    "contactTitle": "Contact details",
-    "contactHint": "We’ll use these details for booking updates and disruption notifications.",
-    "email": "Email address",
-    "countryCode": "Code",
-    "phone": "Phone number",
-    "tripSummary": "Your trip",
-    "passengers": "Passengers",
-    "oneAdult": "1 adult",
-    "fare": "Fare",
-    "total": "Total",
-    "continue": "Continue to seats",
-    "secure": "Your details are protected and are not stored in this browser."
+  "cities": {
+    "THR": {
+      "name": "Tehran",
+      "airport": "Mehrabad · Imam Khomeini"
+    },
+    "MHD": {
+      "name": "Mashhad",
+      "airport": "Shahid Hasheminejad Airport"
+    },
+    "SYZ": {
+      "name": "Shiraz",
+      "airport": "Shahid Dastgheib Airport"
+    },
+    "IFN": {
+      "name": "Isfahan",
+      "airport": "Shahid Beheshti Airport"
+    },
+    "TBZ": {
+      "name": "Tabriz",
+      "airport": "Shahid Madani Airport"
+    },
+    "KIH": {
+      "name": "Kish",
+      "airport": "Kish International Airport"
+    },
+    "AWZ": {
+      "name": "Ahvaz",
+      "airport": "Ahvaz International Airport"
+    },
+    "BND": {
+      "name": "Bandar Abbas",
+      "airport": "Bandar Abbas International Airport"
+    },
+    "IST": {
+      "name": "Istanbul",
+      "airport": "Istanbul Airport"
+    }
   },
-  "SearchResults": {
-    "title": "Select your departure flight",
-    "editSearch": "Edit search",
-    "resultsFound": "flights found",
-    "sortBy": "Sort by",
-    "recommended": "Recommended",
-    "lowestPrice": "Lowest price",
-    "shortest": "Shortest",
-    "filters": "Filter results",
-    "stops": "Stops",
-    "anyStops": "Any stops",
+  "duration": {
+    "hm": "{hours} h {minutes} min",
+    "h": "{hours} h",
+    "m": "{minutes} min",
+    "clock": "{time} h"
+  },
+  "inspire": {
+    "title": "Where to this week?",
+    "previous": "Previous",
+    "next": "Next",
+    "aria": "Destinations",
+    "international": "International",
+    "nonstop": "Nonstop"
+  },
+  "network": {
+    "kicker": "Network",
+    "title": "From Tehran to eight destinations",
+    "lead": "Seven cities in Iran plus Istanbul, all nonstop. Pick a destination from the list or on the map.",
+    "listAria": "Destinations",
+    "mapAria": "Map of dot air routes from Tehran",
     "nonstop": "Nonstop",
-    "oneStop": "1 stop",
-    "departureTime": "Departure time",
+    "international": "International",
+    "destination": "Destination",
+    "distance": "Distance",
+    "km": "km",
+    "flightTime": "Flight time",
+    "flyTo": "Fly to {city}",
+    "note": "Fares change in real time and appear after you search. Flight times are approximate."
+  },
+  "assistant": {
+    "kicker": "Smart assistant",
+    "title": "Describe your trip in one sentence",
+    "lead": "Type where and when, the way you would say it. The dot assistant finds matching flights and suggests the best one.",
+    "name": "dot assistant",
+    "sample": "Sample",
+    "liveFare": "Live fare",
+    "suggests": "dot suggests",
+    "footer": "Each option is priced live",
+    "promptsAria": "Sample requests",
+    "customAnswer": "In the real product the assistant reads this sentence. Sample answer:",
+    "scenarios": {
+      "mashhad": {
+        "q": "Friday, two people, Mashhad",
+        "a": "Three flights to Mashhad on Friday. The midday one fits your plan best.",
+        "o1": "Early morning",
+        "o2": "Midday, nonstop",
+        "o3": "Evening"
+      },
+      "kish": {
+        "q": "Tomorrow morning, one person, Kish",
+        "a": "Two flights to Kish tomorrow morning. The first one arrives earlier.",
+        "o1": "Earliest",
+        "o2": "Late morning"
+      },
+      "istanbul": {
+        "q": "Weekend in Istanbul, round trip",
+        "a": "For Thursday to Sunday, this pair has the shortest waits.",
+        "o1": "Outbound · Thursday",
+        "o2": "Return · Sunday"
+      }
+    }
+  },
+  "tools": {
+    "kicker": "Manage your trip",
+    "title": "From purchase to baggage claim, in one place",
+    "lead": "Everything you need after booking, with no calls and no queues.",
+    "cta": "Manage booking",
+    "sample": "sample",
+    "steps": {
+      "checkIn": "Check-in",
+      "checkInState": "open",
+      "gate": "Gate 7",
+      "gateState": "announced",
+      "boarding": "Boarding",
+      "boardingState": "started",
+      "enRoute": "En route",
+      "enRouteState": "arrives 15:30"
+    },
+    "statusTitle": "Live flight status",
+    "statusBody": "We tell you about check-in, gate, boarding and the baggage belt before you ask.",
+    "selectedSeat": "Selected seat",
+    "window": "Window",
+    "aisle": "Aisle",
+    "middle": "Middle",
+    "seatAria": "Seat {seat}",
+    "seatTaken": "Seat {seat}, taken",
+    "seatsAria": "Sample cabin",
+    "seatTitle": "Seat selection",
+    "seatBody": "See the real cabin map and choose your own seat.",
+    "liveUpdates": "Live updates",
+    "cheapest": "Yellow bar: cheapest day",
+    "fareTitle": "Fare calendar",
+    "fareBody": "Compare fares across the week and pick the cheapest day.",
+    "notes": {
+      "gate": "Your gate is now 7",
+      "gateSub": "DA 142 · Tehran to Shiraz",
+      "gateTime": "now",
+      "checkIn": "Online check-in is open",
+      "checkInSub": "Get your boarding pass",
+      "checkInTime": "2 min ago",
+      "bag": "Your bag is on belt 3",
+      "bagSub": "Shiraz Airport",
+      "bagTime": "5 min ago",
+      "early": "Landing 10 minutes early",
+      "earlySub": "Arrival time updated",
+      "earlyTime": "8 min ago"
+    },
+    "alertsTitle": "Timely alerts",
+    "alertsBody": "Delays, gate changes and check-in opening, by SMS and push."
+  },
+  "guide": {
+    "kicker": "Travel guide",
+    "title": "Know before you fly",
+    "baggage": "Baggage",
+    "baggageBody": "Allowance per fare and cabin-bag rules.",
+    "changes": "Changes and refunds",
+    "changesBody": "Change dates or cancel online, without a call.",
+    "checkIn": "Online check-in",
+    "checkInBody": "Get your boarding pass before you reach the airport.",
+    "special": "Special assistance",
+    "specialBody": "Wheelchairs, unaccompanied minors, special meals and pets.",
+    "documents": "Travel documents",
+    "documentsBody": "What you need for domestic flights and for Istanbul.",
+    "support": "Support",
+    "supportBody": "Live chat and phone support."
+  },
+  "club": {
+    "kicker": "Loyalty club",
+    "title": "dot air Club",
+    "lead": "Earn points on every flight and spend them on the next one. Membership is free.",
+    "member": "MEMBER",
+    "yourName": "Your name",
+    "join": "Join free",
+    "login": "I am a member",
+    "teamKicker": "The team",
+    "hiring": "Hiring",
+    "teamTitle": "We build this in Tehran",
+    "teamLead": "A young team of engineers, designers and aviation specialists. If you think flying can be better, join us.",
+    "careers": "About dot air",
+    "roles": {
+      "designer": "Product designer",
+      "frontend": "Front-end engineer",
+      "ml": "Machine-learning engineer",
+      "network": "Network analyst"
+    }
+  },
+  "footer": {
+    "tagline": "An airline built from the ground up with AI.",
+    "fly": "Fly",
+    "destinations": "Destinations",
+    "help": "Help",
+    "company": "dot air",
+    "network": "Network",
+    "baggage": "Baggage",
+    "faq": "Help centre",
+    "contact": "Contact",
+    "about": "About",
+    "loyalty": "Loyalty club",
+    "offers": "Offers",
+    "rights": "© {year} dot air",
+    "tehran": "TEHRAN",
+    "social": {
+      "instagram": "Instagram",
+      "telegram": "Telegram",
+      "x": "X",
+      "linkedin": "LinkedIn",
+      "youtube": "YouTube",
+      "aparat": "Aparat"
+    },
+    "socialAria": "dot air on social media"
+  },
+  "mobileNav": {
+    "aria": "Bottom navigation",
+    "search": "Search",
+    "trips": "Trips",
+    "checkIn": "Check-in",
+    "status": "Status",
+    "account": "Account"
+  },
+  "locales": {
+    "en-de": "Germany · English",
+    "de-de": "Deutschland · Deutsch",
+    "fa-ir": "ایران · فارسی",
+    "ar-ae": "الإمارات · العربية"
+  },
+  "placeholder": {
+    "title": "This page is on its way",
+    "body": "We are still building this part of the site. Flight search and your account are ready to use.",
+    "home": "Back to home"
+  },
+  "currency": {
+    "IRT": "{amount} Toman"
+  },
+  "flights": {
+    "title": "Select flights",
+    "back": "Back to home",
+    "editSearch": "Edit search",
+    "stepsAria": "Booking steps",
+    "steps": {
+      "select": "Select flights",
+      "passengers": "Passengers",
+      "extras": "Extras",
+      "payment": "Payment"
+    },
+    "legsAria": "Trip legs",
+    "outbound": "Outbound",
+    "return": "Return",
+    "datesAria": "Nearby dates",
+    "fromPrice": "from {price}",
+    "noService": "No flights",
+    "countOutbound": "{count, plural, one {# outbound flight} other {# outbound flights}}",
+    "countReturn": "{count, plural, one {# return flight} other {# return flights}}",
+    "sortAria": "Sort",
+    "earliest": "Earliest",
+    "cheapest": "Cheapest",
+    "timeAria": "Departure time",
     "morning": "Morning",
     "afternoon": "Afternoon",
     "evening": "Evening",
-    "flexible": "Any time",
-    "select": "Select",
-    "selected": "Selected",
-    "from": "From",
-    "total": "Total",
-    "duration": "Duration",
-    "direct": "Direct",
-    "stop": "stop",
-    "economy": "Economy",
-    "cabinBaggage": "Cabin bag",
-    "checkedBaggage": "Checked bag",
-    "changes": "Changes allowed",
-    "refundable": "Refundable",
-    "perPassenger": "per passenger",
+    "emptyTitle": "No flights in this time range",
+    "emptyBody": "{count, plural, one {This day has # flight.} other {This day has # flights.}} Clear the time filter.",
+    "clearFilter": "Clear filter",
+    "sampleNote": "Sample data: the schedule, fares, fare conditions and cabin layout are placeholders until the booking systems are connected.",
+    "nonstop": "Nonstop",
+    "oneStop": "1 stop · {city}",
     "details": "Flight details",
-    "bestValue": "Best value",
-    "noResults": "No flights match these filters.",
-    "fareFamily": "Continue selecting your flight and fare",
-    "lite": "Economy Lite",
-    "classic": "Economy Classic",
-    "convenience": "Economy Convenience",
-    "comfort": "Economy Comfort",
-    "continueBooking": "Continue booking",
+    "yourChoice": "Your choice · {fare}",
+    "nextDay": "Arrives the next day",
+    "economy": "Economy",
     "business": "Business",
-    "first": "First",
-    "selectFlights": "Select flights",
-    "passengerServices": "Passenger and services",
-    "paymentDetails": "Payment details",
-    "tripSummary": "Trip summary",
-    "flightSelected": "Flight selected",
-    "back": "Back",
-    "login": "Log in",
-    "travelRequirements": "Travel requirements",
-    "seeMoreDates": "See more dates",
-    "changeCurrency": "Change currency",
-    "advisory": "Review relevant travel advisories before booking.",
-    "standardSeat": "Standard seat selection",
-    "preferredSeat": "Preferred seat selection",
-    "routeChanges": "Flight/route changes",
-    "carryOn": "Carry-on baggage",
-    "upgradeAvios": "Upgrade with Avios",
-    "noFees": "No fees",
-    "forFee": "For a fee",
-    "oneChange": "1 change",
-    "unlimited": "Unlimited",
-    "available": "Available",
-    "selectFare": "Select fare",
-    "seeFares": "See fares",
-    "totalAllPassengers": "Total for all passengers",
-    "earnAvios": "Earn Avios",
-    "businessClass": "Business Class",
-    "departureSelected": "Departure selected",
-    "confirm": "Confirm",
-    "operatedBy": "Operated by DotAir",
-    "close": "Close",
-    "loadingWelcome": "Welcome on board",
-    "loadingTitle": "It’s the details that make a journey perfect",
-    "loadingResults": "Loading results…",
-    "loadingAward": "Airline award",
-    "earliest": "Earliest departure",
-    "maxPrice": "Max price",
-    "resetFilters": "Reset",
-    "showResults": "{count, plural, one {Show # flight} other {Show # flights}}",
-    "noResultsHint": "Try adjusting your filters or dates.",
-    "roundTrip": "Round trip",
-    "oneWay": "One way",
-    "hoursShort": "h",
-    "minutesShort": "m",
-    "nextDay": "+1",
+    "cabinFrom": "{cabin} from",
+    "soldOut": "Sold out",
     "seatsLeft": "{count, plural, one {# seat left} other {# seats left}}",
-    "compareFares": "Compare fares and what is included",
-    "view": "View",
-    "fareFamilies": {
+    "chooseFare": "Choose your fare",
+    "perAdult": "Price per adult, taxes and fees included",
+    "fareAria": "Fare family",
+    "suggests": "dot suggests",
+    "selected": "Selected",
+    "choose": "Choose {name}",
+    "families": {
       "light": "Light",
       "classic": "Classic",
-      "plus": "Plus",
-      "flex": "Flex"
-    },
-    "fareRows": {
-      "rebooking": "Rebooking",
-      "refund": "Refund",
-      "cabinBag": "Cabin baggage",
-      "checkedBag": "Checked baggage",
-      "seat": "Seat selection",
-      "catering": "Onboard meal",
-      "miles": "Miles earned"
-    },
-    "fareValues": {
-      "included": "Included",
-      "forFee": "For a fee",
-      "notAllowed": "Not available",
-      "atCheckIn": "At check-in"
-    },
-    "businessPerks": {
-      "perkSeat": "More spacious seat",
-      "perkBoarding": "Priority boarding",
-      "perkLounge": "Lounge access",
-      "perkMeal": "Premium dining"
-    }
-  },
-  "Baggage": {
-    "eyebrow": "Baggage",
-    "title": "Everything about your baggage",
-    "subtitle": "Cabin and checked allowances, extra bags, special items and what to do if something goes wrong.",
-    "nav": {
-      "cabin": "Cabin baggage",
-      "checked": "Checked baggage",
-      "extra": "Extra baggage",
-      "special": "Special items",
-      "restricted": "Restricted items",
-      "help": "Delayed or damaged"
-    },
-    "cabin": {
-      "title": "Cabin baggage",
-      "intro": "Every traveller may bring one personal item plus a carry-on bag, within the limits for their cabin.",
-      "personalItem": "Personal item",
-      "personalItemNote": "Fits under the seat in front — 40 × 30 × 15 cm.",
-      "carryOn": "Carry-on bag",
-      "colWeight": "Max weight",
-      "colDimensions": "Dimensions",
-      "rows": {
-        "economy": {
-          "weight": "1 × 8 kg",
-          "dimensions": "55 × 40 × 23 cm"
-        },
-        "premiumEconomy": {
-          "weight": "1 × 10 kg",
-          "dimensions": "55 × 40 × 23 cm"
-        },
-        "business": {
-          "weight": "2 × 10 kg",
-          "dimensions": "55 × 40 × 23 cm"
-        },
-        "first": {
-          "weight": "2 × 12 kg",
-          "dimensions": "55 × 40 × 23 cm"
-        }
-      }
-    },
-    "checked": {
-      "title": "Checked baggage",
-      "intro": "Your free checked allowance depends on your cabin and fare. Weight limits are per piece.",
-      "colCabin": "Cabin",
-      "colAllowance": "Free allowance",
-      "colPiece": "Max per piece",
-      "rows": {
-        "economy": {
-          "allowance": "1 bag",
-          "piece": "23 kg"
-        },
-        "premiumEconomy": {
-          "allowance": "2 bags",
-          "piece": "23 kg"
-        },
-        "business": {
-          "allowance": "2 bags",
-          "piece": "32 kg"
-        },
-        "first": {
-          "allowance": "3 bags",
-          "piece": "32 kg"
-        }
-      },
-      "note": "Light fares may not include checked baggage — add it during booking or in Manage."
-    },
-    "extra": {
-      "title": "Extra & excess baggage",
-      "body": "Need more space? Add extra bags in advance to save versus airport rates.",
-      "items": {
-        "a": {
-          "title": "Add before you fly",
-          "desc": "Prepay extra bags in Manage booking up to 6 hours before departure."
-        },
-        "b": {
-          "title": "Overweight & oversized",
-          "desc": "Bags above your weight limit are carried for an additional fee where space allows."
-        }
-      }
-    },
-    "special": {
-      "title": "Special baggage",
-      "body": "Travelling with something out of the ordinary? Let us know in advance so we can prepare.",
-      "items": {
-        "sports": {
-          "title": "Sports equipment",
-          "desc": "Skis, golf clubs and bikes travel as checked baggage in a suitable case."
-        },
-        "music": {
-          "title": "Musical instruments",
-          "desc": "Small instruments fit in the cabin; larger ones can use an extra seat."
-        },
-        "medical": {
-          "title": "Medical & mobility",
-          "desc": "Wheelchairs and essential medical devices are carried free of charge."
-        },
-        "infant": {
-          "title": "Strollers & car seats",
-          "desc": "One stroller and one car seat per child, carried free of charge."
-        }
-      }
-    },
-    "restricted": {
-      "title": "Restricted & prohibited items",
-      "body": "For everyone’s safety, some items are limited or not allowed on board.",
-      "cabinOnly": "Carry in cabin only",
-      "cabinOnlyItems": "Power banks, spare lithium batteries, e-cigarettes.",
-      "checkedOnly": "Pack in checked baggage",
-      "checkedOnlyItems": "Sharp objects, tools and sporting bats.",
-      "prohibited": "Never allowed",
-      "prohibitedItems": "Explosives, flammable liquids and gases, and other dangerous goods.",
-      "note": "If in doubt, check with our team before you travel."
-    },
-    "help": {
-      "title": "Delayed or damaged baggage",
-      "body": "If your bag does not arrive with you or is damaged, report it at the airport baggage desk before you leave, then track its status online.",
-      "cta": "Report a baggage issue",
-      "track": "Track my baggage"
-    },
-    "ctaTitle": "Add baggage to your trip",
-    "ctaBody": "Manage your booking to add bags and choose extras.",
-    "ctaButton": "Manage booking"
-  },
-  "HomeV2": {
-    "heroTitle": "Where would you like to go?",
-    "heroSubtitle": "Fly smart",
-    "bannerText": "DotAir’s new and improved online services, at a glance.",
-    "bannerCta": "Learn more",
-    "promos": {
-      "app": {
-        "title": "Meet the new DotAir app",
-        "desc": "Book, check in and carry your boarding pass — all in one place."
-      },
-      "assistant": {
-        "title": "Say hello to our travel assistant",
-        "desc": "Get instant answers and manage your trip through in-app chat."
-      },
-      "guide": {
-        "title": "A guide to planning your trip",
-        "desc": "From baggage to seats — everything you need before you fly."
-      }
-    },
-    "noticesTitle": "Notices",
-    "noticesViewAll": "View all",
-    "notices": {
-      "a": "Schedule update on the Doha–London route",
-      "b": "Updated partner benefits for DotAir Club members",
-      "c": "New premium lounge now open in Istanbul",
-      "d": "Improved in-flight Wi-Fi across the fleet"
-    },
-    "appTitle": "DotAir App",
-    "appDesc": "Your travel manager, in the palm of your hand.",
-    "appCta": "Get the app",
-    "travelTitle": "Complete your travel",
-    "travel": {
-      "gift": "Gift cards",
-      "hotels": "Hotels",
-      "cars": "Car rental",
-      "dutyFree": "Duty free"
-    }
-  },
-  "Next": {
-    "brand": "dot air",
-    "skip": "Skip to content",
-    "nav": {
-      "aria": "Main",
-      "book": "Book",
-      "manage": "Manage booking",
-      "checkIn": "Check-in",
-      "status": "Flight status",
-      "destinations": "Destinations",
-      "guide": "Travel guide",
-      "club": "Club",
-      "search": "Search flights",
-      "login": "Log in",
-      "menu": "Menu",
-      "language": "Language and region"
-    },
-    "hero": {
-      "greeting": {
-        "morning": "Good morning",
-        "afternoon": "Good afternoon",
-        "evening": "Good evening",
-        "night": "Good night"
-      },
-      "greetingLine": "{greeting}. Where shall we go?",
-      "mood": {
-        "dawn": "Sunrise",
-        "day": "Daytime",
-        "dusk": "Sunset",
-        "night": "Night"
-      },
-      "tehranTime": "Tehran {time}",
-      "moodAria": "Scene mood: {mood}. Press to change.",
-      "title": "Full stop. New line",
-      "subtitle": "Fly to seven cities in Iran and to Istanbul. Booking takes seconds."
-    },
-    "booking": {
-      "tabsAria": "Services",
-      "tabs": {
-        "book": "Book a flight",
-        "manage": "Manage booking",
-        "checkIn": "Check-in",
-        "status": "Flight status"
-      },
-      "tabsShort": {
-        "book": "Book",
-        "manage": "Manage",
-        "checkIn": "Check-in",
-        "status": "Status"
-      },
-      "tripAria": "Trip type",
-      "round": "Round trip",
-      "oneWay": "One way",
-      "promo": "I have a promo code",
-      "promoLabel": "Promo code",
-      "promoApply": "Apply",
-      "promoSaved": "Code “{code}” saved. It applies when fares are shown.",
-      "promoEmpty": "Enter a promo code.",
-      "points": "Pay with points",
-      "pointsOn": "Results will be shown in Club points.",
-      "pointsOff": "Results will be shown as cash fares.",
-      "from": "From",
-      "to": "To",
-      "toPlaceholder": "Where to?",
-      "chooseOrigin": "Choose origin",
-      "chooseDestination": "Choose destination",
-      "swap": "Swap origin and destination",
-      "swapFirst": "Choose a destination first.",
-      "depart": "Depart",
-      "return": "Return",
-      "addReturn": "Add return",
-      "chooseDate": "Choose date",
-      "dates": "Travel dates",
-      "hintDepart": "Choose your departure date",
-      "hintRange": "Choose your departure date, then your return date",
-      "previousMonth": "Previous month",
-      "nextMonth": "Next month",
-      "passengersClass": "Passengers & class",
-      "passengersCount": "{count, plural, one {# passenger} other {# passengers}}",
-      "paxTitle": "Passengers and class",
-      "adults": "Adults",
-      "adultsHint": "12 years and over",
-      "children": "Children",
-      "childrenHint": "2 to 11 years",
-      "infants": "Infants",
-      "infantsHint": "Under 2 years",
-      "fewer": "Fewer: {label}",
-      "more": "More: {label}",
-      "cabin": "Cabin",
-      "economy": "Economy",
+      "flex": "Flex",
       "business": "Business",
-      "maxPassengers": "Up to 9 passengers per booking",
-      "done": "Done",
-      "close": "Close",
-      "search": "Search flights",
-      "cityPlaceholder": "City or airport code",
-      "citySearch": "Search cities",
-      "noCity": "No city with this name in the dot air network.",
-      "assistant": "dot assistant",
-      "assistantPlaceholder": "Or type: Friday, two people, Mashhad",
-      "assistantLabel": "Describe your trip",
-      "destinationSet": "Destination set to {city}. Choose dates and search.",
-      "lookup": {
-        "reference": "Booking reference",
-        "referenceOrTicket": "Booking reference or ticket number",
-        "lastName": "Last name",
-        "flightNumber": "Flight number",
-        "route": "Route (optional)",
-        "routePlaceholder": "Tehran to Shiraz",
-        "manageSubmit": "Find booking",
-        "checkInSubmit": "Start check-in",
-        "statusSubmit": "Check status",
-        "required": "Enter: {field}.",
-        "notConnected": "This service is not connected yet in this preview build."
-      }
+      "businessFlex": "Business Flex"
     },
-    "cities": {
-      "THR": {
-        "name": "Tehran",
-        "airport": "Mehrabad · Imam Khomeini"
-      },
-      "MHD": {
-        "name": "Mashhad",
-        "airport": "Shahid Hasheminejad Airport"
-      },
-      "SYZ": {
-        "name": "Shiraz",
-        "airport": "Shahid Dastgheib Airport"
-      },
-      "IFN": {
-        "name": "Isfahan",
-        "airport": "Shahid Beheshti Airport"
-      },
-      "TBZ": {
-        "name": "Tabriz",
-        "airport": "Shahid Madani Airport"
-      },
-      "KIH": {
-        "name": "Kish",
-        "airport": "Kish International Airport"
-      },
-      "AWZ": {
-        "name": "Ahvaz",
-        "airport": "Ahvaz International Airport"
-      },
-      "BND": {
-        "name": "Bandar Abbas",
-        "airport": "Bandar Abbas International Airport"
-      },
-      "IST": {
-        "name": "Istanbul",
-        "airport": "Istanbul Airport"
-      }
+    "rows": {
+      "cabinBag": "Cabin bag 7 kg",
+      "cabinBags": "Two cabin bags",
+      "noChecked": "No checked bag",
+      "checked": "Checked bag {kg} kg",
+      "seatFee": "Seat selection for a fee",
+      "seatStandard": "Standard seat included",
+      "seatAny": "Any seat included",
+      "changeFee": "Date change for a fee",
+      "changeLowFee": "Date change for a low fee",
+      "changeFree": "Free date change",
+      "refundNo": "Non-refundable",
+      "refundFee": "Refund for a fee",
+      "refundFree": "Free refund",
+      "points": "{percent}% Club points"
     },
-    "duration": {
-      "hm": "{hours} h {minutes} min",
-      "h": "{hours} h",
-      "m": "{minutes} min",
-      "clock": "{time} h"
+    "inclusion": {
+      "yes": "Included",
+      "no": "Not included",
+      "fee": "For a fee"
     },
-    "inspire": {
-      "title": "Where to this week?",
-      "previous": "Previous",
-      "next": "Next",
-      "aria": "Destinations",
-      "international": "International",
-      "nonstop": "Nonstop"
-    },
-    "network": {
-      "kicker": "Network",
-      "title": "From Tehran to eight destinations",
-      "lead": "Seven cities in Iran plus Istanbul, all nonstop. Pick a destination from the list or on the map.",
-      "listAria": "Destinations",
-      "mapAria": "Map of dot air routes from Tehran",
-      "nonstop": "Nonstop",
-      "international": "International",
-      "destination": "Destination",
-      "distance": "Distance",
-      "km": "km",
-      "flightTime": "Flight time",
-      "flyTo": "Fly to {city}",
-      "note": "Fares change in real time and appear after you search. Flight times are approximate."
-    },
-    "assistant": {
-      "kicker": "Smart assistant",
-      "title": "Describe your trip in one sentence",
-      "lead": "Type where and when, the way you would say it. The dot assistant finds matching flights and suggests the best one.",
-      "name": "dot assistant",
-      "sample": "Sample",
-      "liveFare": "Live fare",
-      "suggests": "dot suggests",
-      "footer": "Each option is priced live",
-      "promptsAria": "Sample requests",
-      "customAnswer": "In the real product the assistant reads this sentence. Sample answer:",
-      "scenarios": {
-        "mashhad": {
-          "q": "Friday, two people, Mashhad",
-          "a": "Three flights to Mashhad on Friday. The midday one fits your plan best.",
-          "o1": "Early morning",
-          "o2": "Midday, nonstop",
-          "o3": "Evening"
-        },
-        "kish": {
-          "q": "Tomorrow morning, one person, Kish",
-          "a": "Two flights to Kish tomorrow morning. The first one arrives earlier.",
-          "o1": "Earliest",
-          "o2": "Late morning"
-        },
-        "istanbul": {
-          "q": "Weekend in Istanbul, round trip",
-          "a": "For Thursday to Sunday, this pair has the shortest waits.",
-          "o1": "Outbound · Thursday",
-          "o2": "Return · Sunday"
-        }
-      }
-    },
-    "tools": {
-      "kicker": "Manage your trip",
-      "title": "From purchase to baggage claim, in one place",
-      "lead": "Everything you need after booking, with no calls and no queues.",
-      "cta": "Manage booking",
+    "seats": {
+      "title": "Choose your seats",
       "sample": "sample",
-      "steps": {
-        "checkIn": "Check-in",
-        "checkInState": "open",
-        "gate": "Gate 7",
-        "gateState": "announced",
-        "boarding": "Boarding",
-        "boardingState": "started",
-        "enRoute": "En route",
-        "enRouteState": "arrives 15:30"
-      },
-      "statusTitle": "Live flight status",
-      "statusBody": "We tell you about check-in, gate, boarding and the baggage belt before you ask.",
-      "selectedSeat": "Selected seat",
-      "window": "Window",
-      "aisle": "Aisle",
-      "middle": "Middle",
-      "seatAria": "Seat {seat}",
+      "paxAria": "Passengers",
+      "adult": "Adult {n}",
+      "child": "Child {n}",
+      "none": "No seat",
+      "hint": "Choose a seat to see its features.",
+      "included": "Included",
+      "mapAria": "Seat map",
+      "legendStandard": "Standard · {fee}",
+      "legendExtra": "Extra legroom · {fee}",
+      "legendTaken": "Taken or other cabin",
+      "legendYours": "Your seat",
+      "legendDoors": "Doors and exits",
+      "legendWing": "Wing",
+      "optional": "Choosing a seat is optional. If you skip it, we assign one for free at check-in.",
+      "front": "Front",
+      "galley": "Galley",
+      "lavatory": "WC",
+      "exit": "EXIT",
+      "seat": "Seat {seat}",
+      "seatOther": "Seat {seat}, other cabin",
       "seatTaken": "Seat {seat}, taken",
-      "seatsAria": "Sample cabin",
-      "seatTitle": "Seat selection",
-      "seatBody": "See the real cabin map and choose your own seat.",
-      "liveUpdates": "Live updates",
-      "cheapest": "Yellow bar: cheapest day",
-      "fareTitle": "Fare calendar",
-      "fareBody": "Compare fares across the week and pick the cheapest day.",
-      "notes": {
-        "gate": "Your gate is now 7",
-        "gateSub": "DA 142 · Tehran to Shiraz",
-        "gateTime": "now",
-        "checkIn": "Online check-in is open",
-        "checkInSub": "Get your boarding pass",
-        "checkInTime": "2 min ago",
-        "bag": "Your bag is on belt 3",
-        "bagSub": "Shiraz Airport",
-        "bagTime": "5 min ago",
-        "early": "Landing 10 minutes early",
-        "earlySub": "Arrival time updated",
-        "earlyTime": "8 min ago"
+      "seatExit": "Seat {seat}, exit row, extra legroom",
+      "seatExtra": "Seat {seat}, extra legroom",
+      "childExit": "Children cannot sit in an emergency exit row. Choose another seat.",
+      "position": {
+        "window": "Window",
+        "aisle": "Aisle",
+        "middle": "Middle"
       },
-      "alertsTitle": "Timely alerts",
-      "alertsBody": "Delays, gate changes and check-in opening, by SMS and push."
-    },
-    "guide": {
-      "kicker": "Travel guide",
-      "title": "Know before you fly",
-      "baggage": "Baggage",
-      "baggageBody": "Allowance per fare and cabin-bag rules.",
-      "changes": "Changes and refunds",
-      "changesBody": "Change dates or cancel online, without a call.",
-      "checkIn": "Online check-in",
-      "checkInBody": "Get your boarding pass before you reach the airport.",
-      "special": "Special assistance",
-      "specialBody": "Wheelchairs, unaccompanied minors, special meals and pets.",
-      "documents": "Travel documents",
-      "documentsBody": "What you need for domestic flights and for Istanbul.",
-      "support": "Support",
-      "supportBody": "Live chat and phone support."
-    },
-    "club": {
-      "kicker": "Loyalty club",
-      "title": "dot air Club",
-      "lead": "Earn points on every flight and spend them on the next one. Membership is free.",
-      "member": "MEMBER",
-      "yourName": "Your name",
-      "join": "Join free",
-      "login": "I am a member",
-      "teamKicker": "The team",
-      "hiring": "Hiring",
-      "teamTitle": "We build this in Tehran",
-      "teamLead": "A young team of engineers, designers and aviation specialists. If you think flying can be better, join us.",
-      "careers": "About dot air",
-      "roles": {
-        "designer": "Product designer",
-        "frontend": "Front-end engineer",
-        "ml": "Machine-learning engineer",
-        "network": "Network analyst"
+      "features": {
+        "pitchBusiness": "Seat pitch 96 cm",
+        "widerSeat": "Wider seat, no middle seat",
+        "fullMeal": "Full meal service",
+        "pitchExtra": "Extra legroom: 86 cm pitch",
+        "pitchStandard": "Seat pitch 76 cm",
+        "exitRow": "Emergency exit row: age 15 and over, no infants",
+        "bulkhead": "First row of the cabin: bags go in the overhead bin",
+        "noRecline": "Seat does not recline",
+        "overWing": "Window view is over the wing",
+        "nearLavatory": "Close to the lavatories",
+        "quickExit": "Quicker to leave the aircraft",
+        "usbPower": "USB power"
       }
     },
-    "footer": {
-      "tagline": "An airline built from the ground up with AI.",
-      "fly": "Fly",
-      "destinations": "Destinations",
-      "help": "Help",
-      "company": "dot air",
-      "network": "Network",
-      "baggage": "Baggage",
-      "faq": "Help centre",
-      "contact": "Contact",
-      "about": "About",
-      "loyalty": "Loyalty club",
-      "offers": "Offers",
-      "rights": "© {year} dot air",
-      "tehran": "TEHRAN",
-      "social": {
-        "instagram": "Instagram",
-        "telegram": "Telegram",
-        "x": "X",
-        "linkedin": "LinkedIn",
-        "youtube": "YouTube",
-        "aparat": "Aparat"
-      },
-      "socialAria": "dot air on social media"
+    "selectFlight": "Select this flight",
+    "seatList": "Seat {seats}",
+    "summary": {
+      "title": "Your trip",
+      "notSelected": "Not selected yet",
+      "notConfirmed": "Not confirmed",
+      "change": "Change",
+      "fares": "Fares · {passengers}",
+      "seats": "Seats",
+      "total": "Total",
+      "withFlight": "With this flight",
+      "continue": "Continue to passengers",
+      "continueShort": "Continue",
+      "selectOutbound": "Select an outbound flight",
+      "selectReturn": "Select a return flight",
+      "chooseOutbound": "Choose outbound",
+      "chooseReturn": "Choose return",
+      "fine": "Fares include taxes and fees and may change until payment is complete.",
+      "outboundDone": "Outbound selected. Now choose your return flight.",
+      "nextStep": "Passenger details are the next step and are not built yet."
     },
-    "mobileNav": {
-      "aria": "Bottom navigation",
-      "search": "Search",
-      "trips": "Trips",
-      "checkIn": "Check-in",
-      "status": "Status",
-      "account": "Account"
+    "detail": {
+      "flightTime": "Flight time {duration}",
+      "operated": "Operated by dot air",
+      "checkIn": "{terminal} · Check-in closes {time} · Gate announced on the day",
+      "belt": "{terminal} · Baggage belt announced after landing",
+      "stopIn": "Stop in {city} · {duration}",
+      "stopNote": "No change of aircraft; passengers stay on board.",
+      "date": "Date",
+      "totalTime": "Total travel time",
+      "distance": "Distance",
+      "km": "{distance} km",
+      "onBoard": "On board",
+      "refreshments": "Light refreshments",
+      "localTimes": "All times are local to each airport.",
+      "terminal4": "Terminal 4",
+      "terminal1": "Terminal 1",
+      "terminalIntl": "International terminal",
+      "terminalDomestic": "Domestic terminal",
+      "mehrabad": "Mehrabad Airport",
+      "imamKhomeini": "Imam Khomeini Airport"
     },
-    "locales": {
-      "en-de": "Germany · English",
-      "de-de": "Deutschland · Deutsch",
-      "fa-ir": "ایران · فارسی",
-      "ar-ae": "الإمارات · العربية"
+    "invalid": {
+      "title": "We could not read this search",
+      "body": "The link is incomplete or out of date. Start a new search from the home page.",
+      "cta": "New search"
     }
+  },
+  "account": {
+    "login": "Log in",
+    "accountAria": "Account: {name}",
+    "loginOrSignup": "Log in or sign up",
+    "entrySub": "No account yet? We create one with this number or email.",
+    "methodAria": "Sign-in method",
+    "otp": "One-time code",
+    "password": "Password",
+    "identifier": "Mobile number or email",
+    "identifierPlaceholder": "name@example.com",
+    "forgot": "I forgot my password",
+    "sendCode": "Send me a code",
+    "terms": "By continuing you accept the dot air terms of use and privacy policy.",
+    "forgotTitle": "Reset your password",
+    "forgotSub": "Enter the mobile number or email of your account. If an account exists, we send a code.",
+    "verifyTitle": "Enter the code",
+    "verifySub": "We sent a 5-digit code to {id}.",
+    "edit": "Edit",
+    "codeAria": "Verification code",
+    "digit": "Digit {n}",
+    "resendIn": "Resend code in {time}",
+    "resend": "Resend the code",
+    "previewNote": "Preview build: no message is sent and any 5-digit code works. Code 00000 shows the error state.",
+    "profileTitle": "Complete your profile",
+    "profileSub": "We use this to fill in passenger details on your next bookings.",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "nationalIdOptional": "National ID (optional)",
+    "mobileOptional": "Mobile number (optional)",
+    "emailOptional": "Email (optional)",
+    "acceptTerms": "I accept the terms of use and the privacy policy.",
+    "create": "Create account",
+    "newPwTitle": "New password",
+    "setPwTitle": "Set a password",
+    "newPwSub": "Choose a password you do not use anywhere else.",
+    "newPassword": "New password",
+    "repeatPassword": "Repeat password",
+    "ruleLength": "At least 8 characters",
+    "ruleDigit": "At least one number",
+    "ruleMatch": "Both fields match",
+    "savePassword": "Save password",
+    "showPassword": "Show password",
+    "back": "Back",
+    "close": "Close",
+    "errors": {
+      "identifier": "Enter a valid mobile number or email.",
+      "code": "Enter all 5 digits.",
+      "codeWrong": "That code is not right. Try again.",
+      "credentials": "The number/email or password is not right.",
+      "firstName": "Enter your first name.",
+      "lastName": "Enter your last name.",
+      "nationalId": "The national ID must be 10 digits.",
+      "phone": "That mobile number is not valid.",
+      "email": "That email is not valid.",
+      "terms": "You need to accept the terms to create an account.",
+      "password": "Use at least 8 characters and one number.",
+      "mismatch": "The two passwords do not match.",
+      "contact": "Keep at least one way to reach you."
+    },
+    "toasts": {
+      "welcome": "Welcome, {name}.",
+      "created": "Your account is ready. Welcome, {name}.",
+      "loggedOut": "You are logged out.",
+      "passwordSaved": "Password saved.",
+      "passwordChanged": "Password changed. Log in with your new password."
+    },
+    "menu": {
+      "profile": "My profile",
+      "trips": "My trips",
+      "logout": "Log out"
+    }
+  },
+  "profile": {
+    "title": "My profile",
+    "member": "dot air Club member",
+    "completion": "Profile completion",
+    "completeCount": "{done} of {total} complete",
+    "missing": "Still missing: {items}",
+    "complete": "Your profile is complete.",
+    "items": {
+      "name": "Name",
+      "mobile": "Mobile number",
+      "email": "Email",
+      "nationalId": "National ID",
+      "password": "Password"
+    },
+    "personal": "Personal details",
+    "personalSub": "Your name must match your ID document.",
+    "nationalId": "National ID",
+    "email": "Email",
+    "mobile": "Mobile number",
+    "save": "Save changes",
+    "saved": "Changes saved.",
+    "security": "Sign-in and security",
+    "otpTitle": "One-time code",
+    "otpSub": "Log in with a code sent to your phone or email",
+    "on": "On",
+    "passwordSet": "Set",
+    "passwordNotSet": "Not set",
+    "changePassword": "Change",
+    "setPassword": "Set password",
+    "notifications": "Notifications",
+    "sms": "SMS",
+    "smsSub": "Flight status and gate changes",
+    "emailSub": "Tickets and receipts",
+    "push": "Browser alerts",
+    "pushSub": "Check-in reminders",
+    "travellers": "Saved travellers",
+    "travellersEmpty": "No saved travellers yet. Saving companions makes your next booking faster.",
+    "addTraveller": "Add traveller",
+    "soon": "This part is not built yet.",
+    "trips": "My trips",
+    "tripsEmpty": "No trips yet.",
+    "searchFlights": "Search flights",
+    "signedOutTitle": "Log in to see your profile",
+    "signedOutBody": "Accounts in this preview build live only in this browser tab and are cleared when you reload."
   }
 }

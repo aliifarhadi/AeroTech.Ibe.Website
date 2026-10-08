@@ -1,4 +1,4 @@
-import { destinationsFrom, HUB_CODE, isNetworkCode, ticketedAirportCode } from './network';
+import { cityOfAirport, HUB_CODE, isNetworkCode, ticketedAirportCode } from './network';
 
 /**
  * The search a traveller is composing in the booking widget, before it becomes a
@@ -91,24 +91,15 @@ export function tripReducer(draft: TripDraft, action: TripAction): TripDraft {
       };
     }
     case 'setOrigin': {
-      if (!isNetworkCode(action.code)) return draft;
-      const reachable = destinationsFrom(action.code);
-      // Away from the hub there is exactly one destination; from the hub keep a valid choice.
-      const to =
-        reachable.length === 1
-          ? (reachable[0] ?? null)
-          : draft.to !== null && reachable.includes(draft.to)
-            ? draft.to
-            : null;
+      if (!isNetworkCode(action.code) || action.code === draft.from) return draft;
+      // Picking the current destination as the origin turns the trip around.
+      const to = draft.to === action.code ? draft.from : draft.to;
       return { ...draft, from: action.code, to };
     }
     case 'setDestination': {
-      if (action.code === draft.from) return draft;
-      if (destinationsFrom(draft.from).includes(action.code)) return { ...draft, to: action.code };
-      // A destination that is not reachable from the current origin is reachable from the hub.
-      return destinationsFrom(HUB_CODE).includes(action.code)
-        ? { ...draft, from: HUB_CODE, to: action.code }
-        : draft;
+      if (!isNetworkCode(action.code) || action.code === draft.to) return draft;
+      if (action.code !== draft.from) return { ...draft, to: action.code };
+      return draft.to === null ? draft : { ...draft, from: draft.to, to: action.code };
     }
     case 'swap':
       return draft.to === null ? draft : { ...draft, from: draft.to, to: draft.from };
@@ -163,4 +154,44 @@ export function toSearchQuery(draft: TripDraft): string {
   if (draft.promoCode) params.set('promo', draft.promoCode);
   if (draft.awardSearch) params.set('miles', '1');
   return params.toString();
+}
+
+const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
+const count = (value: string | null, fallback: number) => {
+  const n = Number(value ?? fallback);
+  return Number.isInteger(n) && n >= 0 && n <= MAX_PASSENGERS ? n : fallback;
+};
+
+/**
+ * Reads a search query back into a draft: the inverse of `toSearchQuery`. Returns null when the
+ * query does not describe a bookable search, so pages can show an error instead of guessing.
+ */
+export function draftFromQuery(params: URLSearchParams): TripDraft | null {
+  const from = cityOfAirport(params.get('from') ?? '');
+  const to = cityOfAirport(params.get('to') ?? '');
+  const depart = params.get('depart') ?? '';
+  const back = params.get('return');
+  const trip = params.get('tripType') === 'ONE_WAY' ? 'one' : 'round';
+  if (!isNetworkCode(from) || !isNetworkCode(to) || from === to) return null;
+  if (!ISO_DATE.test(depart)) return null;
+  if (trip === 'round' && (!back || !ISO_DATE.test(back) || back < depart)) return null;
+
+  const adults = Math.max(1, count(params.get('adults'), 1));
+  const children = count(params.get('children'), 0);
+  const infants = Math.min(adults, count(params.get('infants'), 0));
+  if (adults + children + infants > MAX_PASSENGERS) return null;
+
+  return {
+    trip,
+    from,
+    to,
+    depart,
+    return: trip === 'round' ? back : null,
+    adults,
+    children,
+    infants,
+    cabin: params.get('cabin') === 'BUSINESS' ? 'BUSINESS' : 'ECONOMY',
+    promoCode: (params.get('promo') ?? '').trim().toUpperCase().slice(0, 32),
+    awardSearch: params.get('miles') === '1',
+  };
 }

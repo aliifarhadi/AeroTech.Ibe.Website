@@ -80,7 +80,7 @@ for (const locale of ['fa-ir', 'en-de'] as const) {
 
   test.describe(`components ${locale}`, () => {
     test.beforeEach(async ({ page }) => {
-      await page.goto(`/${locale}/next/design-system/components`);
+      await page.goto(`/${locale}/design-system/components`);
       await expect(page.locator('html')).toHaveAttribute('dir', t.dir);
       // Wait for hydration, otherwise an early key press reaches markup without handlers.
       await page.waitForFunction(() => {

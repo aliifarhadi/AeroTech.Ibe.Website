@@ -1,975 +1,635 @@
 {
-  "Brand": {
-    "name": "dotair"
-  },
-  "Common": {
-    "skipToContent": "Zum Inhalt springen",
-    "comingSoon": "Diese Seite ist Teil der Design-Vorschau. Vollständige Inhalte folgen in einer späteren Phase."
-  },
-  "Nav": {
+  "brand": "dot air",
+  "skip": "Zum Inhalt springen",
+  "nav": {
+    "aria": "Hauptnavigation",
     "book": "Buchen",
-    "manage": "Verwalten",
+    "manage": "Buchung verwalten",
     "checkIn": "Check-in",
-    "flightStatus": "Flugstatus",
+    "status": "Flugstatus",
     "destinations": "Reiseziele",
-    "offers": "Angebote",
-    "help": "Hilfe",
-    "loyalty": "Vielflieger",
+    "guide": "Reiseinfos",
+    "club": "Club",
+    "search": "Flüge suchen",
     "login": "Anmelden",
-    "signup": "Beitreten",
-    "about": "Über uns",
     "menu": "Menü",
-    "search": "Suchen",
-    "explore": "Entdecken",
-    "experience": "Erleben",
-    "club": "DotAir Club"
+    "language": "Sprache und Region"
   },
-  "Home": {
-    "heroBadge": "Direkt von der Airline",
-    "title": "Entdecken Sie <hl>günstige Flüge</hl> weltweit",
-    "heroCta": "Bis zu 15 % sparen",
-    "subtitle": "Suchen Sie Flüge, verwalten Sie Ihre Buchung und checken Sie ein — in Ihrer Sprache und Leserichtung."
+  "hero": {
+    "greeting": {
+      "morning": "Guten Morgen",
+      "afternoon": "Guten Tag",
+      "evening": "Guten Abend",
+      "night": "Gute Nacht"
+    },
+    "greetingLine": "{greeting}. Wohin geht es?",
+    "mood": {
+      "dawn": "Sonnenaufgang",
+      "day": "Tag",
+      "dusk": "Sonnenuntergang",
+      "night": "Nacht"
+    },
+    "tehranTime": "Teheran {time}",
+    "moodAria": "Stimmung der Szene: {mood}. Zum Ändern drücken.",
+    "title": "Punkt. Neue Zeile",
+    "subtitle": "Fliegen Sie in sieben Städte im Iran und nach Istanbul. Gebucht ist in Sekunden.",
+    "greetingNamed": "{greeting}, {name}. Wohin geht es?"
   },
-  "LocaleSwitcher": {
-    "label": "Sprache und Markt"
-  },
-  "Widget": {
-    "ariaTabs": "Buchungsoptionen",
+  "booking": {
+    "tabsAria": "Services",
     "tabs": {
       "book": "Flug buchen",
-      "stopover": "Stopover / Pakete",
-      "manage": "Verwalten / Check-in",
-      "flightStatus": "Flugstatus"
+      "manage": "Buchung verwalten",
+      "checkIn": "Check-in",
+      "status": "Flugstatus"
     },
-    "tripType": {
-      "legend": "Reiseart",
-      "roundTrip": "Hin- und Rückflug",
-      "oneWay": "Nur Hinflug",
-      "multiCity": "Multi-City"
+    "tabsShort": {
+      "book": "Buchen",
+      "manage": "Ändern",
+      "checkIn": "Check-in",
+      "status": "Status"
     },
+    "tripAria": "Reiseart",
+    "round": "Hin und zurück",
+    "oneWay": "Nur Hinflug",
+    "promo": "Ich habe einen Aktionscode",
+    "promoLabel": "Aktionscode",
+    "promoApply": "Übernehmen",
+    "promoSaved": "Code „{code}“ gespeichert. Er wird bei der Preisanzeige berücksichtigt.",
+    "promoEmpty": "Bitte Aktionscode eingeben.",
+    "points": "Mit Punkten zahlen",
+    "pointsOn": "Ergebnisse werden in Club-Punkten angezeigt.",
+    "pointsOff": "Ergebnisse werden als Barpreise angezeigt.",
     "from": "Von",
     "to": "Nach",
-    "fromPlaceholder": "Von",
-    "toPlaceholder": "Nach",
-    "swap": "Abflug und Ziel tauschen",
-    "depart": "Abflug",
+    "toPlaceholder": "Wohin?",
+    "chooseOrigin": "Abflugort wählen",
+    "chooseDestination": "Reiseziel wählen",
+    "swap": "Abflugort und Reiseziel tauschen",
+    "swapFirst": "Bitte zuerst ein Reiseziel wählen.",
+    "depart": "Hinflug",
     "return": "Rückflug",
-    "passengers": "Passagiere",
-    "passengersCount": "{count, plural, one {# Passagier} other {# Passagiere}}",
-    "paxClassLabel": "Passagiere / Klasse",
-    "paxClass": "{count, plural, one {# Passagier} other {# Passagiere}}, {cabin}",
-    "passengerPicker": {
-      "title": "Passagiere und Klasse",
-      "adults": "Erwachsene",
-      "children": "Kinder",
-      "infants": "Babys",
-      "cabin": "Klasse",
-      "done": "Fertig",
-      "increase": "{label} erhöhen",
-      "decrease": "{label} verringern"
-    },
-    "selectDate": "Datum auswählen",
+    "addReturn": "Rückflug hinzufügen",
+    "chooseDate": "Datum wählen",
+    "dates": "Reisedaten",
+    "hintDepart": "Hinflugdatum wählen",
+    "hintRange": "Erst das Hinflugdatum, dann das Rückflugdatum wählen",
     "previousMonth": "Vorheriger Monat",
     "nextMonth": "Nächster Monat",
-    "today": "Heute",
-    "noAirportsFound": "Keine Flughäfen gefunden",
-    "dateRange": {
-      "flexibleDates": "Meine Reisedaten sind flexibel",
-      "clearAll": "Alle löschen",
-      "continue": "Weiter"
-    },
-    "useMiles": "Mit Meilen buchen",
-    "cabin": "Klasse",
-    "cabins": {
-      "economy": "Economy",
-      "premiumEconomy": "Premium Economy",
-      "business": "Business",
-      "first": "First"
-    },
-    "promo": "Promo-Code",
-    "promoPlaceholder": "Code eingeben",
-    "addPromo": "Promo-Code hinzufügen",
-    "search": "Flüge suchen",
-    "manage": {
-      "reference": "Buchungsnummer",
-      "surname": "Nachname",
-      "cta": "Buchung finden"
-    },
-    "checkIn": {
-      "reference": "Buchungsnummer oder Ticket",
-      "surname": "Nachname",
-      "cta": "Einchecken"
-    },
-    "status": {
-      "flightNumber": "Flugnummer",
-      "date": "Datum",
-      "cta": "Status prüfen"
-    },
-    "errors": {
-      "from": "Abflugort auswählen",
-      "to": "Zielort auswählen",
-      "sameAirport": "Abflug und Ziel müssen sich unterscheiden",
-      "depart": "Abflugdatum wählen",
-      "returnDate": "Rückflugdatum wählen"
-    },
-    "bookCash": "Buchen",
-    "bookMiles": "Mit Meilen buchen",
-    "flexibleDates": "Flexible Daten"
-  },
-  "Trust": {
-    "items": {
-      "a": {
-        "title": "Bestpreis-Versprechen",
-        "desc": "Transparente Preise ohne versteckte Gebühren."
-      },
-      "b": {
-        "title": "Sichere Zahlungen",
-        "desc": "Geschützter Checkout mit vertrauenswürdigen Anbietern."
-      },
-      "c": {
-        "title": "24/7-Support",
-        "desc": "Echte Hilfe, wann immer Sie reisen."
-      },
-      "d": {
-        "title": "Flexible Änderungen",
-        "desc": "Verwalten oder ändern Sie Ihre Reise mühelos."
-      }
-    }
-  },
-  "Destinations": {
-    "eyebrow": "Entdecken",
-    "title": "Beliebte Reiseziele",
-    "subtitle": "Inspiration für Ihre nächste Reise.",
-    "from": "ab",
-    "cta": "Alle Reiseziele ansehen",
-    "cities": {
-      "DXB": "Dubai",
-      "IST": "Istanbul",
-      "LHR": "London",
-      "BER": "Berlin"
-    }
-  },
-  "Offers": {
-    "eyebrow": "Angebote",
-    "title": "Aktuelle Angebote",
-    "subtitle": "Angebote für günstigeres Reisen.",
-    "cta": "Details ansehen",
-    "cards": {
-      "a": {
-        "badge": "Begrenzt",
-        "title": "Begleiter-Tarife",
-        "desc": "Nehmen Sie auf ausgewählten Strecken eine Begleitung günstiger mit."
-      },
-      "b": {
-        "badge": "Mitglieder",
-        "title": "Preise nur für Mitglieder",
-        "desc": "Melden Sie sich an, um exklusive Tarife für Vielflieger freizuschalten."
-      },
-      "c": {
-        "badge": "Saisonal",
-        "title": "Last-Minute-Reisen",
-        "desc": "Spontane Kurztrips zu reduzierten Tarifen in dieser Saison."
-      }
-    }
-  },
-  "Loyalty": {
-    "eyebrow": "Prämien",
-    "title": "Sammeln Sie Meilen auf jeder Reise",
-    "body": "Treten Sie dem Vielfliegerprogramm bei, um Meilen zu sammeln und einzulösen, Mitgliedertarife freizuschalten und nach Ihren Wünschen zu reisen.",
-    "join": "Jetzt beitreten",
-    "login": "Anmelden"
-  },
-  "AppPromo": {
-    "title": "Nehmen Sie Ihre Reise mit",
-    "body": "Installieren Sie die App für Bordkarten, Flug-Updates und schnelleren Check-in.",
-    "cta": "App holen"
-  },
-  "About": {
-    "eyebrow": "Über DotAir",
-    "title": "Wir bringen Sie <hl>näher</hl> ans Wesentliche",
-    "subtitle": "Wir sind eine moderne Fluggesellschaft mit einer Idee: Reisen soll mühelos, transparent und menschlich sein — in jeder Sprache, die Sie sprechen.",
-    "stats": {
-      "destinations": {
-        "value": "120+",
-        "label": "Reiseziele"
-      },
-      "onTime": {
-        "value": "92%",
-        "label": "Pünktlichkeit"
-      },
-      "guests": {
-        "value": "18 Mio.",
-        "label": "Gäste pro Jahr"
-      },
-      "fleet": {
-        "value": "60",
-        "label": "Moderne Flugzeuge"
-      }
-    },
-    "storyEyebrow": "Unsere Geschichte",
-    "storyTitle": "Gebaut für die Menschen, die fliegen",
-    "storyP1": "DotAir begann mit einer einfachen Überzeugung — eine Reise zu buchen und zu verwalten sollte so angenehm sein wie die Reise selbst. Keine versteckten Gebühren, keine Sackgassen, kein Fachjargon.",
-    "storyP2": "Heute verbinden wir Städte weltweit mit einer jungen, effizienten Flotte und einem Direktkanal, der Ihnen die Kontrolle gibt — von der Suche bis zum Check-in.",
-    "valuesEyebrow": "Wofür wir stehen",
-    "valuesTitle": "Unsere Werte",
-    "values": {
-      "safety": {
-        "title": "Sicherheit zuerst",
-        "desc": "Jede Entscheidung beginnt mit der Sicherheit unserer Gäste und Crew — ohne Kompromisse."
-      },
-      "guests": {
-        "title": "Gäste im Fokus",
-        "desc": "Wir gestalten für echte Reisende, mit klaren Preisen und Hilfe, wann immer Sie sie brauchen."
-      },
-      "planet": {
-        "title": "Schonender zum Planeten",
-        "desc": "Eine treibstoffeffiziente Flotte und smartere Abläufe, um unseren Fußabdruck jedes Jahr zu verringern."
-      }
-    },
-    "ctaTitle": "Bereit, mit uns zu fliegen?",
-    "ctaBody": "Finden Sie Tarife zu über 120 Zielen weltweit.",
-    "ctaButton": "Flug buchen"
-  },
-  "Contact": {
-    "eyebrow": "Kontakt",
-    "title": "Wir sind für Sie da",
-    "subtitle": "Erreichen Sie das DotAir-Team jederzeit — per Telefon, E-Mail oder Live-Chat, in Ihrer Sprache.",
-    "methods": {
-      "phone": {
-        "title": "Anrufen",
-        "detail": "+49 30 1234 5678",
-        "note": "24/7, jeden Tag"
-      },
-      "email": {
-        "title": "E-Mail",
-        "detail": "help@dotair.example",
-        "note": "Antwort innerhalb von 24 Stunden"
-      },
-      "chat": {
-        "title": "Live-Chat",
-        "detail": "Chat in der App",
-        "note": "Am schnellsten bei Buchungsfragen"
-      },
-      "offices": {
-        "title": "Büros",
-        "detail": "DotAir-Büro finden",
-        "note": "In über 40 Ländern"
-      }
-    },
-    "hoursTitle": "Servicezeiten",
-    "hours": "Telefon- und Chat-Support sind rund um die Uhr verfügbar, in mehreren Sprachen.",
-    "formTitle": "Senden Sie uns eine Nachricht",
-    "form": {
-      "name": "Vollständiger Name",
-      "email": "E-Mail-Adresse",
-      "subject": "Betreff",
-      "subjects": {
-        "booking": "Buchungshilfe",
-        "baggage": "Gepäck",
-        "refund": "Erstattungen & Änderungen",
-        "other": "Etwas anderes"
-      },
-      "message": "Nachricht",
-      "send": "Nachricht senden"
-    },
-    "successTitle": "Danke — Ihre Nachricht ist unterwegs.",
-    "successBody": "Unser Team meldet sich innerhalb von 24 Stunden bei Ihnen."
-  },
-  "Footer": {
-    "rights": "Alle Rechte vorbehalten.",
-    "stayInTouch": "In Kontakt bleiben",
-    "columns": {
-      "bookManage": "Buchen & Verwalten",
-      "explore": "Entdecken",
-      "help": "Hilfe",
-      "about": "Über DotAir",
-      "business": "Geschäftlich"
-    },
-    "links": {
-      "bookFlight": "Flug buchen",
-      "manage": "Buchung verwalten",
-      "checkIn": "Check-in",
-      "flightStatus": "Flugstatus",
-      "destinations": "Reiseziele",
-      "offers": "Angebote",
-      "experience": "Erleben",
-      "club": "DotAir Club",
-      "contact": "Kontakt",
-      "faqs": "Häufige Fragen",
-      "baggage": "Gepäck",
-      "assistance": "Sonderbetreuung",
-      "aboutUs": "Über uns",
-      "careers": "Karriere",
-      "newsroom": "Newsroom",
-      "sustainability": "Nachhaltigkeit",
-      "corporate": "Geschäftsreisen",
-      "agents": "Reisebüros",
-      "partners": "Partner"
-    },
-    "legal": {
-      "privacy": "Datenschutz",
-      "terms": "AGB",
-      "cookies": "Cookies"
-    },
-    "getApp": "App holen"
-  },
-  "Passengers": {
-    "back": "Zurück",
-    "progress": "Buchungsfortschritt",
-    "stepFlights": "Flüge",
-    "stepPassengers": "Passagiere",
-    "stepSeats": "Sitze",
-    "stepPayment": "Zahlung",
-    "eyebrow": "Passagierinformationen",
-    "title": "Wer reist?",
-    "subtitle": "Geben Sie die Passagier- und Kontaktdaten genau wie im Reisedokument ein.",
-    "documentNotice": "Die Namen müssen exakt mit dem verwendeten Reisepass oder Reisedokument übereinstimmen.",
-    "adultOne": "Erwachsener 1",
-    "requiredFields": "Alle Pflichtfelder müssen ausgefüllt werden.",
-    "titleLabel": "Anrede",
-    "select": "Auswählen",
-    "mr": "Herr",
-    "ms": "Frau",
-    "mrs": "Frau",
-    "givenName": "Vorname",
-    "familyName": "Nachname",
-    "dateOfBirth": "Geburtsdatum",
-    "dateHint": "Format JJJJ-MM-TT verwenden.",
-    "gender": "Geschlecht (optional)",
-    "preferNot": "Keine Angabe",
-    "female": "Weiblich",
-    "male": "Männlich",
-    "loyalty": "Vielfliegerprogramm hinzufügen",
-    "loyaltyProgram": "Vielfliegerprogramm",
-    "loyaltyNumber": "Mitgliedsnummer",
-    "contactTitle": "Kontaktdaten",
-    "contactHint": "Wir verwenden diese Daten für Buchungs- und Störungsmeldungen.",
-    "email": "E-Mail-Adresse",
-    "countryCode": "Code",
-    "phone": "Telefonnummer",
-    "tripSummary": "Ihre Reise",
-    "passengers": "Passagiere",
-    "oneAdult": "1 Erwachsener",
-    "fare": "Tarif",
-    "total": "Gesamt",
-    "continue": "Weiter zur Sitzplatzwahl",
-    "secure": "Ihre Daten werden geschützt und nicht in diesem Browser gespeichert."
-  },
-  "SearchResults": {
-    "title": "Wählen Sie Ihre Flüge",
-    "editSearch": "Suche bearbeiten",
-    "resultsFound": "Flüge gefunden",
-    "sortBy": "Sortieren nach",
-    "recommended": "Empfohlen",
-    "lowestPrice": "Niedrigster Preis",
-    "shortest": "Kürzeste Reise",
-    "filters": "Ergebnisse filtern",
-    "stops": "Stopps",
-    "anyStops": "Alle Flüge",
-    "nonstop": "Direktflug",
-    "oneStop": "1 Stopp",
-    "departureTime": "Abflugzeit",
-    "morning": "Morgen",
-    "afternoon": "Nachmittag",
-    "evening": "Abend",
-    "flexible": "Jede Zeit",
-    "select": "Auswählen",
-    "selected": "Ausgewählt",
-    "from": "Ab",
-    "total": "Gesamt",
-    "duration": "Flugdauer",
-    "direct": "Direkt",
-    "stop": "Stopp",
+    "passengersClass": "Reisende & Klasse",
+    "passengersCount": "{count, plural, one {# Person} other {# Personen}}",
+    "paxTitle": "Reisende und Klasse",
+    "adults": "Erwachsene",
+    "adultsHint": "Ab 12 Jahren",
+    "children": "Kinder",
+    "childrenHint": "2 bis 11 Jahre",
+    "infants": "Kleinkinder",
+    "infantsHint": "Unter 2 Jahren",
+    "fewer": "Weniger: {label}",
+    "more": "Mehr: {label}",
+    "cabin": "Reiseklasse",
     "economy": "Economy",
-    "cabinBaggage": "Handgepäck",
-    "checkedBaggage": "Aufgabegepäck",
-    "changes": "Änderungen möglich",
-    "refundable": "Erstattbar",
-    "perPassenger": "pro Passagier",
-    "details": "Flugdetails",
-    "bestValue": "Bestes Angebot",
-    "noResults": "Keine Flüge entsprechen diesen Filtern.",
-    "fareFamily": "Flug und Tarif auswählen",
-    "lite": "Economy Lite",
-    "classic": "Economy Classic",
-    "convenience": "Economy Convenience",
-    "comfort": "Economy Comfort",
-    "continueBooking": "Buchung fortsetzen",
     "business": "Business",
-    "first": "First",
-    "selectFlights": "Flüge auswählen",
-    "passengerServices": "Passagier und Services",
-    "paymentDetails": "Zahlungsdetails",
-    "tripSummary": "Reisezusammenfassung",
-    "flightSelected": "Flug ausgewählt",
-    "back": "Zurück",
-    "login": "Anmelden",
-    "travelRequirements": "Reisebestimmungen",
-    "seeMoreDates": "Weitere Daten",
-    "changeCurrency": "Währung ändern",
-    "advisory": "Prüfen Sie vor der Buchung die aktuellen Reisehinweise.",
-    "standardSeat": "Standard-Sitzplatzwahl",
-    "preferredSeat": "Bevorzugte Sitzplatzwahl",
-    "routeChanges": "Flug-/Streckenänderungen",
-    "carryOn": "Handgepäck",
-    "upgradeAvios": "Upgrade mit Avios",
-    "noFees": "Gebührenfrei",
-    "forFee": "Gegen Gebühr",
-    "oneChange": "1 Änderung",
-    "unlimited": "Unbegrenzt",
-    "available": "Verfügbar",
-    "selectFare": "Tarif auswählen",
-    "seeFares": "Tarife anzeigen",
-    "totalAllPassengers": "Gesamtpreis für alle Passagiere",
-    "earnAvios": "Avios sammeln",
-    "businessClass": "Business Class",
-    "departureSelected": "Hinflug ausgewählt",
-    "confirm": "Bestätigen",
-    "operatedBy": "Durchgeführt von DotAir",
+    "maxPassengers": "Bis zu 9 Reisende pro Buchung",
+    "done": "Fertig",
     "close": "Schließen",
-    "loadingWelcome": "Willkommen an Bord",
-    "loadingTitle": "Es sind die Details, die eine Reise perfekt machen",
-    "loadingResults": "Ergebnisse werden geladen…",
-    "loadingAward": "Airline-Auszeichnung",
-    "earliest": "Früheste Abflugzeit",
-    "maxPrice": "Höchstpreis",
-    "resetFilters": "Zurücksetzen",
-    "showResults": "{count, plural, one {# Flug anzeigen} other {# Flüge anzeigen}}",
-    "noResultsHint": "Passen Sie Ihre Filter oder Daten an.",
-    "roundTrip": "Hin- und Rückflug",
-    "oneWay": "Nur Hinflug",
-    "hoursShort": "Std",
-    "minutesShort": "Min",
-    "nextDay": "+1",
-    "seatsLeft": "{count, plural, one {noch # Platz} other {noch # Plätze}}",
-    "compareFares": "Tarife und Leistungen vergleichen",
-    "view": "Ansehen",
-    "fareFamilies": {
+    "search": "Flüge suchen",
+    "cityPlaceholder": "Stadt oder Flughafencode",
+    "citySearch": "Städte suchen",
+    "noCity": "Keine Stadt mit diesem Namen im Streckennetz von dot air.",
+    "assistant": "dot Assistent",
+    "assistantPlaceholder": "Oder tippen: Freitag, zwei Personen, Maschhad",
+    "assistantLabel": "Beschreiben Sie Ihre Reise",
+    "destinationSet": "Reiseziel auf {city} gesetzt. Datum wählen und suchen.",
+    "lookup": {
+      "reference": "Buchungscode",
+      "referenceOrTicket": "Buchungscode oder Ticketnummer",
+      "lastName": "Nachname",
+      "flightNumber": "Flugnummer",
+      "route": "Strecke (optional)",
+      "routePlaceholder": "Teheran nach Schiras",
+      "manageSubmit": "Buchung anzeigen",
+      "checkInSubmit": "Check-in starten",
+      "statusSubmit": "Status prüfen",
+      "required": "Bitte eingeben: {field}.",
+      "notConnected": "Dieser Service ist in dieser Vorschauversion noch nicht angebunden."
+    }
+  },
+  "cities": {
+    "THR": {
+      "name": "Teheran",
+      "airport": "Mehrabad · Imam Khomeini"
+    },
+    "MHD": {
+      "name": "Maschhad",
+      "airport": "Flughafen Shahid Hasheminejad"
+    },
+    "SYZ": {
+      "name": "Schiras",
+      "airport": "Flughafen Shahid Dastgheib"
+    },
+    "IFN": {
+      "name": "Isfahan",
+      "airport": "Flughafen Shahid Beheshti"
+    },
+    "TBZ": {
+      "name": "Täbris",
+      "airport": "Flughafen Shahid Madani"
+    },
+    "KIH": {
+      "name": "Kisch",
+      "airport": "Internationaler Flughafen Kisch"
+    },
+    "AWZ": {
+      "name": "Ahvaz",
+      "airport": "Internationaler Flughafen Ahvaz"
+    },
+    "BND": {
+      "name": "Bandar Abbas",
+      "airport": "Internationaler Flughafen Bandar Abbas"
+    },
+    "IST": {
+      "name": "Istanbul",
+      "airport": "Flughafen Istanbul"
+    }
+  },
+  "duration": {
+    "hm": "{hours} Std. {minutes} Min.",
+    "h": "{hours} Std.",
+    "m": "{minutes} Min.",
+    "clock": "{time} Std."
+  },
+  "inspire": {
+    "title": "Wohin diese Woche?",
+    "previous": "Zurück",
+    "next": "Weiter",
+    "aria": "Reiseziele",
+    "international": "International",
+    "nonstop": "Nonstop"
+  },
+  "network": {
+    "kicker": "Streckennetz",
+    "title": "Von Teheran zu acht Zielen",
+    "lead": "Sieben Städte im Iran und Istanbul, alle nonstop. Wählen Sie ein Ziel aus der Liste oder auf der Karte.",
+    "listAria": "Reiseziele",
+    "mapAria": "Karte der dot air Strecken ab Teheran",
+    "nonstop": "Nonstop",
+    "international": "International",
+    "destination": "Reiseziel",
+    "distance": "Entfernung",
+    "km": "km",
+    "flightTime": "Flugzeit",
+    "flyTo": "Nach {city} fliegen",
+    "note": "Preise ändern sich in Echtzeit und erscheinen nach der Suche. Flugzeiten sind Richtwerte."
+  },
+  "assistant": {
+    "kicker": "Smarter Assistent",
+    "title": "Beschreiben Sie Ihre Reise in einem Satz",
+    "lead": "Schreiben Sie wohin und wann, so wie Sie es sagen würden. Der dot Assistent findet passende Flüge und schlägt den besten vor.",
+    "name": "dot Assistent",
+    "sample": "Beispiel",
+    "liveFare": "Live-Preis",
+    "suggests": "dot empfiehlt",
+    "footer": "Jede Option wird live bepreist",
+    "promptsAria": "Beispielanfragen",
+    "customAnswer": "Im echten Produkt liest der Assistent diesen Satz. Beispielantwort:",
+    "scenarios": {
+      "mashhad": {
+        "q": "Freitag, zwei Personen, Maschhad",
+        "a": "Drei Flüge nach Maschhad am Freitag. Der Mittagsflug passt am besten zu Ihrem Plan.",
+        "o1": "Früher Morgen",
+        "o2": "Mittag, nonstop",
+        "o3": "Abend"
+      },
+      "kish": {
+        "q": "Morgen früh, eine Person, Kisch",
+        "a": "Zwei Flüge nach Kisch morgen früh. Der erste kommt früher an.",
+        "o1": "Frühester",
+        "o2": "Später Vormittag"
+      },
+      "istanbul": {
+        "q": "Wochenende in Istanbul, hin und zurück",
+        "a": "Für Donnerstag bis Sonntag hat dieses Paar die kürzesten Wartezeiten.",
+        "o1": "Hinflug · Donnerstag",
+        "o2": "Rückflug · Sonntag"
+      }
+    }
+  },
+  "tools": {
+    "kicker": "Reise verwalten",
+    "title": "Vom Kauf bis zur Gepäckausgabe, an einem Ort",
+    "lead": "Alles, was Sie nach der Buchung brauchen, ohne Anrufe und ohne Warteschlangen.",
+    "cta": "Buchung verwalten",
+    "sample": "Beispiel",
+    "steps": {
+      "checkIn": "Check-in",
+      "checkInState": "geöffnet",
+      "gate": "Gate 7",
+      "gateState": "bekannt gegeben",
+      "boarding": "Boarding",
+      "boardingState": "gestartet",
+      "enRoute": "Unterwegs",
+      "enRouteState": "Ankunft 15:30"
+    },
+    "statusTitle": "Flugstatus in Echtzeit",
+    "statusBody": "Wir informieren Sie über Check-in, Gate, Boarding und Gepäckband, bevor Sie fragen.",
+    "selectedSeat": "Gewählter Sitz",
+    "window": "Fenster",
+    "aisle": "Gang",
+    "middle": "Mitte",
+    "seatAria": "Sitz {seat}",
+    "seatTaken": "Sitz {seat}, belegt",
+    "seatsAria": "Beispielkabine",
+    "seatTitle": "Sitzplatzwahl",
+    "seatBody": "Sehen Sie den echten Kabinenplan und wählen Sie Ihren Sitz selbst.",
+    "liveUpdates": "Live-Updates",
+    "cheapest": "Gelber Balken: günstigster Tag",
+    "fareTitle": "Preiskalender",
+    "fareBody": "Vergleichen Sie die Preise der Woche und wählen Sie den günstigsten Tag.",
+    "notes": {
+      "gate": "Ihr Gate ist jetzt 7",
+      "gateSub": "DA 142 · Teheran nach Schiras",
+      "gateTime": "jetzt",
+      "checkIn": "Online-Check-in ist geöffnet",
+      "checkInSub": "Bordkarte abrufen",
+      "checkInTime": "vor 2 Min.",
+      "bag": "Ihr Gepäck ist auf Band 3",
+      "bagSub": "Flughafen Schiras",
+      "bagTime": "vor 5 Min.",
+      "early": "Landung 10 Minuten früher",
+      "earlySub": "Ankunftszeit aktualisiert",
+      "earlyTime": "vor 8 Min."
+    },
+    "alertsTitle": "Rechtzeitige Hinweise",
+    "alertsBody": "Verspätungen, Gate-Änderungen und Check-in-Öffnung per SMS und Push."
+  },
+  "guide": {
+    "kicker": "Reiseinfos",
+    "title": "Gut zu wissen vor dem Flug",
+    "baggage": "Gepäck",
+    "baggageBody": "Freigepäck je Tarif und Regeln für Handgepäck.",
+    "changes": "Umbuchung und Erstattung",
+    "changesBody": "Datum ändern oder stornieren, online und ohne Anruf.",
+    "checkIn": "Online-Check-in",
+    "checkInBody": "Holen Sie Ihre Bordkarte, bevor Sie am Flughafen sind.",
+    "special": "Besondere Betreuung",
+    "specialBody": "Rollstuhl, allein reisende Kinder, Sondermahlzeiten und Haustiere.",
+    "documents": "Reisedokumente",
+    "documentsBody": "Was Sie für Inlandsflüge und für Istanbul brauchen.",
+    "support": "Support",
+    "supportBody": "Live-Chat und telefonische Hilfe."
+  },
+  "club": {
+    "kicker": "Treueprogramm",
+    "title": "dot air Club",
+    "lead": "Sammeln Sie Punkte auf jedem Flug und lösen Sie sie beim nächsten ein. Die Mitgliedschaft ist kostenlos.",
+    "member": "MEMBER",
+    "yourName": "Ihr Name",
+    "join": "Kostenlos beitreten",
+    "login": "Ich bin Mitglied",
+    "teamKicker": "Das Team",
+    "hiring": "Wir stellen ein",
+    "teamTitle": "Wir bauen das in Teheran",
+    "teamLead": "Ein junges Team aus Ingenieurinnen, Designern und Luftfahrtprofis. Wenn Sie glauben, dass Fliegen besser geht, kommen Sie zu uns.",
+    "careers": "Über dot air",
+    "roles": {
+      "designer": "Product Designer",
+      "frontend": "Frontend-Entwicklung",
+      "ml": "Machine-Learning-Engineering",
+      "network": "Netzplanung"
+    }
+  },
+  "footer": {
+    "tagline": "Eine Airline, von Grund auf mit KI gebaut.",
+    "fly": "Fliegen",
+    "destinations": "Reiseziele",
+    "help": "Hilfe",
+    "company": "dot air",
+    "network": "Streckennetz",
+    "baggage": "Gepäck",
+    "faq": "Hilfe-Center",
+    "contact": "Kontakt",
+    "about": "Über uns",
+    "loyalty": "Treueprogramm",
+    "offers": "Angebote",
+    "rights": "© {year} dot air",
+    "tehran": "TEHRAN",
+    "social": {
+      "instagram": "Instagram",
+      "telegram": "Telegram",
+      "x": "X",
+      "linkedin": "LinkedIn",
+      "youtube": "YouTube",
+      "aparat": "Aparat"
+    },
+    "socialAria": "dot air in sozialen Medien"
+  },
+  "mobileNav": {
+    "aria": "Untere Navigation",
+    "search": "Suche",
+    "trips": "Reisen",
+    "checkIn": "Check-in",
+    "status": "Status",
+    "account": "Konto"
+  },
+  "locales": {
+    "en-de": "Germany · English",
+    "de-de": "Deutschland · Deutsch",
+    "fa-ir": "ایران · فارسی",
+    "ar-ae": "الإمارات · العربية"
+  },
+  "placeholder": {
+    "title": "Diese Seite ist unterwegs",
+    "body": "Dieser Teil der Website wird noch gebaut. Flugsuche und Konto sind bereits nutzbar.",
+    "home": "Zur Startseite"
+  },
+  "currency": {
+    "IRT": "{amount} Toman"
+  },
+  "flights": {
+    "title": "Flüge wählen",
+    "back": "Zur Startseite",
+    "editSearch": "Suche ändern",
+    "stepsAria": "Buchungsschritte",
+    "steps": {
+      "select": "Flüge wählen",
+      "passengers": "Reisende",
+      "extras": "Extras",
+      "payment": "Zahlung"
+    },
+    "legsAria": "Reiseabschnitte",
+    "outbound": "Hinflug",
+    "return": "Rückflug",
+    "datesAria": "Benachbarte Tage",
+    "fromPrice": "ab {price}",
+    "noService": "Keine Flüge",
+    "countOutbound": "{count, plural, one {# Hinflug} other {# Hinflüge}}",
+    "countReturn": "{count, plural, one {# Rückflug} other {# Rückflüge}}",
+    "sortAria": "Sortierung",
+    "earliest": "Früheste",
+    "cheapest": "Günstigste",
+    "timeAria": "Abflugzeit",
+    "morning": "Morgens",
+    "afternoon": "Nachmittags",
+    "evening": "Abends",
+    "emptyTitle": "Keine Flüge in diesem Zeitraum",
+    "emptyBody": "{count, plural, one {An diesem Tag gibt es # Flug.} other {An diesem Tag gibt es # Flüge.}} Entfernen Sie den Zeitfilter.",
+    "clearFilter": "Filter entfernen",
+    "sampleNote": "Beispieldaten: Flugplan, Preise, Tarifbedingungen und Kabinenplan sind Platzhalter, bis die Buchungssysteme angebunden sind.",
+    "nonstop": "Nonstop",
+    "oneStop": "1 Stopp · {city}",
+    "details": "Flugdetails",
+    "yourChoice": "Ihre Wahl · {fare}",
+    "nextDay": "Ankunft am Folgetag",
+    "economy": "Economy",
+    "business": "Business",
+    "cabinFrom": "{cabin} ab",
+    "soldOut": "Ausgebucht",
+    "seatsLeft": "{count, plural, one {Noch # Platz} other {Noch # Plätze}}",
+    "chooseFare": "Tarif wählen",
+    "perAdult": "Preis pro Erwachsenem, inklusive Steuern und Gebühren",
+    "fareAria": "Tariffamilie",
+    "suggests": "dot empfiehlt",
+    "selected": "Gewählt",
+    "choose": "{name} wählen",
+    "families": {
       "light": "Light",
       "classic": "Classic",
-      "plus": "Plus",
-      "flex": "Flex"
-    },
-    "fareRows": {
-      "rebooking": "Umbuchung",
-      "refund": "Erstattung",
-      "cabinBag": "Handgepäck",
-      "checkedBag": "Aufgabegepäck",
-      "seat": "Sitzplatzwahl",
-      "catering": "Bordverpflegung",
-      "miles": "Meilen"
-    },
-    "fareValues": {
-      "included": "Inklusive",
-      "forFee": "Gegen Gebühr",
-      "notAllowed": "Nicht verfügbar",
-      "atCheckIn": "Beim Check-in"
-    },
-    "businessPerks": {
-      "perkSeat": "Mehr Sitzkomfort",
-      "perkBoarding": "Priority Boarding",
-      "perkLounge": "Lounge-Zugang",
-      "perkMeal": "Premium-Menü"
-    }
-  },
-  "Baggage": {
-    "eyebrow": "Gepäck",
-    "title": "Alles rund um Ihr Gepäck",
-    "subtitle": "Hand- und Aufgabegepäck, Zusatzgepäck, besondere Gegenstände und was zu tun ist, wenn etwas schiefgeht.",
-    "nav": {
-      "cabin": "Handgepäck",
-      "checked": "Aufgabegepäck",
-      "extra": "Zusatzgepäck",
-      "special": "Besondere Gegenstände",
-      "restricted": "Verbotene Gegenstände",
-      "help": "Verspätet oder beschädigt"
-    },
-    "cabin": {
-      "title": "Handgepäck",
-      "intro": "Jeder Reisende darf einen persönlichen Gegenstand sowie ein Handgepäckstück innerhalb der Grenzen seiner Klasse mitnehmen.",
-      "personalItem": "Persönlicher Gegenstand",
-      "personalItemNote": "Passt unter den Vordersitz — 40 × 30 × 15 cm.",
-      "carryOn": "Handgepäckstück",
-      "colWeight": "Max. Gewicht",
-      "colDimensions": "Maße",
-      "rows": {
-        "economy": {
-          "weight": "1 × 8 kg",
-          "dimensions": "55 × 40 × 23 cm"
-        },
-        "premiumEconomy": {
-          "weight": "1 × 10 kg",
-          "dimensions": "55 × 40 × 23 cm"
-        },
-        "business": {
-          "weight": "2 × 10 kg",
-          "dimensions": "55 × 40 × 23 cm"
-        },
-        "first": {
-          "weight": "2 × 12 kg",
-          "dimensions": "55 × 40 × 23 cm"
-        }
-      }
-    },
-    "checked": {
-      "title": "Aufgabegepäck",
-      "intro": "Ihre kostenlose Freigepäckmenge hängt von Klasse und Tarif ab. Gewichtsgrenzen gelten pro Stück.",
-      "colCabin": "Klasse",
-      "colAllowance": "Freigepäck",
-      "colPiece": "Max. pro Stück",
-      "rows": {
-        "economy": {
-          "allowance": "1 Gepäckstück",
-          "piece": "23 kg"
-        },
-        "premiumEconomy": {
-          "allowance": "2 Gepäckstücke",
-          "piece": "23 kg"
-        },
-        "business": {
-          "allowance": "2 Gepäckstücke",
-          "piece": "32 kg"
-        },
-        "first": {
-          "allowance": "3 Gepäckstücke",
-          "piece": "32 kg"
-        }
-      },
-      "note": "Light-Tarife enthalten möglicherweise kein Aufgabegepäck — fügen Sie es bei der Buchung oder unter Verwalten hinzu."
-    },
-    "extra": {
-      "title": "Zusatz- & Übergepäck",
-      "body": "Mehr Platz nötig? Fügen Sie Zusatzgepäck im Voraus hinzu und sparen Sie gegenüber den Flughafenpreisen.",
-      "items": {
-        "a": {
-          "title": "Vor dem Flug hinzufügen",
-          "desc": "Bezahlen Sie Zusatzgepäck unter Buchung verwalten bis 6 Stunden vor Abflug im Voraus."
-        },
-        "b": {
-          "title": "Über- & Sondermaße",
-          "desc": "Gepäck über Ihrem Gewichtslimit wird gegen Gebühr befördert, sofern Platz vorhanden ist."
-        }
-      }
-    },
-    "special": {
-      "title": "Besonderes Gepäck",
-      "body": "Reisen Sie mit etwas Außergewöhnlichem? Sagen Sie uns im Voraus Bescheid, damit wir uns vorbereiten können.",
-      "items": {
-        "sports": {
-          "title": "Sportausrüstung",
-          "desc": "Ski, Golfschläger und Fahrräder reisen als Aufgabegepäck in einer geeigneten Verpackung."
-        },
-        "music": {
-          "title": "Musikinstrumente",
-          "desc": "Kleine Instrumente passen in die Kabine; größere können einen Extrasitz nutzen."
-        },
-        "medical": {
-          "title": "Medizin & Mobilität",
-          "desc": "Rollstühle und wichtige medizinische Geräte werden kostenlos befördert."
-        },
-        "infant": {
-          "title": "Kinderwagen & Autositze",
-          "desc": "Ein Kinderwagen und ein Autositz pro Kind, kostenlos befördert."
-        }
-      }
-    },
-    "restricted": {
-      "title": "Eingeschränkte & verbotene Gegenstände",
-      "body": "Zur Sicherheit aller sind einige Gegenstände eingeschränkt oder nicht an Bord erlaubt.",
-      "cabinOnly": "Nur im Handgepäck",
-      "cabinOnlyItems": "Powerbanks, Ersatz-Lithiumbatterien, E-Zigaretten.",
-      "checkedOnly": "Ins Aufgabegepäck",
-      "checkedOnlyItems": "Scharfe Gegenstände, Werkzeuge und Sportschläger.",
-      "prohibited": "Nie erlaubt",
-      "prohibitedItems": "Sprengstoffe, brennbare Flüssigkeiten und Gase sowie andere Gefahrgüter.",
-      "note": "Im Zweifel fragen Sie vor der Reise unser Team."
-    },
-    "help": {
-      "title": "Verspätetes oder beschädigtes Gepäck",
-      "body": "Wenn Ihr Gepäck nicht mit Ihnen ankommt oder beschädigt ist, melden Sie es am Gepäckschalter am Flughafen, bevor Sie gehen, und verfolgen Sie den Status online.",
-      "cta": "Gepäckproblem melden",
-      "track": "Gepäck verfolgen"
-    },
-    "ctaTitle": "Fügen Sie Gepäck zu Ihrer Reise hinzu",
-    "ctaBody": "Verwalten Sie Ihre Buchung, um Gepäck und Extras hinzuzufügen.",
-    "ctaButton": "Buchung verwalten"
-  },
-  "HomeV2": {
-    "heroTitle": "Wohin möchten Sie reisen?",
-    "heroSubtitle": "Intelligent fliegen",
-    "bannerText": "DotAirs neue und verbesserte Online-Services auf einen Blick.",
-    "bannerCta": "Mehr erfahren",
-    "promos": {
-      "app": {
-        "title": "Die neue DotAir App",
-        "desc": "Buchen, einchecken und Bordkarte mitnehmen — alles an einem Ort."
-      },
-      "assistant": {
-        "title": "Unser Reiseassistent",
-        "desc": "Sofort Antworten erhalten und Ihre Reise per In-App-Chat verwalten."
-      },
-      "guide": {
-        "title": "Ein Leitfaden für Ihre Reise",
-        "desc": "Von Gepäck bis Sitzplatz — alles, was Sie vor dem Flug brauchen."
-      }
-    },
-    "noticesTitle": "Hinweise",
-    "noticesViewAll": "Alle ansehen",
-    "notices": {
-      "a": "Fahrplanänderung auf der Strecke Doha–London",
-      "b": "Aktualisierte Partnervorteile für DotAir-Club-Mitglieder",
-      "c": "Neue Premium-Lounge in Istanbul eröffnet",
-      "d": "Verbessertes WLAN an Bord der gesamten Flotte"
-    },
-    "appTitle": "DotAir App",
-    "appDesc": "Ihr Reisemanager – in Ihrer Hand.",
-    "appCta": "App holen",
-    "travelTitle": "Vervollständigen Sie Ihre Reise",
-    "travel": {
-      "gift": "Geschenkkarten",
-      "hotels": "Hotels",
-      "cars": "Mietwagen",
-      "dutyFree": "Duty-free"
-    }
-  },
-  "Next": {
-    "brand": "dot air",
-    "skip": "Zum Inhalt springen",
-    "nav": {
-      "aria": "Hauptnavigation",
-      "book": "Buchen",
-      "manage": "Buchung verwalten",
-      "checkIn": "Check-in",
-      "status": "Flugstatus",
-      "destinations": "Reiseziele",
-      "guide": "Reiseinfos",
-      "club": "Club",
-      "search": "Flüge suchen",
-      "login": "Anmelden",
-      "menu": "Menü",
-      "language": "Sprache und Region"
-    },
-    "hero": {
-      "greeting": {
-        "morning": "Guten Morgen",
-        "afternoon": "Guten Tag",
-        "evening": "Guten Abend",
-        "night": "Gute Nacht"
-      },
-      "greetingLine": "{greeting}. Wohin geht es?",
-      "mood": {
-        "dawn": "Sonnenaufgang",
-        "day": "Tag",
-        "dusk": "Sonnenuntergang",
-        "night": "Nacht"
-      },
-      "tehranTime": "Teheran {time}",
-      "moodAria": "Stimmung der Szene: {mood}. Zum Ändern drücken.",
-      "title": "Punkt. Neue Zeile",
-      "subtitle": "Fliegen Sie in sieben Städte im Iran und nach Istanbul. Gebucht ist in Sekunden."
-    },
-    "booking": {
-      "tabsAria": "Services",
-      "tabs": {
-        "book": "Flug buchen",
-        "manage": "Buchung verwalten",
-        "checkIn": "Check-in",
-        "status": "Flugstatus"
-      },
-      "tabsShort": {
-        "book": "Buchen",
-        "manage": "Ändern",
-        "checkIn": "Check-in",
-        "status": "Status"
-      },
-      "tripAria": "Reiseart",
-      "round": "Hin und zurück",
-      "oneWay": "Nur Hinflug",
-      "promo": "Ich habe einen Aktionscode",
-      "promoLabel": "Aktionscode",
-      "promoApply": "Übernehmen",
-      "promoSaved": "Code „{code}“ gespeichert. Er wird bei der Preisanzeige berücksichtigt.",
-      "promoEmpty": "Bitte Aktionscode eingeben.",
-      "points": "Mit Punkten zahlen",
-      "pointsOn": "Ergebnisse werden in Club-Punkten angezeigt.",
-      "pointsOff": "Ergebnisse werden als Barpreise angezeigt.",
-      "from": "Von",
-      "to": "Nach",
-      "toPlaceholder": "Wohin?",
-      "chooseOrigin": "Abflugort wählen",
-      "chooseDestination": "Reiseziel wählen",
-      "swap": "Abflugort und Reiseziel tauschen",
-      "swapFirst": "Bitte zuerst ein Reiseziel wählen.",
-      "depart": "Hinflug",
-      "return": "Rückflug",
-      "addReturn": "Rückflug hinzufügen",
-      "chooseDate": "Datum wählen",
-      "dates": "Reisedaten",
-      "hintDepart": "Hinflugdatum wählen",
-      "hintRange": "Erst das Hinflugdatum, dann das Rückflugdatum wählen",
-      "previousMonth": "Vorheriger Monat",
-      "nextMonth": "Nächster Monat",
-      "passengersClass": "Reisende & Klasse",
-      "passengersCount": "{count, plural, one {# Person} other {# Personen}}",
-      "paxTitle": "Reisende und Klasse",
-      "adults": "Erwachsene",
-      "adultsHint": "Ab 12 Jahren",
-      "children": "Kinder",
-      "childrenHint": "2 bis 11 Jahre",
-      "infants": "Kleinkinder",
-      "infantsHint": "Unter 2 Jahren",
-      "fewer": "Weniger: {label}",
-      "more": "Mehr: {label}",
-      "cabin": "Reiseklasse",
-      "economy": "Economy",
+      "flex": "Flex",
       "business": "Business",
-      "maxPassengers": "Bis zu 9 Reisende pro Buchung",
-      "done": "Fertig",
-      "close": "Schließen",
-      "search": "Flüge suchen",
-      "cityPlaceholder": "Stadt oder Flughafencode",
-      "citySearch": "Städte suchen",
-      "noCity": "Keine Stadt mit diesem Namen im Streckennetz von dot air.",
-      "assistant": "dot Assistent",
-      "assistantPlaceholder": "Oder tippen: Freitag, zwei Personen, Maschhad",
-      "assistantLabel": "Beschreiben Sie Ihre Reise",
-      "destinationSet": "Reiseziel auf {city} gesetzt. Datum wählen und suchen.",
-      "lookup": {
-        "reference": "Buchungscode",
-        "referenceOrTicket": "Buchungscode oder Ticketnummer",
-        "lastName": "Nachname",
-        "flightNumber": "Flugnummer",
-        "route": "Strecke (optional)",
-        "routePlaceholder": "Teheran nach Schiras",
-        "manageSubmit": "Buchung anzeigen",
-        "checkInSubmit": "Check-in starten",
-        "statusSubmit": "Status prüfen",
-        "required": "Bitte eingeben: {field}.",
-        "notConnected": "Dieser Service ist in dieser Vorschauversion noch nicht angebunden."
-      }
+      "businessFlex": "Business Flex"
     },
-    "cities": {
-      "THR": {
-        "name": "Teheran",
-        "airport": "Mehrabad · Imam Khomeini"
-      },
-      "MHD": {
-        "name": "Maschhad",
-        "airport": "Flughafen Shahid Hasheminejad"
-      },
-      "SYZ": {
-        "name": "Schiras",
-        "airport": "Flughafen Shahid Dastgheib"
-      },
-      "IFN": {
-        "name": "Isfahan",
-        "airport": "Flughafen Shahid Beheshti"
-      },
-      "TBZ": {
-        "name": "Täbris",
-        "airport": "Flughafen Shahid Madani"
-      },
-      "KIH": {
-        "name": "Kisch",
-        "airport": "Internationaler Flughafen Kisch"
-      },
-      "AWZ": {
-        "name": "Ahvaz",
-        "airport": "Internationaler Flughafen Ahvaz"
-      },
-      "BND": {
-        "name": "Bandar Abbas",
-        "airport": "Internationaler Flughafen Bandar Abbas"
-      },
-      "IST": {
-        "name": "Istanbul",
-        "airport": "Flughafen Istanbul"
-      }
+    "rows": {
+      "cabinBag": "Handgepäck 7 kg",
+      "cabinBags": "Zwei Handgepäckstücke",
+      "noChecked": "Kein Aufgabegepäck",
+      "checked": "Aufgabegepäck {kg} kg",
+      "seatFee": "Sitzplatzwahl gegen Gebühr",
+      "seatStandard": "Standardsitz inklusive",
+      "seatAny": "Jeder Sitz inklusive",
+      "changeFee": "Umbuchung gegen Gebühr",
+      "changeLowFee": "Umbuchung gegen geringe Gebühr",
+      "changeFree": "Kostenlose Umbuchung",
+      "refundNo": "Nicht erstattbar",
+      "refundFee": "Erstattung gegen Gebühr",
+      "refundFree": "Kostenlose Erstattung",
+      "points": "{percent} % Club-Punkte"
     },
-    "duration": {
-      "hm": "{hours} Std. {minutes} Min.",
-      "h": "{hours} Std.",
-      "m": "{minutes} Min.",
-      "clock": "{time} Std."
+    "inclusion": {
+      "yes": "Inklusive",
+      "no": "Nicht enthalten",
+      "fee": "Gegen Gebühr"
     },
-    "inspire": {
-      "title": "Wohin diese Woche?",
-      "previous": "Zurück",
-      "next": "Weiter",
-      "aria": "Reiseziele",
-      "international": "International",
-      "nonstop": "Nonstop"
-    },
-    "network": {
-      "kicker": "Streckennetz",
-      "title": "Von Teheran zu acht Zielen",
-      "lead": "Sieben Städte im Iran und Istanbul, alle nonstop. Wählen Sie ein Ziel aus der Liste oder auf der Karte.",
-      "listAria": "Reiseziele",
-      "mapAria": "Karte der dot air Strecken ab Teheran",
-      "nonstop": "Nonstop",
-      "international": "International",
-      "destination": "Reiseziel",
-      "distance": "Entfernung",
-      "km": "km",
-      "flightTime": "Flugzeit",
-      "flyTo": "Nach {city} fliegen",
-      "note": "Preise ändern sich in Echtzeit und erscheinen nach der Suche. Flugzeiten sind Richtwerte."
-    },
-    "assistant": {
-      "kicker": "Smarter Assistent",
-      "title": "Beschreiben Sie Ihre Reise in einem Satz",
-      "lead": "Schreiben Sie wohin und wann, so wie Sie es sagen würden. Der dot Assistent findet passende Flüge und schlägt den besten vor.",
-      "name": "dot Assistent",
+    "seats": {
+      "title": "Sitzplätze wählen",
       "sample": "Beispiel",
-      "liveFare": "Live-Preis",
-      "suggests": "dot empfiehlt",
-      "footer": "Jede Option wird live bepreist",
-      "promptsAria": "Beispielanfragen",
-      "customAnswer": "Im echten Produkt liest der Assistent diesen Satz. Beispielantwort:",
-      "scenarios": {
-        "mashhad": {
-          "q": "Freitag, zwei Personen, Maschhad",
-          "a": "Drei Flüge nach Maschhad am Freitag. Der Mittagsflug passt am besten zu Ihrem Plan.",
-          "o1": "Früher Morgen",
-          "o2": "Mittag, nonstop",
-          "o3": "Abend"
-        },
-        "kish": {
-          "q": "Morgen früh, eine Person, Kisch",
-          "a": "Zwei Flüge nach Kisch morgen früh. Der erste kommt früher an.",
-          "o1": "Frühester",
-          "o2": "Später Vormittag"
-        },
-        "istanbul": {
-          "q": "Wochenende in Istanbul, hin und zurück",
-          "a": "Für Donnerstag bis Sonntag hat dieses Paar die kürzesten Wartezeiten.",
-          "o1": "Hinflug · Donnerstag",
-          "o2": "Rückflug · Sonntag"
-        }
-      }
-    },
-    "tools": {
-      "kicker": "Reise verwalten",
-      "title": "Vom Kauf bis zur Gepäckausgabe, an einem Ort",
-      "lead": "Alles, was Sie nach der Buchung brauchen, ohne Anrufe und ohne Warteschlangen.",
-      "cta": "Buchung verwalten",
-      "sample": "Beispiel",
-      "steps": {
-        "checkIn": "Check-in",
-        "checkInState": "geöffnet",
-        "gate": "Gate 7",
-        "gateState": "bekannt gegeben",
-        "boarding": "Boarding",
-        "boardingState": "gestartet",
-        "enRoute": "Unterwegs",
-        "enRouteState": "Ankunft 15:30"
-      },
-      "statusTitle": "Flugstatus in Echtzeit",
-      "statusBody": "Wir informieren Sie über Check-in, Gate, Boarding und Gepäckband, bevor Sie fragen.",
-      "selectedSeat": "Gewählter Sitz",
-      "window": "Fenster",
-      "aisle": "Gang",
-      "middle": "Mitte",
-      "seatAria": "Sitz {seat}",
+      "paxAria": "Reisende",
+      "adult": "Erwachsene/r {n}",
+      "child": "Kind {n}",
+      "none": "Kein Sitz",
+      "hint": "Wählen Sie einen Sitz, um seine Merkmale zu sehen.",
+      "included": "Inklusive",
+      "mapAria": "Sitzplan",
+      "legendStandard": "Standard · {fee}",
+      "legendExtra": "Mehr Beinfreiheit · {fee}",
+      "legendTaken": "Belegt oder andere Kabine",
+      "legendYours": "Ihr Sitz",
+      "legendDoors": "Türen und Notausgänge",
+      "legendWing": "Tragfläche",
+      "optional": "Die Sitzplatzwahl ist optional. Ohne Auswahl erhalten Sie beim Check-in kostenlos einen Sitz.",
+      "front": "Vorne",
+      "galley": "Bordküche",
+      "lavatory": "WC",
+      "exit": "EXIT",
+      "seat": "Sitz {seat}",
+      "seatOther": "Sitz {seat}, andere Kabine",
       "seatTaken": "Sitz {seat}, belegt",
-      "seatsAria": "Beispielkabine",
-      "seatTitle": "Sitzplatzwahl",
-      "seatBody": "Sehen Sie den echten Kabinenplan und wählen Sie Ihren Sitz selbst.",
-      "liveUpdates": "Live-Updates",
-      "cheapest": "Gelber Balken: günstigster Tag",
-      "fareTitle": "Preiskalender",
-      "fareBody": "Vergleichen Sie die Preise der Woche und wählen Sie den günstigsten Tag.",
-      "notes": {
-        "gate": "Ihr Gate ist jetzt 7",
-        "gateSub": "DA 142 · Teheran nach Schiras",
-        "gateTime": "jetzt",
-        "checkIn": "Online-Check-in ist geöffnet",
-        "checkInSub": "Bordkarte abrufen",
-        "checkInTime": "vor 2 Min.",
-        "bag": "Ihr Gepäck ist auf Band 3",
-        "bagSub": "Flughafen Schiras",
-        "bagTime": "vor 5 Min.",
-        "early": "Landung 10 Minuten früher",
-        "earlySub": "Ankunftszeit aktualisiert",
-        "earlyTime": "vor 8 Min."
+      "seatExit": "Sitz {seat}, Notausgangsreihe, mehr Beinfreiheit",
+      "seatExtra": "Sitz {seat}, mehr Beinfreiheit",
+      "childExit": "Kinder dürfen nicht in einer Notausgangsreihe sitzen. Bitte wählen Sie einen anderen Sitz.",
+      "position": {
+        "window": "Fenster",
+        "aisle": "Gang",
+        "middle": "Mitte"
       },
-      "alertsTitle": "Rechtzeitige Hinweise",
-      "alertsBody": "Verspätungen, Gate-Änderungen und Check-in-Öffnung per SMS und Push."
-    },
-    "guide": {
-      "kicker": "Reiseinfos",
-      "title": "Gut zu wissen vor dem Flug",
-      "baggage": "Gepäck",
-      "baggageBody": "Freigepäck je Tarif und Regeln für Handgepäck.",
-      "changes": "Umbuchung und Erstattung",
-      "changesBody": "Datum ändern oder stornieren, online und ohne Anruf.",
-      "checkIn": "Online-Check-in",
-      "checkInBody": "Holen Sie Ihre Bordkarte, bevor Sie am Flughafen sind.",
-      "special": "Besondere Betreuung",
-      "specialBody": "Rollstuhl, allein reisende Kinder, Sondermahlzeiten und Haustiere.",
-      "documents": "Reisedokumente",
-      "documentsBody": "Was Sie für Inlandsflüge und für Istanbul brauchen.",
-      "support": "Support",
-      "supportBody": "Live-Chat und telefonische Hilfe."
-    },
-    "club": {
-      "kicker": "Treueprogramm",
-      "title": "dot air Club",
-      "lead": "Sammeln Sie Punkte auf jedem Flug und lösen Sie sie beim nächsten ein. Die Mitgliedschaft ist kostenlos.",
-      "member": "MEMBER",
-      "yourName": "Ihr Name",
-      "join": "Kostenlos beitreten",
-      "login": "Ich bin Mitglied",
-      "teamKicker": "Das Team",
-      "hiring": "Wir stellen ein",
-      "teamTitle": "Wir bauen das in Teheran",
-      "teamLead": "Ein junges Team aus Ingenieurinnen, Designern und Luftfahrtprofis. Wenn Sie glauben, dass Fliegen besser geht, kommen Sie zu uns.",
-      "careers": "Über dot air",
-      "roles": {
-        "designer": "Product Designer",
-        "frontend": "Frontend-Entwicklung",
-        "ml": "Machine-Learning-Engineering",
-        "network": "Netzplanung"
+      "features": {
+        "pitchBusiness": "Sitzabstand 96 cm",
+        "widerSeat": "Breiterer Sitz, kein Mittelsitz",
+        "fullMeal": "Vollwertige Mahlzeit",
+        "pitchExtra": "Mehr Beinfreiheit: 86 cm Sitzabstand",
+        "pitchStandard": "Sitzabstand 76 cm",
+        "exitRow": "Notausgangsreihe: ab 15 Jahren, keine Kleinkinder",
+        "bulkhead": "Erste Reihe der Kabine: Handgepäck ins Gepäckfach",
+        "noRecline": "Rückenlehne nicht verstellbar",
+        "overWing": "Fensterblick auf die Tragfläche",
+        "nearLavatory": "Nahe den Toiletten",
+        "quickExit": "Schneller aussteigen",
+        "usbPower": "USB-Anschluss"
       }
     },
-    "footer": {
-      "tagline": "Eine Airline, von Grund auf mit KI gebaut.",
-      "fly": "Fliegen",
-      "destinations": "Reiseziele",
-      "help": "Hilfe",
-      "company": "dot air",
-      "network": "Streckennetz",
-      "baggage": "Gepäck",
-      "faq": "Hilfe-Center",
-      "contact": "Kontakt",
-      "about": "Über uns",
-      "loyalty": "Treueprogramm",
-      "offers": "Angebote",
-      "rights": "© {year} dot air",
-      "tehran": "TEHRAN",
-      "social": {
-        "instagram": "Instagram",
-        "telegram": "Telegram",
-        "x": "X",
-        "linkedin": "LinkedIn",
-        "youtube": "YouTube",
-        "aparat": "Aparat"
-      },
-      "socialAria": "dot air in sozialen Medien"
+    "selectFlight": "Diesen Flug wählen",
+    "seatList": "Sitz {seats}",
+    "summary": {
+      "title": "Ihre Reise",
+      "notSelected": "Noch nicht gewählt",
+      "notConfirmed": "Nicht bestätigt",
+      "change": "Ändern",
+      "fares": "Tickets · {passengers}",
+      "seats": "Sitzplätze",
+      "total": "Gesamt",
+      "withFlight": "Mit diesem Flug",
+      "continue": "Weiter zu den Reisenden",
+      "continueShort": "Weiter",
+      "selectOutbound": "Hinflug wählen",
+      "selectReturn": "Rückflug wählen",
+      "chooseOutbound": "Hinflug auswählen",
+      "chooseReturn": "Rückflug auswählen",
+      "fine": "Preise enthalten Steuern und Gebühren und können sich bis zum Abschluss der Zahlung ändern.",
+      "outboundDone": "Hinflug gewählt. Wählen Sie jetzt Ihren Rückflug.",
+      "nextStep": "Die Angaben zu den Reisenden sind der nächste Schritt und noch nicht gebaut."
     },
-    "mobileNav": {
-      "aria": "Untere Navigation",
-      "search": "Suche",
-      "trips": "Reisen",
-      "checkIn": "Check-in",
-      "status": "Status",
-      "account": "Konto"
+    "detail": {
+      "flightTime": "Flugzeit {duration}",
+      "operated": "Durchgeführt von dot air",
+      "checkIn": "{terminal} · Check-in schließt um {time} · Gate wird am Reisetag bekannt gegeben",
+      "belt": "{terminal} · Gepäckband wird nach der Landung bekannt gegeben",
+      "stopIn": "Stopp in {city} · {duration}",
+      "stopNote": "Kein Flugzeugwechsel; Reisende bleiben an Bord.",
+      "date": "Datum",
+      "totalTime": "Gesamtreisezeit",
+      "distance": "Entfernung",
+      "km": "{distance} km",
+      "onBoard": "An Bord",
+      "refreshments": "Leichte Erfrischungen",
+      "localTimes": "Alle Zeiten sind Ortszeiten des jeweiligen Flughafens.",
+      "terminal4": "Terminal 4",
+      "terminal1": "Terminal 1",
+      "terminalIntl": "Internationales Terminal",
+      "terminalDomestic": "Inlandsterminal",
+      "mehrabad": "Flughafen Mehrabad",
+      "imamKhomeini": "Flughafen Imam Khomeini"
     },
-    "locales": {
-      "en-de": "Germany · English",
-      "de-de": "Deutschland · Deutsch",
-      "fa-ir": "ایران · فارسی",
-      "ar-ae": "الإمارات · العربية"
+    "invalid": {
+      "title": "Diese Suche konnte nicht gelesen werden",
+      "body": "Der Link ist unvollständig oder veraltet. Starten Sie eine neue Suche auf der Startseite.",
+      "cta": "Neue Suche"
     }
+  },
+  "account": {
+    "login": "Anmelden",
+    "accountAria": "Konto: {name}",
+    "loginOrSignup": "Anmelden oder registrieren",
+    "entrySub": "Noch kein Konto? Wir legen eines mit dieser Nummer oder E-Mail an.",
+    "methodAria": "Anmeldemethode",
+    "otp": "Einmalcode",
+    "password": "Passwort",
+    "identifier": "Mobilnummer oder E-Mail",
+    "identifierPlaceholder": "name@example.com",
+    "forgot": "Passwort vergessen",
+    "sendCode": "Code senden",
+    "terms": "Mit dem Fortfahren akzeptieren Sie die Nutzungsbedingungen und die Datenschutzerklärung von dot air.",
+    "forgotTitle": "Passwort zurücksetzen",
+    "forgotSub": "Geben Sie die Mobilnummer oder E-Mail Ihres Kontos ein. Wenn ein Konto existiert, senden wir einen Code.",
+    "verifyTitle": "Code eingeben",
+    "verifySub": "Wir haben einen 5-stelligen Code an {id} gesendet.",
+    "edit": "Ändern",
+    "codeAria": "Bestätigungscode",
+    "digit": "Ziffer {n}",
+    "resendIn": "Code erneut senden in {time}",
+    "resend": "Code erneut senden",
+    "previewNote": "Vorschauversion: Es wird keine Nachricht gesendet und jeder 5-stellige Code funktioniert. Der Code 00000 zeigt den Fehlerzustand.",
+    "profileTitle": "Profil vervollständigen",
+    "profileSub": "Damit füllen wir die Angaben zu Reisenden bei Ihren nächsten Buchungen aus.",
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "nationalIdOptional": "Nationale ID (optional)",
+    "mobileOptional": "Mobilnummer (optional)",
+    "emailOptional": "E-Mail (optional)",
+    "acceptTerms": "Ich akzeptiere die Nutzungsbedingungen und die Datenschutzerklärung.",
+    "create": "Konto erstellen",
+    "newPwTitle": "Neues Passwort",
+    "setPwTitle": "Passwort festlegen",
+    "newPwSub": "Wählen Sie ein Passwort, das Sie nirgendwo sonst verwenden.",
+    "newPassword": "Neues Passwort",
+    "repeatPassword": "Passwort wiederholen",
+    "ruleLength": "Mindestens 8 Zeichen",
+    "ruleDigit": "Mindestens eine Ziffer",
+    "ruleMatch": "Beide Felder stimmen überein",
+    "savePassword": "Passwort speichern",
+    "showPassword": "Passwort anzeigen",
+    "back": "Zurück",
+    "close": "Schließen",
+    "errors": {
+      "identifier": "Bitte eine gültige Mobilnummer oder E-Mail eingeben.",
+      "code": "Bitte alle 5 Ziffern eingeben.",
+      "codeWrong": "Der Code stimmt nicht. Bitte erneut versuchen.",
+      "credentials": "Nummer/E-Mail oder Passwort stimmt nicht.",
+      "firstName": "Bitte Vornamen eingeben.",
+      "lastName": "Bitte Nachnamen eingeben.",
+      "nationalId": "Die nationale ID muss 10 Ziffern haben.",
+      "phone": "Diese Mobilnummer ist ungültig.",
+      "email": "Diese E-Mail ist ungültig.",
+      "terms": "Zum Erstellen eines Kontos müssen Sie die Bedingungen akzeptieren.",
+      "password": "Mindestens 8 Zeichen und eine Ziffer verwenden.",
+      "mismatch": "Die beiden Passwörter stimmen nicht überein.",
+      "contact": "Mindestens ein Kontaktweg muss bleiben."
+    },
+    "toasts": {
+      "welcome": "Willkommen, {name}.",
+      "created": "Ihr Konto ist bereit. Willkommen, {name}.",
+      "loggedOut": "Sie sind abgemeldet.",
+      "passwordSaved": "Passwort gespeichert.",
+      "passwordChanged": "Passwort geändert. Melden Sie sich mit dem neuen Passwort an."
+    },
+    "menu": {
+      "profile": "Mein Profil",
+      "trips": "Meine Reisen",
+      "logout": "Abmelden"
+    }
+  },
+  "profile": {
+    "title": "Mein Profil",
+    "member": "Mitglied im dot air Club",
+    "completion": "Profil vollständig",
+    "completeCount": "{done} von {total} erledigt",
+    "missing": "Es fehlt noch: {items}",
+    "complete": "Ihr Profil ist vollständig.",
+    "items": {
+      "name": "Name",
+      "mobile": "Mobilnummer",
+      "email": "E-Mail",
+      "nationalId": "Nationale ID",
+      "password": "Passwort"
+    },
+    "personal": "Persönliche Daten",
+    "personalSub": "Ihr Name muss mit Ihrem Ausweisdokument übereinstimmen.",
+    "nationalId": "Nationale ID",
+    "email": "E-Mail",
+    "mobile": "Mobilnummer",
+    "save": "Änderungen speichern",
+    "saved": "Änderungen gespeichert.",
+    "security": "Anmeldung und Sicherheit",
+    "otpTitle": "Einmalcode",
+    "otpSub": "Anmeldung mit einem Code per SMS oder E-Mail",
+    "on": "Aktiv",
+    "passwordSet": "Festgelegt",
+    "passwordNotSet": "Nicht festgelegt",
+    "changePassword": "Ändern",
+    "setPassword": "Passwort festlegen",
+    "notifications": "Benachrichtigungen",
+    "sms": "SMS",
+    "smsSub": "Flugstatus und Gate-Änderungen",
+    "emailSub": "Tickets und Belege",
+    "push": "Browser-Hinweise",
+    "pushSub": "Check-in-Erinnerungen",
+    "travellers": "Gespeicherte Mitreisende",
+    "travellersEmpty": "Noch keine Mitreisenden gespeichert. Damit geht die nächste Buchung schneller.",
+    "addTraveller": "Mitreisende hinzufügen",
+    "soon": "Dieser Teil ist noch nicht gebaut.",
+    "trips": "Meine Reisen",
+    "tripsEmpty": "Noch keine Reisen.",
+    "searchFlights": "Flüge suchen",
+    "signedOutTitle": "Melden Sie sich an, um Ihr Profil zu sehen",
+    "signedOutBody": "Konten in dieser Vorschauversion existieren nur in diesem Browser-Tab und werden beim Neuladen gelöscht."
   }
 }
