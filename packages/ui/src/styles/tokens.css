@@ -83,6 +83,7 @@
   --color-muted: var(--p-sand-300); /* 4.5:1 or better on every surface */
   --color-faint: var(--p-sand-400); /* canvas and surface-1 only */
   --color-disabled: var(--p-sand-500);
+  --color-on-scene: var(--p-cream-50); /* text laid over the hero sky */
 
   /* colour: borders (border-hairline, border-strong ...) */
   --color-hairline: var(--p-white-a12);
@@ -122,6 +123,8 @@
   --text-field--line-height: 1.7;
   --text-title: 1.1875rem;
   --text-title--line-height: 1.5;
+  --text-subheading: 1.5rem; /* card titles, large numerals */
+  --text-subheading--line-height: 1.4;
   --text-heading: clamp(1.625rem, 3vw, 2.375rem);
   --text-heading--line-height: 1.4;
   --text-display: clamp(1.875rem, 4.2vw, 3.375rem);
@@ -131,7 +134,7 @@
   /* space: Tailwind's numeric scale on a 4px base (p-4 = 16px). Section rhythm has names. */
   --spacing: 0.25rem;
   --spacing-gutter: clamp(1rem, 4vw, 2rem);
-  --spacing-section: clamp(4rem, 8vw, 6.5rem);
+  --spacing-section: clamp(3.5rem, 6.5vw, 5.5rem);
   --container-page: 77rem;
 
   /* radius: rounded-control, rounded-card ... */
@@ -145,6 +148,10 @@
   --shadow-raised: inset 0 1px 0 rgb(255 255 255 / 0.07), 0 30px 80px rgb(0 0 0 / 0.55);
   --shadow-overlay: 0 30px 80px rgb(0 0 0 / 0.6);
   --shadow-action: 0 8px 28px rgb(253 184 20 / 0.35);
+
+  /* text over the hero sky needs a soft shadow to stay readable in every mood */
+  --text-shadow-scene: 0 1px 14px rgb(0 0 0 / 0.55);
+  --text-shadow-scene-strong: 0 2px 26px rgb(0 0 0 / 0.4);
 
   /* motion: ease-out-soft, ease-pop; durations as plain custom properties below */
   --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);

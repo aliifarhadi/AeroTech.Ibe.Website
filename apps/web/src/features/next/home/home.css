@@ -1,0 +1,300 @@
+/*
+ * Home page: layouts and motion that no utility expresses. Component tier of the design system:
+ * every value comes from a token. Class names carry the `home-` prefix so they cannot collide.
+ */
+@theme {
+  --animate-caret: caret 1s steps(1) infinite;
+  --animate-bob: bob 1s ease-in-out infinite;
+  --animate-beat: beat 1.6s ease-in-out infinite;
+  --animate-progress: progress var(--cycle, 4.2s) linear forwards;
+
+  @keyframes caret {
+    50% {
+      opacity: 0;
+    }
+  }
+  @keyframes bob {
+    0%,
+    100% {
+      transform: none;
+      opacity: 0.4;
+    }
+    50% {
+      transform: translateY(-4px);
+      opacity: 1;
+    }
+  }
+  @keyframes beat {
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-success) 50%, transparent);
+    }
+    50% {
+      box-shadow: 0 0 0 6px transparent;
+    }
+  }
+  @keyframes progress {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+}
+
+@layer components {
+  /* ---------- scroll reveal (see shared/reveal.tsx) ---------- */
+  [data-reveal] {
+    transition:
+      opacity 0.7s,
+      transform 0.9s var(--ease-out-soft);
+    transition-delay: var(--reveal-delay, 0s);
+  }
+  [data-reveal='pending'] {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+
+  /* ---------- horizontal rails ---------- */
+  .home-rail {
+    scrollbar-width: none;
+  }
+  .home-rail::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* ---------- collapsible row (promo code) ---------- */
+  .home-collapse {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows var(--duration-slow) var(--ease-out-soft);
+  }
+  .home-collapse[data-open] {
+    grid-template-rows: 1fr;
+  }
+  .home-collapse > div {
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  /*
+   * ---------- search form grid ----------
+   * One column on phones, then 2, 3 and finally a single row of 4. Cells are separated by short
+   * inset hairlines: `::after` under a full-width row, `::before` beside a neighbour.
+   */
+  .home-search-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .home-search-grid > * {
+    position: relative;
+  }
+  .home-search-grid > *::before,
+  .home-search-grid > *::after {
+    position: absolute;
+    background: var(--color-hairline);
+    pointer-events: none;
+  }
+  .home-search-grid > *::after {
+    inset-inline: 0.875rem;
+    bottom: 0;
+    height: 1px;
+  }
+  .home-search-grid > *::before {
+    inset-block: 0.875rem;
+    inset-inline-start: 0;
+    width: 1px;
+  }
+  .home-search-grid > [data-cell='route']::after,
+  .home-search-grid > [data-cell='dates']::after,
+  .home-search-grid > [data-cell='passengers']::after {
+    content: '';
+  }
+  @media (min-width: 701px) {
+    .home-search-grid {
+      grid-template-columns: minmax(0, 1fr) auto;
+    }
+    .home-search-grid > [data-cell='route'],
+    .home-search-grid > [data-cell='dates'] {
+      grid-column: 1 / -1;
+    }
+    .home-search-grid > [data-cell='passengers']::after {
+      content: none;
+    }
+    .home-search-grid > [data-cell='go']::before {
+      content: '';
+    }
+  }
+  @media (min-width: 901px) {
+    .home-search-grid {
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) auto;
+    }
+    .home-search-grid > [data-cell='dates'] {
+      grid-column: auto;
+    }
+    .home-search-grid > [data-cell='dates']::after {
+      content: none;
+    }
+    .home-search-grid > [data-cell='passengers']::before {
+      content: '';
+    }
+  }
+  @media (min-width: 1101px) {
+    .home-search-grid {
+      grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.9fr) minmax(0, 1.25fr) auto;
+    }
+    .home-search-grid > [data-cell='route'] {
+      grid-column: auto;
+    }
+    .home-search-grid > [data-cell='route']::after {
+      content: none;
+    }
+    .home-search-grid > [data-cell='dates']::before {
+      content: '';
+    }
+  }
+
+  /* ---------- network section ---------- */
+  .home-network-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  @media (min-width: 901px) {
+    .home-network-grid {
+      grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+    }
+  }
+  .home-instrument {
+    grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr);
+  }
+  .home-instrument > dl > [data-cell='time'],
+  .home-instrument > [data-cell='cta'] {
+    grid-column: 1 / -1;
+  }
+  @media (min-width: 1101px) {
+    .home-instrument {
+      grid-template-columns: auto minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1.3fr) auto;
+    }
+    .home-instrument > dl > [data-cell='time'],
+    .home-instrument > [data-cell='cta'] {
+      grid-column: auto;
+    }
+  }
+
+  /* ---------- trip tools ---------- */
+  .home-flight-line {
+    position: relative;
+    height: 0.875rem;
+  }
+  .home-flight-line::before,
+  .home-flight-line::after {
+    content: '';
+    position: absolute;
+    top: 0.375rem;
+    left: 0;
+    height: 2px;
+    border-radius: 2px;
+  }
+  .home-flight-line::before {
+    width: 100%;
+    background: var(--color-strong-line);
+  }
+  .home-flight-line::after {
+    width: var(--progress, 40%);
+    background: var(--color-action);
+  }
+  /* the aircraft: a dot at the end of the flown part */
+  .home-flight-line > span {
+    position: absolute;
+    top: 0;
+    left: var(--progress, 40%);
+    width: 0.875rem;
+    height: 0.875rem;
+    margin-left: -0.4375rem;
+    border-radius: 50%;
+    background: var(--color-action);
+    box-shadow: 0 0 0 5px var(--color-action-soft);
+  }
+  .home-seat-grid {
+    grid-template-columns: repeat(3, 2.375rem) 1.375rem repeat(3, 2.375rem);
+  }
+  @media (min-width: 701px) {
+    .home-seat-grid {
+      grid-template-columns: repeat(3, 1.875rem) 1.375rem repeat(3, 1.875rem);
+    }
+  }
+
+  /* ---------- membership card ---------- */
+  .home-member-stage {
+    width: 12rem;
+    margin-inline: auto;
+    perspective: 900px;
+  }
+  @media (min-width: 701px) {
+    .home-member-stage {
+      position: absolute;
+      inset-block-start: 2rem;
+      inset-inline-end: 2rem;
+      width: min(42%, 13.75rem);
+      margin-inline: 0;
+    }
+  }
+  .home-member-card {
+    position: relative;
+    display: flex;
+    aspect-ratio: 1.586;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 0.875rem;
+    border: 1px solid var(--color-strong-line);
+    border-radius: var(--radius-control);
+    background: linear-gradient(135deg, var(--color-surface-3), var(--color-surface-1));
+    box-shadow: var(--shadow-overlay);
+    transform: rotateX(var(--tilt-x, 8deg)) rotateY(var(--tilt-y, -14deg));
+    transition: transform 0.2s ease-out;
+  }
+  .home-member-card::after {
+    content: '';
+    position: absolute;
+    inset: -40%;
+    background: radial-gradient(
+      circle at var(--glare-x, 30%) var(--glare-y, 20%),
+      var(--color-action-line),
+      transparent 45%
+    );
+    opacity: 0.45;
+  }
+  .home-member-card > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ---------- footer ---------- */
+  .home-footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .home-footer-grid > :first-child {
+    grid-column: 1 / -1;
+  }
+  @media (min-width: 901px) {
+    .home-footer-grid {
+      grid-template-columns: 1.5fr repeat(4, 1fr);
+    }
+    .home-footer-grid > :first-child {
+      grid-column: auto;
+    }
+  }
+  /* room for the phone's home indicator, and for the bottom navigation above the footer */
+  .home-safe-bottom {
+    padding-bottom: calc(0.375rem + env(safe-area-inset-bottom, 0px));
+  }
+  .home-footer {
+    padding-bottom: calc(5.75rem + env(safe-area-inset-bottom, 0px));
+  }
+  @media (min-width: 701px) {
+    .home-footer {
+      padding-bottom: 1.75rem;
+    }
+  }
+}

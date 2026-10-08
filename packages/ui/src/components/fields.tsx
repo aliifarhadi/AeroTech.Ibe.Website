@@ -1,6 +1,6 @@
 'use client';
 
-import type { ReactNode } from 'react';
+import type { ReactNode, Ref } from 'react';
 import {
   Button as AriaButton,
   Checkbox as AriaCheckbox,
@@ -88,6 +88,7 @@ export type FieldButtonProps = Omit<AriaButtonProps, 'children' | 'className' | 
   placeholder?: string;
   isInvalid?: boolean;
   className?: string;
+  ref?: Ref<HTMLButtonElement>;
 };
 
 export function FieldButton({

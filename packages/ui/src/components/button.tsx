@@ -4,7 +4,9 @@ import type { ReactNode } from 'react';
 import {
   Button as AriaButton,
   composeRenderProps,
+  Link as AriaLink,
   type ButtonProps as AriaButtonProps,
+  type LinkProps as AriaLinkProps,
 } from 'react-aria-components';
 import { tv, type VariantProps } from 'tailwind-variants/lite';
 import { Spinner } from './spinner';
@@ -51,6 +53,25 @@ export function Button({ variant, size, fullWidth, className, children, ...props
         isPending ? <Spinner /> : content,
       )}
     </AriaButton>
+  );
+}
+
+export type ButtonLinkProps = Omit<AriaLinkProps, 'children' | 'className'> &
+  VariantProps<typeof button> & { children: ReactNode; className?: string };
+
+/** A link that looks like a button. Use it when the action is navigation. */
+export function ButtonLink({
+  variant,
+  size,
+  fullWidth,
+  className,
+  children,
+  ...props
+}: ButtonLinkProps) {
+  return (
+    <AriaLink {...props} className={button({ variant, size, fullWidth, className })}>
+      {children}
+    </AriaLink>
   );
 }
 

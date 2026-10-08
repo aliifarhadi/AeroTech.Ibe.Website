@@ -4,6 +4,7 @@
  * from React Aria Components, no feature knowledge, no data fetching, no `next/*` imports.
  */
 export { cn } from './cn';
+export { toBcp47 } from './locale';
 export * from './components/badge';
 export * from './components/button';
 export * from './components/calendar';
@@ -20,6 +21,7 @@ export {
   CalendarDate,
   DateFormatter,
   getLocalTimeZone,
+  parseDate,
   today,
   type DateValue,
 } from '@internationalized/date';

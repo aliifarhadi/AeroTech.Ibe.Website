@@ -7,7 +7,9 @@ import { Checkbox, FieldButton, SegmentedControl, Stepper, Switch, TextField } f
 import { Icon } from './icon';
 import { getLocalTimeZone, today } from '@internationalized/date';
 import { Calendar } from './calendar';
-import { toBcp47, UiProvider } from './provider';
+import { toBcp47 } from '../locale';
+import { UiProvider } from './provider';
+import { SearchList } from './search-list';
 
 describe('Button', () => {
   it('calls onPress with mouse and keyboard', async () => {
@@ -171,5 +173,39 @@ describe('Calendar', () => {
   it('is Gregorian in en-de', () => {
     renderIn('en-de');
     expect(screen.getByRole('application').textContent).toContain(String(new Date().getFullYear()));
+  });
+});
+
+describe('SearchList', () => {
+  const items = [
+    { id: 'MHD', title: 'Mashhad' },
+    { id: 'SYZ', title: 'Shiraz' },
+  ];
+  const renderList = (selectedId: string | null, onSelect: (id: string) => void) =>
+    render(
+      <SearchList
+        aria-label="Cities"
+        placeholder="City"
+        emptyMessage="None"
+        items={items}
+        selectedId={selectedId}
+        onSelect={onSelect}
+      />,
+    );
+
+  it('reports a choice when nothing was selected', async () => {
+    const onSelect = vi.fn();
+    renderList(null, onSelect);
+    await userEvent.click(screen.getByRole('option', { name: 'Shiraz' }));
+    expect(onSelect).toHaveBeenCalledWith('SYZ');
+  });
+
+  it('reports a different choice, and the same choice again, when one is selected', async () => {
+    const onSelect = vi.fn();
+    renderList('MHD', onSelect);
+    await userEvent.click(screen.getByRole('option', { name: 'Shiraz' }));
+    expect(onSelect).toHaveBeenLastCalledWith('SYZ');
+    await userEvent.click(screen.getByRole('option', { name: 'Mashhad' }));
+    expect(onSelect).toHaveBeenLastCalledWith('MHD');
   });
 });
