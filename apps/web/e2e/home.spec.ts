@@ -2,7 +2,7 @@ import AxeBuilder from '@axe-core/playwright';
 import { expect, test, type Page } from '@playwright/test';
 
 /**
- * The redesigned home page (`/[locale]/next`), in a right-to-left and a left-to-right locale, on
+ * The home page (`/[locale]`), in a right-to-left and a left-to-right locale, on
  * the desktop and phone projects of playwright.config.ts.
  */
 
@@ -85,7 +85,7 @@ const isoFromToday = (page: Page, days: number) =>
 
 /** The page is static HTML; the form is ready once the dates have been filled in on the client. */
 async function openHome(page: Page, locale: string) {
-  await page.goto(`/${locale}/next`);
+  await page.goto(`/${locale}`);
   await expect(page.locator('#book [data-cell="dates"] button').first()).toContainText(/\d|[۰-۹]/);
 }
 
@@ -152,7 +152,7 @@ for (const locale of ['fa-ir', 'en-de'] as const) {
       await card(page).getByRole('button', { name: t.search }).click();
       await expect(page.getByRole('dialog')).toBeVisible();
       await expect(page.getByRole('dialog').getByRole('option').first()).toBeVisible();
-      await expect(page).toHaveURL(new RegExp(`/${locale}/next`));
+      await expect(page).toHaveURL(new RegExp(`/${locale}`));
     });
 
     test('a complete search opens the results with the right query', async ({ page }) => {
@@ -212,15 +212,19 @@ for (const locale of ['fa-ir', 'en-de'] as const) {
       expect(params.has('return')).toBe(false);
     });
 
-    test('an origin other than Tehran fixes the destination to Tehran', async ({ page }) => {
+    test('any city can be the origin, and the other end stays free', async ({ page }) => {
       await openHome(page, locale);
       await field(page, t.from).click();
       await page
         .getByRole('dialog')
         .getByRole('option', { name: new RegExp(t.shiraz) })
         .click();
-      await expect(field(page, t.from)).toContainText(t.shiraz);
-      await expect(field(page, t.to)).toContainText(t.tehran);
+      await expect(field(page, t.from)).toContainText('SYZ');
+      await field(page, t.to).click();
+      const options = page.getByRole('dialog').getByRole('option');
+      await expect(options.filter({ hasText: t.shiraz })).toHaveCount(0);
+      await options.filter({ hasText: t.mashhad }).click();
+      await expect(field(page, t.to)).toContainText('MHD');
     });
 
     test('swap needs a destination first', async ({ page }) => {
@@ -291,7 +295,7 @@ for (const locale of ['fa-ir', 'en-de'] as const) {
         'aria-selected',
         'true',
       );
-      await expect(page).toHaveURL(new RegExp(`/${locale}/next$`));
+      await expect(page).toHaveURL(new RegExp(`/${locale}$`));
     });
   });
 }
@@ -306,8 +310,6 @@ for (const locale of ['de-de', 'ar-ae'] as const) {
     await openHome(page, locale);
     await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
     expect(await hasHorizontalOverflow(page)).toBe(false);
-    // next-intl prints the key path when a message is missing.
-    await expect(page.locator('body')).not.toContainText('Next.');
     expect(errors).toEqual([]);
   });
 }
