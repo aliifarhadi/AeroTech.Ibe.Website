@@ -1,5 +1,5 @@
 import type { ElementType, ReactNode } from 'react';
-import { cn } from '@aerotech/ui';
+import { cn } from '@aerotech/ui/cn';
 
 /**
  * Canonical type scale for the app. Use these instead of ad-hoc `text-*` classes so

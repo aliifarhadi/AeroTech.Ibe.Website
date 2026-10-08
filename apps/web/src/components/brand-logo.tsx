@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { cn } from '@aerotech/ui';
+import { cn } from '@aerotech/ui/cn';
 
 /*
  * Decorative "sign" shape used for the brand PATTERN (tonal background motif), not as the logo.

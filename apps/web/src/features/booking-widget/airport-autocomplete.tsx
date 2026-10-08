@@ -2,7 +2,7 @@
 
 import { useEffect, useId, useMemo, useRef, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
-import { cn } from '@aerotech/ui';
+import { cn } from '@aerotech/ui/cn';
 import { PlaneIcon } from '@/components/icons';
 import { airportLabel, AIRPORTS, type AirportOption } from './airports';
 

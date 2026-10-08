@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import { cn } from '@aerotech/ui';
+import { cn } from '@aerotech/ui/cn';
 
 type Segment = { text: string; highlight: boolean };
 

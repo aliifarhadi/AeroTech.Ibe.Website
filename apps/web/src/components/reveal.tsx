@@ -2,7 +2,7 @@
 
 import type { ElementType, ReactNode } from 'react';
 import { useEffect, useRef, useState } from 'react';
-import { cn } from '@aerotech/ui';
+import { cn } from '@aerotech/ui/cn';
 
 /**
  * Light scroll-reveal: fades/slides content in the first time it enters the viewport.

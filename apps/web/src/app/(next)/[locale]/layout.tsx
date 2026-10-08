@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { getDirection } from '@aerotech/domain';
+import { UiProvider } from '@aerotech/ui';
 import { routing } from '@/i18n/routing';
 import '../../next.css';
 
@@ -52,7 +53,9 @@ export default async function NextRootLayout({
   return (
     <html lang={locale} dir={getDirection(locale)}>
       <body className="min-h-dvh overflow-x-clip bg-canvas text-default antialiased">
-        <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider messages={messages}>
+          <UiProvider locale={locale}>{children}</UiProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

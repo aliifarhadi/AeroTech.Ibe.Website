@@ -2,7 +2,7 @@
 
 import { useEffect, useId, useRef, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
-import { cn } from '@aerotech/ui';
+import { cn } from '@aerotech/ui/cn';
 import {
   gregorianToJalali,
   JALALI_MONTH_NAMES,
